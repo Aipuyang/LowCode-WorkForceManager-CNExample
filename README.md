@@ -5,8 +5,8 @@
 示例应用程序中包含如下使用 SnapDevelop 可视化设计器创建的内容（实体、查询、视图等）：
 
 - 实体: BaseEntity; Company; CompanyContact; Department; Education; Employee; EmployJob
-- 枚举: CompanySize; DegreeType; EmployeeStatus; Gender; PositionType; Province
-- 查询: CompanyCities; CompanyDegreeStatic; CompanyEmployees; CompanyGenderStatic; CompanyGenderStatic; CompanySizeStatic; CompanyStatic; CompanyStatistics; EmployeeDegreeStatic; EmployeeResignStatic; EmployeeStatic; EmployeeWorkExperienceStatics
+- 枚举: CompanySize; DegreeType; EmployeeStatus; Gender; PositionType
+- 查询: CompanyCities; CompanyDegreeStatic; CompanyEmployees; CompanyGenderStatic; CompanyGenderStatic; CompanySizeStatic; CompanyStatic; EmployeeDegreeStatic; EmployeeResignStatic; EmployeeStatic; EmployeeWorkExperienceStatics
 - 视图:
   - 公司: CompanyAdd; CompanyContactAdd; CompanyDetail; CompanyList; CompanyUpdate
   - 部门: Department_Employee_TreeList; DepartmentAdd; DepartmentUpdate
