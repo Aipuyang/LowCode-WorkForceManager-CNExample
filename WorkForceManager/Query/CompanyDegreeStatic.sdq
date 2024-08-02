@@ -17,14 +17,14 @@
       },
       {
         "alias": "Department",
-        "pointX": 606,
-        "pointY": 180,
+        "pointX": 548,
+        "pointY": 180.8,
         "isExpanded": true
       },
       {
         "alias": "Company",
-        "pointX": 1016,
-        "pointY": 180,
+        "pointX": 873.6,
+        "pointY": 182.40000000000003,
         "isExpanded": true
       }
     ],

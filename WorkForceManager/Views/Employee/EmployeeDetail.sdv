@@ -1445,7 +1445,8 @@
                                           "id": "popConfirm_778d204c1333c00",
                                           "widget": "popConfirm",
                                           "props": {
-                                            "ref": "popConfirm_778d204c1333c00"
+                                            "ref": "popConfirm_778d204c1333c00",
+                                            "open": false
                                           },
                                           "events": {
                                             "confirm": {

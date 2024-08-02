@@ -11,14 +11,14 @@
     "sources": [
       {
         "alias": "Employee",
-        "pointX": 424,
-        "pointY": 152,
+        "pointX": 455.20000000000005,
+        "pointY": 77.59999999999997,
         "isExpanded": true
       },
       {
         "alias": "Department",
-        "pointX": 761,
-        "pointY": 122,
+        "pointX": 779.9999999999999,
+        "pointY": 89.6,
         "isExpanded": true
       },
       {

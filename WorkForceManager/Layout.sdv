@@ -39,24 +39,24 @@
       "type": "sub",
       "items": [
         {
-          "key": "4cf1d5d8ea9118",
+          "key": "df2f3d2dd631080",
           "label": "统计",
           "page": "$(Document)Home",
-          "icon": "",
+          "icon": "PieChartFilled",
           "hide": false
         },
         {
-          "key": "9e752224fe2c580",
+          "key": "331e40578aa9940",
           "label": "公司",
           "page": "$(Document)CompanyList",
-          "icon": "",
+          "icon": "BankFilled",
           "hide": false
         },
         {
-          "key": "b69aad1927b6680",
+          "key": "355ac1df3a03d60",
           "label": "员工",
           "page": "$(Document)Department_Employee_TreeList",
-          "icon": "",
+          "icon": "ContactsFilled",
           "hide": false
         }
       ]
