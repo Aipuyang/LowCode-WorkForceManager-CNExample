@@ -21,4 +21,4 @@
 - 点击 生成项目，一键生成全栈应用程序。
 - 在 IDE 中选择运行生成完毕的Web API 项目和Vue项目，可查看为应用程序创建的 Web API 和前端页面。
 
-欲了解更多信息，请查看教程：[https://docs.aipuyang.com/sd2025/Create_a_Designer_Developed_Project/Code-First-Tutorials.html]([https://docs.aipuyang.com/sd2025/Create_a_Designer_Developed_Project/Code-First-Tutorials.html#%E5%88%9B%E5%BB%BA%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E6%BC%94%E7%A4%BA](https://docs.aipuyang.com/sd2025/Create_a_Designer_Developed_Project/Code-First-Tutorials.html#%E5%88%9B%E5%BB%BA%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E6%BC%94%E7%A4%BA))
+欲了解更多信息，请查看教程：[创建企业员工统计系统](https://docs.aipuyang.com/sd2025/Create_a_Designer_Developed_Project/Code-First-Tutorials.html#%E5%88%9B%E5%BB%BA%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E6%BC%94%E7%A4%BA)
