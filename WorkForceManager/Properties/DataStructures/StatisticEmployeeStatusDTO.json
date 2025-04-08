@@ -1,0 +1,36 @@
+﻿{
+  "id": "abc1a823d3a8454c8239e5cf0c30b1f6",
+  "widget": "model",
+  "props": {
+    "name": "StatisticEmployeeStatusDTO",
+    "displayName": "StatisticEmployeeStatusDTO"
+  },
+  "children": [
+    {
+      "id": "35b9ff44ce904e9b8d50728960917a9d",
+      "widget": "field",
+      "props": {
+        "displayName": "EmployeeStatus",
+        "name": "EmployeeStatus",
+        "dataType": "$(ref)535f74c9239c4797b3ab0c2800cbd356",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "731996ea0aad484eacde322712c7c201",
+      "widget": "field",
+      "props": {
+        "displayName": "Count",
+        "name": "Count",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "references": {
+    "535f74c9239c4797b3ab0c2800cbd356": "EmployeeStatus.json"
+  },
+  "version": "1.0.0"
+}

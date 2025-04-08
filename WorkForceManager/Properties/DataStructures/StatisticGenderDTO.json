@@ -1,0 +1,36 @@
+﻿{
+  "id": "fa9489441bcb42caaaa3a715fafd8f24",
+  "widget": "model",
+  "props": {
+    "name": "StatisticGenderDTO",
+    "displayName": "StatisticGenderDTO"
+  },
+  "children": [
+    {
+      "id": "8265139edd4440ee9078d7a234f9fa78",
+      "widget": "field",
+      "props": {
+        "displayName": "Gender",
+        "name": "Gender",
+        "dataType": "$(ref)6f161b5fe6c545cb9102a69a9776c5e8",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "e512eb9c07ce42a19060923fd0f240f8",
+      "widget": "field",
+      "props": {
+        "displayName": "Count",
+        "name": "Count",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "references": {
+    "6f161b5fe6c545cb9102a69a9776c5e8": "Gender.json"
+  },
+  "version": "1.0.0"
+}

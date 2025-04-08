@@ -1,0 +1,103 @@
+﻿{
+  "id": "0a50063933594d59a1aea3169d00ce5e",
+  "widget": "enum",
+  "props": {
+    "name": "DegreeType",
+    "displayName": "DegreeType",
+    "converters": [
+      {
+        "id": "02a094f03005863",
+        "widget": "converter",
+        "props": {
+          "name": "Degree",
+          "ref": "Degree",
+          "input": "enum",
+          "output": "Color",
+          "items": [
+            {
+              "source": "&(self)[0a50063933594d59a1aea3169d00ce5e].[fd9f36edf75249b3beca55d79632686f]",
+              "target": "#00A80080"
+            },
+            {
+              "source": "&(self)[0a50063933594d59a1aea3169d00ce5e].[e11198248b0f48ed8c6461c50365e430]",
+              "target": "#FF7800FF"
+            },
+            {
+              "source": "&(self)[0a50063933594d59a1aea3169d00ce5e].[cf4cc5eb1fa645928cc786b21c0f23cb]",
+              "target": "#FAD400FF"
+            },
+            {
+              "source": "&(self)[0a50063933594d59a1aea3169d00ce5e].[bb26d169704f4170ab46c60a0e59a9d3]",
+              "target": "#00BABDFF"
+            },
+            {
+              "source": "&(self)[0a50063933594d59a1aea3169d00ce5e].[e38e58a987874fa2a5af13eb4b26058e]",
+              "target": "#FF7800FF"
+            },
+            {
+              "source": "&(self)[0a50063933594d59a1aea3169d00ce5e].[8136c362a5dd4de4bb848d833019ccf5]",
+              "target": "#1F93FFB8"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "fd9f36edf75249b3beca55d79632686f",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "准学士",
+        "name": "AD",
+        "value": 0
+      }
+    },
+    {
+      "id": "e11198248b0f48ed8c6461c50365e430",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "学士",
+        "name": "BD",
+        "value": 1
+      }
+    },
+    {
+      "id": "cf4cc5eb1fa645928cc786b21c0f23cb",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "硕士",
+        "name": "MD",
+        "value": 2
+      }
+    },
+    {
+      "id": "bb26d169704f4170ab46c60a0e59a9d3",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "博士",
+        "name": "DD",
+        "value": 3
+      }
+    },
+    {
+      "id": "e38e58a987874fa2a5af13eb4b26058e",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "教授",
+        "name": "PD",
+        "value": 4
+      }
+    },
+    {
+      "id": "8136c362a5dd4de4bb848d833019ccf5",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "其他",
+        "name": "OT",
+        "value": 5
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

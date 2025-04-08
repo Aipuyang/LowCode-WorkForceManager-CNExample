@@ -1,0 +1,1042 @@
+﻿{
+  "id": "9112573518644a56ab96c31d94e612e6",
+  "widget": "database",
+  "version": "1.0.0",
+  "props": {
+    "name": "Database",
+    "description": "Database",
+    "dbType": "Sqlite",
+    "connectionString": "Data Source=\"Database.db\"",
+    "x": 52.5,
+    "y": 100.5
+  },
+  "children": [
+    {
+      "id": "07b0fe61729f4d47b4e2e4902fc42222",
+      "widget": "table",
+      "props": {
+        "x": 569.5,
+        "y": 453,
+        "displayName": "公司表",
+        "name": "Company",
+        "indexes": [
+          {
+            "name": "PK_Company",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[71419c05e9b4445f965aa84aa4554dbe]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "71419c05e9b4445f965aa84aa4554dbe",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "9019a41bd855421685dacfb9018ef5ba",
+          "widget": "column",
+          "props": {
+            "displayName": "公司名称",
+            "name": "CompanyName",
+            "dataType": "String",
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "7e0c2bdce96a46318f594d2a739089a1",
+          "widget": "column",
+          "props": {
+            "displayName": "公司Logo",
+            "name": "Logo",
+            "dataType": "Byte",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isCollection": true
+          }
+        },
+        {
+          "id": "9f45f4a80da24bf38e4012b7a9e0fbc7",
+          "widget": "column",
+          "props": {
+            "displayName": "公司规模",
+            "name": "CompanySize",
+            "dataType": "$(ref)f3b5b3597a4a473aac597e1c17fba72e",
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "4c1dcfeb6f6e4650af491a05e361cafe",
+          "widget": "column",
+          "props": {
+            "displayName": "所在省份",
+            "name": "Province",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "6857107bce88495699087db7ee3dd674",
+          "widget": "column",
+          "props": {
+            "displayName": "所在城市",
+            "name": "City",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "732e9468e48d4dad884eaf11408ef5f3_889bdcaf5c654f478f33dca57711ac89_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "Departments",
+            "name": "Departments",
+            "dataType": "$(self)[732e9468e48d4dad884eaf11408ef5f3]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "e9496a0de6e744f0bda5526e977cbdd4_9f070de5223045fcac6cebba6b3e2edb_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "CompanyContacts",
+            "name": "CompanyContacts",
+            "dataType": "$(self)[e9496a0de6e744f0bda5526e977cbdd4]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "820fc7ca30c4456cbb4e05086ec9f39c_c75222c28cbb495f89bea9e33550dc4e_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "Employees",
+            "name": "Employees",
+            "dataType": "$(self)[820fc7ca30c4456cbb4e05086ec9f39c]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "e9496a0de6e744f0bda5526e977cbdd4",
+      "widget": "table",
+      "props": {
+        "x": 247.5,
+        "y": 171,
+        "displayName": "公司联系人表",
+        "name": "CompanyContact",
+        "indexes": [
+          {
+            "name": "PK_CompanyContact",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[00f1ac8a52504db7a2dd1ea66c220c25]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "35e94ddb5eab4072aebdf6fbf845024a",
+            "name": "FK_CompanyContact_Employee",
+            "refTable": "$(self)[820fc7ca30c4456cbb4e05086ec9f39c]",
+            "columns": [
+              "$(self)[e9496a0de6e744f0bda5526e977cbdd4].[759d7ab029a44281a024874e9cda8749]"
+            ],
+            "refColumns": [
+              "$(self)[820fc7ca30c4456cbb4e05086ec9f39c].[60dbcfc56be84a6cae980a9e22fdda5e]"
+            ]
+          },
+          {
+            "id": "9f070de5223045fcac6cebba6b3e2edb",
+            "name": "FK_CompanyContact_Company",
+            "refTable": "$(self)[07b0fe61729f4d47b4e2e4902fc42222]",
+            "columns": [
+              "$(self)[e9496a0de6e744f0bda5526e977cbdd4].[3d82426c63dd4402aac1d0c8f8d8cc69]"
+            ],
+            "refColumns": [
+              "$(self)[07b0fe61729f4d47b4e2e4902fc42222].[71419c05e9b4445f965aa84aa4554dbe]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "00f1ac8a52504db7a2dd1ea66c220c25",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "3d82426c63dd4402aac1d0c8f8d8cc69",
+          "widget": "column",
+          "props": {
+            "displayName": "公司",
+            "name": "CompanyID",
+            "dataType": "Int32",
+            "nullable": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "759d7ab029a44281a024874e9cda8749",
+          "widget": "column",
+          "props": {
+            "displayName": "联系人",
+            "name": "EmployeeID",
+            "dataType": "Int32",
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "a113f760a6dd4e46a1d403f2c17c412f",
+          "widget": "column",
+          "props": {
+            "displayName": "职位",
+            "name": "ContactPosition",
+            "dataType": "$(ref)06cde15b34964d06bc7749fe05c2bba5",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "07b0fe61729f4d47b4e2e4902fc42222_9f070de5223045fcac6cebba6b3e2edb_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Company",
+            "name": "Company",
+            "dataType": "$(self)[07b0fe61729f4d47b4e2e4902fc42222]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "820fc7ca30c4456cbb4e05086ec9f39c_35e94ddb5eab4072aebdf6fbf845024a_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Employee",
+            "name": "Employee",
+            "dataType": "$(self)[820fc7ca30c4456cbb4e05086ec9f39c]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "732e9468e48d4dad884eaf11408ef5f3",
+      "widget": "table",
+      "props": {
+        "x": 231,
+        "y": 882,
+        "displayName": "部门表",
+        "name": "Department",
+        "indexes": [
+          {
+            "name": "PK_Department",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[b6d52a1db4b641c982262b54cd0077d7]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "889bdcaf5c654f478f33dca57711ac89",
+            "name": "FK_Department_Company",
+            "refTable": "$(self)[07b0fe61729f4d47b4e2e4902fc42222]",
+            "columns": [
+              "$(self)[732e9468e48d4dad884eaf11408ef5f3].[cd690bbd547745f79d547f9742529452]"
+            ],
+            "refColumns": [
+              "$(self)[07b0fe61729f4d47b4e2e4902fc42222].[71419c05e9b4445f965aa84aa4554dbe]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "b6d52a1db4b641c982262b54cd0077d7",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "bef77034b04a46959c03a9b1e5b9805d",
+          "widget": "column",
+          "props": {
+            "displayName": "部门名称",
+            "name": "DepartmentName",
+            "dataType": "String",
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "cd690bbd547745f79d547f9742529452",
+          "widget": "column",
+          "props": {
+            "displayName": "所属公司",
+            "name": "CompanyID",
+            "dataType": "Int32",
+            "nullable": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "07b0fe61729f4d47b4e2e4902fc42222_889bdcaf5c654f478f33dca57711ac89_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Company",
+            "name": "Company",
+            "dataType": "$(self)[07b0fe61729f4d47b4e2e4902fc42222]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "820fc7ca30c4456cbb4e05086ec9f39c_703b07b54eb3436cbba6cb110316635b_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "Employees",
+            "name": "Employees",
+            "dataType": "$(self)[820fc7ca30c4456cbb4e05086ec9f39c]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "561ce6553a1a46da96d9b5c9c0799b43",
+      "widget": "table",
+      "props": {
+        "x": 247.5,
+        "y": 640,
+        "displayName": "教育经历",
+        "name": "Education",
+        "indexes": [
+          {
+            "name": "PK_Education",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[370e18f5e6a1453894a17df560582fa5]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "139c45ada4864ecf853943e67b844d12",
+            "name": "FK_Education_Employee",
+            "refTable": "$(self)[820fc7ca30c4456cbb4e05086ec9f39c]",
+            "columns": [
+              "$(self)[561ce6553a1a46da96d9b5c9c0799b43].[ac09415e2b7e4cdaac419f339e3beee7]"
+            ],
+            "refColumns": [
+              "$(self)[820fc7ca30c4456cbb4e05086ec9f39c].[60dbcfc56be84a6cae980a9e22fdda5e]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "370e18f5e6a1453894a17df560582fa5",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "33eb0af92e0a4906a1f7237bbcca5317",
+          "widget": "column",
+          "props": {
+            "displayName": "学校",
+            "name": "School",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "9644fcb7c3754bbeb370327f8dd46c1d",
+          "widget": "column",
+          "props": {
+            "displayName": "开始时间",
+            "name": "StartDate",
+            "dataType": "DateOnly",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "1bbe1cb2a7d846d4aaf782b2dd771258",
+          "widget": "column",
+          "props": {
+            "displayName": "结束时间",
+            "name": "EndDate",
+            "dataType": "DateOnly",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "6811ae92ca554901921fade39a4f7159",
+          "widget": "column",
+          "props": {
+            "displayName": "专业",
+            "name": "Major",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "d77fff4b25274384a4dc9e9bef5faae5",
+          "widget": "column",
+          "props": {
+            "displayName": "学位",
+            "name": "Degree",
+            "dataType": "$(ref)f18bf8913614438180c6387570d05652",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "ac09415e2b7e4cdaac419f339e3beee7",
+          "widget": "column",
+          "props": {
+            "displayName": "员工",
+            "name": "EmployeeID",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "820fc7ca30c4456cbb4e05086ec9f39c_139c45ada4864ecf853943e67b844d12_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Employee",
+            "name": "Employee",
+            "dataType": "$(self)[820fc7ca30c4456cbb4e05086ec9f39c]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "820fc7ca30c4456cbb4e05086ec9f39c",
+      "widget": "table",
+      "props": {
+        "x": 569.5,
+        "y": 171,
+        "displayName": "员工",
+        "name": "Employee",
+        "indexes": [
+          {
+            "name": "PK_Employee",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[60dbcfc56be84a6cae980a9e22fdda5e]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "c75222c28cbb495f89bea9e33550dc4e",
+            "name": "FK_Employee_Company_1",
+            "refTable": "$(self)[07b0fe61729f4d47b4e2e4902fc42222]",
+            "columns": [
+              "$(self)[820fc7ca30c4456cbb4e05086ec9f39c].[001f435a6800421581cc2bab45e9e0bd]"
+            ],
+            "refColumns": [
+              "$(self)[07b0fe61729f4d47b4e2e4902fc42222].[71419c05e9b4445f965aa84aa4554dbe]"
+            ]
+          },
+          {
+            "id": "703b07b54eb3436cbba6cb110316635b",
+            "name": "FK_Employee_Department",
+            "refTable": "$(self)[732e9468e48d4dad884eaf11408ef5f3]",
+            "columns": [
+              "$(self)[820fc7ca30c4456cbb4e05086ec9f39c].[fcc5b824101347009d31c2a377d3512e]"
+            ],
+            "refColumns": [
+              "$(self)[732e9468e48d4dad884eaf11408ef5f3].[b6d52a1db4b641c982262b54cd0077d7]"
+            ]
+          },
+          {
+            "id": "9906f2b2ea534d6f912b4909892fe2d4",
+            "name": "FK_Employee_Company",
+            "refTable": "$(self)[820fc7ca30c4456cbb4e05086ec9f39c]",
+            "columns": [
+              "$(self)[820fc7ca30c4456cbb4e05086ec9f39c].[04fc267009434d69a881fa0b4bffd226]"
+            ],
+            "refColumns": [
+              "$(self)[820fc7ca30c4456cbb4e05086ec9f39c].[60dbcfc56be84a6cae980a9e22fdda5e]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "60dbcfc56be84a6cae980a9e22fdda5e",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "81b2a061e2d94ff38757141ef2f99db6",
+          "widget": "column",
+          "props": {
+            "displayName": "姓名",
+            "name": "Name",
+            "dataType": "String",
+            "nullable": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "e0c5c5b6f28945d583ffa411ab743895",
+          "widget": "column",
+          "props": {
+            "displayName": "性别",
+            "name": "Gender",
+            "dataType": "$(ref)712b65e3a5c34046a10ad17015e715f3",
+            "nullable": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "087fe91d88a542a8bea27eacbc92e156",
+          "widget": "column",
+          "props": {
+            "displayName": "邮箱",
+            "name": "Email",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "e58226365df24db39b500b8d0b5c9941",
+          "widget": "column",
+          "props": {
+            "displayName": "联系电话",
+            "name": "Phone",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "cd6038335b884141a586576a4a42a129",
+          "widget": "column",
+          "props": {
+            "displayName": "头像",
+            "name": "Avatar",
+            "dataType": "Byte",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isCollection": true
+          }
+        },
+        {
+          "id": "03a9800324ab44a89ce05eb9177ce253",
+          "widget": "column",
+          "props": {
+            "displayName": "入职日期",
+            "name": "HireDate",
+            "dataType": "DateOnly",
+            "nullable": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "e60694eb63054da7b868d9c113d924ce",
+          "widget": "column",
+          "props": {
+            "displayName": "离职日期",
+            "name": "ResignDate",
+            "dataType": "DateOnly",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "541d9cadc4c5402cb8e97bf625317ed0",
+          "widget": "column",
+          "props": {
+            "displayName": "学历",
+            "name": "Degree",
+            "dataType": "$(ref)f18bf8913614438180c6387570d05652",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "a7b09df7ee094b44a41ec89a86594fb3",
+          "widget": "column",
+          "props": {
+            "displayName": "毕业院校",
+            "name": "EducateSchool",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "ab81b6c3dde64733b578a0eea95849d6",
+          "widget": "column",
+          "props": {
+            "displayName": "毕业时间",
+            "name": "EducateDate",
+            "dataType": "DateOnly",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "fcc5b824101347009d31c2a377d3512e",
+          "widget": "column",
+          "props": {
+            "displayName": "部门",
+            "name": "DepartmentID",
+            "dataType": "Int32",
+            "nullable": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "04fc267009434d69a881fa0b4bffd226",
+          "widget": "column",
+          "props": {
+            "displayName": "上级领导",
+            "name": "LeaderID",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "a315eeba89cd41e18eb16ada89245a6d",
+          "widget": "column",
+          "props": {
+            "displayName": "员工状态",
+            "name": "Status",
+            "dataType": "$(ref)870e2f0e4ecc4b65ace74852a78d5f7d",
+            "nullable": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "001f435a6800421581cc2bab45e9e0bd",
+          "widget": "column",
+          "props": {
+            "displayName": "公司ID",
+            "name": "CompanyID",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "c97d7c9fa3794833be394555e7655e6e",
+          "widget": "column",
+          "props": {
+            "displayName": "离职原因",
+            "name": "ResignReason",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "329bd62e311944b7b5ac8d9917af6c81",
+          "widget": "column",
+          "props": {
+            "displayName": "生日",
+            "name": "Bithday",
+            "dataType": "DateOnly",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "f91e6be84b0640d49a0eda28217a7247",
+          "widget": "column",
+          "props": {
+            "displayName": "身份证号码",
+            "name": "IdCard",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "ba5e8980f95840b88ad6fbf9135711f2",
+          "widget": "column",
+          "props": {
+            "displayName": "职位",
+            "name": "Position",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "21b441dab6ba4084920e71d77f619fdd",
+          "widget": "field",
+          "props": {
+            "displayName": "LeaderName",
+            "name": "LeaderName",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "computed": true,
+            "computedType": "Expression",
+            "expression": "$(exp)&(self)[820fc7ca30c4456cbb4e05086ec9f39c].[820fc7ca30c4456cbb4e05086ec9f39c_9906f2b2ea534d6f912b4909892fe2d4_principal].[81b2a061e2d94ff38757141ef2f99db6]"
+          }
+        },
+        {
+          "id": "f297159d1fb249809f1260441a9c135a",
+          "widget": "field",
+          "props": {
+            "displayName": "DepartmentName",
+            "name": "DepartmentName",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "computed": true,
+            "computedType": "Expression",
+            "expression": "$(exp)&(self)[820fc7ca30c4456cbb4e05086ec9f39c].[732e9468e48d4dad884eaf11408ef5f3_703b07b54eb3436cbba6cb110316635b_principal].[bef77034b04a46959c03a9b1e5b9805d]"
+          }
+        },
+        {
+          "id": "edf5b54a97eb4d0d803efb81554fd77b_4f7332270e2e4beda9ecd9181d8b5ba3_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "EmployeeJobs",
+            "name": "EmployeeJobs",
+            "dataType": "$(self)[edf5b54a97eb4d0d803efb81554fd77b]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "561ce6553a1a46da96d9b5c9c0799b43_139c45ada4864ecf853943e67b844d12_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "Educations",
+            "name": "Educations",
+            "dataType": "$(self)[561ce6553a1a46da96d9b5c9c0799b43]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "e9496a0de6e744f0bda5526e977cbdd4_35e94ddb5eab4072aebdf6fbf845024a_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "CompanyContacts",
+            "name": "CompanyContacts",
+            "dataType": "$(self)[e9496a0de6e744f0bda5526e977cbdd4]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "07b0fe61729f4d47b4e2e4902fc42222_c75222c28cbb495f89bea9e33550dc4e_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Company",
+            "name": "Company",
+            "dataType": "$(self)[07b0fe61729f4d47b4e2e4902fc42222]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "732e9468e48d4dad884eaf11408ef5f3_703b07b54eb3436cbba6cb110316635b_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Department",
+            "name": "Department",
+            "dataType": "$(self)[732e9468e48d4dad884eaf11408ef5f3]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "820fc7ca30c4456cbb4e05086ec9f39c_9906f2b2ea534d6f912b4909892fe2d4_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "Employees",
+            "name": "Employees",
+            "dataType": "$(self)[820fc7ca30c4456cbb4e05086ec9f39c]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "820fc7ca30c4456cbb4e05086ec9f39c_9906f2b2ea534d6f912b4909892fe2d4_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "EmployeeNavigation",
+            "name": "EmployeeNavigation",
+            "dataType": "$(self)[820fc7ca30c4456cbb4e05086ec9f39c]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "edf5b54a97eb4d0d803efb81554fd77b",
+      "widget": "table",
+      "props": {
+        "x": 247.5,
+        "y": 357,
+        "displayName": "工作经历",
+        "name": "EmployeeJob",
+        "indexes": [
+          {
+            "name": "PK_EmployeeJob",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[742ab60b43d34fba81e4a566b6fc5aa4]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "4f7332270e2e4beda9ecd9181d8b5ba3",
+            "name": "FK_EmployeeJob_Employee",
+            "refTable": "$(self)[820fc7ca30c4456cbb4e05086ec9f39c]",
+            "columns": [
+              "$(self)[edf5b54a97eb4d0d803efb81554fd77b].[15ea8147017f472eac2d39aee980caa0]"
+            ],
+            "refColumns": [
+              "$(self)[820fc7ca30c4456cbb4e05086ec9f39c].[60dbcfc56be84a6cae980a9e22fdda5e]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "742ab60b43d34fba81e4a566b6fc5aa4",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "e1025413eac442e8a143215d62e0da85",
+          "widget": "column",
+          "props": {
+            "displayName": "公司",
+            "name": "Company",
+            "dataType": "String",
+            "nullable": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "72e3e8bbef9241bb9bf9e874b3491a5c",
+          "widget": "column",
+          "props": {
+            "displayName": "标题",
+            "name": "Title",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "796ee5360720453ba1f66bdc76181366",
+          "widget": "column",
+          "props": {
+            "displayName": "开始日期",
+            "name": "StartDate",
+            "dataType": "DateOnly",
+            "nullable": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "01f462e8063d4f32b3e5b565f3c8b530",
+          "widget": "column",
+          "props": {
+            "displayName": "结束日期",
+            "name": "EndDate",
+            "dataType": "DateOnly",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "3c88c07a8e044c5295af13cd7180749e",
+          "widget": "column",
+          "props": {
+            "displayName": "离职原因",
+            "name": "ResignReason",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "4cdea3111ddf4ff5b48f3c8b3ac3abac",
+          "widget": "column",
+          "props": {
+            "displayName": "联系人",
+            "name": "Contact",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "6278c5ff901b42989e4a6a31f31d15c7",
+          "widget": "column",
+          "props": {
+            "displayName": "联系方式",
+            "name": "ContactPhone",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "15ea8147017f472eac2d39aee980caa0",
+          "widget": "column",
+          "props": {
+            "displayName": "所属员工",
+            "name": "EmployeeID",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "820fc7ca30c4456cbb4e05086ec9f39c_4f7332270e2e4beda9ecd9181d8b5ba3_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Employee",
+            "name": "Employee",
+            "dataType": "$(self)[820fc7ca30c4456cbb4e05086ec9f39c]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    }
+  ],
+  "references": {
+    "f3b5b3597a4a473aac597e1c17fba72e": "..\\Properties\\DataStructures\\CompanySize.json",
+    "06cde15b34964d06bc7749fe05c2bba5": "..\\Properties\\DataStructures\\PositionType.json",
+    "f18bf8913614438180c6387570d05652": "..\\Properties\\DataStructures\\DegreeType.json",
+    "712b65e3a5c34046a10ad17015e715f3": "..\\Properties\\DataStructures\\Gender.json",
+    "870e2f0e4ecc4b65ace74852a78d5f7d": "..\\Properties\\DataStructures\\EmployeeStatus.json"
+  }
+}

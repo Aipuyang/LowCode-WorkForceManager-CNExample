@@ -1,0 +1,264 @@
+﻿{
+  "id": "101f3dd1b768497fbd646cc48cc7c51d_api",
+  "widget": "api",
+  "version": "1.0.0",
+  "props": {
+    "name": "EmployeeJob",
+    "description": "EmployeeJob",
+    "route": "api/[controller]"
+  },
+  "children": [
+    {
+      "id": "960e0dd5ac144981bf1e5f18427be6bf",
+      "widget": "filter",
+      "props": {
+        "displayName": "EmployeeIDFilter",
+        "name": "EmployeeIDFilter",
+        "sources": [
+          {
+            "id": "46232ae5ed7b43ab8ad14df542a26b67",
+            "type": "table",
+            "name": "EmployeeJob",
+            "target": "$(ref)7f250322b47e4549b5acaffa98ce445a.[edf5b54a97eb4d0d803efb81554fd77b]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "e260d1609bee4a968cb3b1ef3a066ac2",
+          "widget": "field",
+          "props": {
+            "displayName": "EmployeeID",
+            "name": "EmployeeID",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "744565ac9fe64b529942031f5b0c6b71",
+          "widget": "condition",
+          "props": {
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[e260d1609bee4a968cb3b1ef3a066ac2]",
+            "field": "&(self)[960e0dd5ac144981bf1e5f18427be6bf].sources.[46232ae5ed7b43ab8ad14df542a26b67].[15ea8147017f472eac2d39aee980caa0]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "edf5b54a97eb4d0d803efb81554fd77b_add_func",
+      "widget": "function",
+      "props": {
+        "name": "AddEmployeeJob",
+        "openApi": true,
+        "requestMethod": "POST",
+        "route": "AddEmployeeJob"
+      },
+      "children": [
+        {
+          "id": "4a3f0100c6644a3b90b7f1a300bb41a7",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[e5714adcc5b7409db27c2ae5c72eee64]"
+          },
+          "children": [
+            {
+              "id": "edf5b54a97eb4d0d803efb81554fd77b_add_params",
+              "widget": "field",
+              "props": {
+                "name": "employeeJob",
+                "dataType": "$(ref)7f250322b47e4549b5acaffa98ce445a.[edf5b54a97eb4d0d803efb81554fd77b]",
+                "parameterFrom": "Body"
+              }
+            }
+          ]
+        },
+        {
+          "id": "e5714adcc5b7409db27c2ae5c72eee64",
+          "widget": "insert",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "新增",
+            "next": "$(self)[edf5b54a97eb4d0d803efb81554fd77b_add_end]",
+            "source": "$(ref)7f250322b47e4549b5acaffa98ce445a.[edf5b54a97eb4d0d803efb81554fd77b]",
+            "sourceValue": "$(self)[4a3f0100c6644a3b90b7f1a300bb41a7].[edf5b54a97eb4d0d803efb81554fd77b_add_params]"
+          }
+        },
+        {
+          "id": "edf5b54a97eb4d0d803efb81554fd77b_add_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[e5714adcc5b7409db27c2ae5c72eee64].result.[e5714adcc5b7409db27c2ae5c72eee64_success]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2e94e29fcd634ae883afa5b3203841fa",
+      "widget": "function",
+      "props": {
+        "name": "DeleteEmployeeJob",
+        "openApi": true,
+        "requestMethod": "DELETE",
+        "route": "DeleteEmployeeJob",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "5ec57f2eabfa440090b5f62f207c74a0",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[be8f41c140a444389520903f05d3fc28]"
+          },
+          "children": [
+            {
+              "id": "063073f2a66a42efb0c207b51e3287d2",
+              "widget": "field",
+              "props": {
+                "displayName": "id",
+                "name": "id",
+                "dataType": "Int32",
+                "defaultValueType": "Value",
+                "parameterFrom": "Route"
+              }
+            }
+          ]
+        },
+        {
+          "id": "be8f41c140a444389520903f05d3fc28",
+          "widget": "delete",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "删除",
+            "next": "$(self)[36a5bff6524e4c98a0d305405478c4aa]",
+            "source": "$(ref)7f250322b47e4549b5acaffa98ce445a.[edf5b54a97eb4d0d803efb81554fd77b]",
+            "filter": "$(ref)7f250322b47e4549b5acaffa98ce445a.[edf5b54a97eb4d0d803efb81554fd77b].PrimaryKeys"
+          },
+          "children": [
+            {
+              "id": "2f2c8ebab22c4dccbca7086371c91cc5",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[be8f41c140a444389520903f05d3fc28].filter.[742ab60b43d34fba81e4a566b6fc5aa4]",
+                "value": "&(self)[5ec57f2eabfa440090b5f62f207c74a0].[063073f2a66a42efb0c207b51e3287d2]",
+                "type": "Field"
+              }
+            }
+          ]
+        },
+        {
+          "id": "36a5bff6524e4c98a0d305405478c4aa",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "result": "&(self)[be8f41c140a444389520903f05d3fc28].result.[be8f41c140a444389520903f05d3fc28_success]",
+            "type": "Field"
+          }
+        }
+      ]
+    },
+    {
+      "id": "3da0ee997f434c23ac2144a44213c53e",
+      "widget": "function",
+      "props": {
+        "name": "GetListByEmployeeId",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetListByEmployeeId",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "0f23b4dd67744bc08a701127f9d66b15",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[19df1551d4bf40eb857154f7bf023fea]"
+          },
+          "children": [
+            {
+              "id": "a4a85571980641c5a78284b2d59c383c",
+              "widget": "field",
+              "props": {
+                "displayName": "employeeIDFilter",
+                "name": "employeeIDFilter",
+                "dataType": "$(self)[960e0dd5ac144981bf1e5f18427be6bf]",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "19df1551d4bf40eb857154f7bf023fea",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "查询",
+            "next": "$(self)[47ca69d8cbc2489dbc0ebb6ed0e71d56]",
+            "filter": "$(self)[960e0dd5ac144981bf1e5f18427be6bf]",
+            "strategy": "list"
+          },
+          "children": [
+            {
+              "id": "061561827b1b405b859b3323e5600b98",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "f46091c5bddd44f3a21e46b59b41efff",
+                    "type": "table",
+                    "name": "EmployeeJob",
+                    "target": "$(ref)7f250322b47e4549b5acaffa98ce445a.[edf5b54a97eb4d0d803efb81554fd77b]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "52e5ba4b21a94fcebaa3bcfaa20f3df0",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[19df1551d4bf40eb857154f7bf023fea].filter.[e260d1609bee4a968cb3b1ef3a066ac2]",
+                "value": "&(self)[0f23b4dd67744bc08a701127f9d66b15].[a4a85571980641c5a78284b2d59c383c].[e260d1609bee4a968cb3b1ef3a066ac2]",
+                "type": "Field"
+              }
+            }
+          ]
+        },
+        {
+          "id": "47ca69d8cbc2489dbc0ebb6ed0e71d56",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "result": "&(self)[19df1551d4bf40eb857154f7bf023fea].result.[edf5b54a97eb4d0d803efb81554fd77b]",
+            "type": "Field"
+          }
+        }
+      ]
+    }
+  ],
+  "references": {
+    "7f250322b47e4549b5acaffa98ce445a": "..\\DataSource\\Database.sde"
+  }
+}

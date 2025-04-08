@@ -1,0 +1,280 @@
+﻿{
+  "id": "3ad5bfeb9fb34896a314c08e72222b77_api",
+  "widget": "api",
+  "version": "1.0.0",
+  "props": {
+    "name": "CompanyContact",
+    "description": "CompanyContact",
+    "route": "api/[controller]"
+  },
+  "children": [
+    {
+      "id": "47f75af02fb4402b9846a281cce9c954",
+      "widget": "filter",
+      "props": {
+        "displayName": "CompanyIdFilter",
+        "name": "CompanyIdFilter",
+        "sources": [
+          {
+            "id": "19ad9f2247914419b59f467c07062a98",
+            "type": "table",
+            "name": "CompanyContact",
+            "target": "$(ref)e6d451ec4ec8411f988661cbb3881a72.[e9496a0de6e744f0bda5526e977cbdd4]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "36dbc6724a1f4995b7d167159ec7cdf6",
+          "widget": "field",
+          "props": {
+            "displayName": "CompanyId",
+            "name": "CompanyId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "be8d07146ef1436595e7535ae5721b8b",
+          "widget": "condition",
+          "props": {
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[36dbc6724a1f4995b7d167159ec7cdf6]",
+            "field": "&(self)[47f75af02fb4402b9846a281cce9c954].sources.[19ad9f2247914419b59f467c07062a98].[3d82426c63dd4402aac1d0c8f8d8cc69]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "e9496a0de6e744f0bda5526e977cbdd4_add_func",
+      "widget": "function",
+      "props": {
+        "name": "AddContact",
+        "openApi": true,
+        "requestMethod": "POST",
+        "route": "AddContact"
+      },
+      "children": [
+        {
+          "id": "5884ebeff2444a9fa34fd448a422d38e",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[21d823b8afa349c790a19f8ef03c4e18]"
+          },
+          "children": [
+            {
+              "id": "e9496a0de6e744f0bda5526e977cbdd4_add_params",
+              "widget": "field",
+              "props": {
+                "name": "companyContact",
+                "dataType": "$(ref)e6d451ec4ec8411f988661cbb3881a72.[e9496a0de6e744f0bda5526e977cbdd4]",
+                "parameterFrom": "Body"
+              }
+            }
+          ]
+        },
+        {
+          "id": "21d823b8afa349c790a19f8ef03c4e18",
+          "widget": "insert",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "新增",
+            "next": "$(self)[e9496a0de6e744f0bda5526e977cbdd4_add_end]",
+            "source": "$(ref)e6d451ec4ec8411f988661cbb3881a72.[e9496a0de6e744f0bda5526e977cbdd4]",
+            "sourceValue": "$(self)[5884ebeff2444a9fa34fd448a422d38e].[e9496a0de6e744f0bda5526e977cbdd4_add_params]"
+          }
+        },
+        {
+          "id": "e9496a0de6e744f0bda5526e977cbdd4_add_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[21d823b8afa349c790a19f8ef03c4e18].result.[21d823b8afa349c790a19f8ef03c4e18_success]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "5b15920a09044ee2bf689be94c60560f",
+      "widget": "function",
+      "props": {
+        "name": "DeleteContact",
+        "openApi": true,
+        "requestMethod": "DELETE",
+        "route": "DeleteContact",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "f0b78e461dbe4044947cf224df43c062",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[d5384d7e761943c583722df41d39fff5]"
+          },
+          "children": [
+            {
+              "id": "faa83d64d5b440b3abedbf4bd9b63e04",
+              "widget": "field",
+              "props": {
+                "displayName": "id",
+                "name": "id",
+                "dataType": "Int32",
+                "defaultValueType": "Value",
+                "parameterFrom": "Route"
+              }
+            }
+          ]
+        },
+        {
+          "id": "d5384d7e761943c583722df41d39fff5",
+          "widget": "delete",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "删除",
+            "next": "$(self)[4898f5eff6df47a5b161cca95ab7efc9]",
+            "source": "$(ref)e6d451ec4ec8411f988661cbb3881a72.[e9496a0de6e744f0bda5526e977cbdd4]",
+            "filter": "$(ref)e6d451ec4ec8411f988661cbb3881a72.[e9496a0de6e744f0bda5526e977cbdd4].PrimaryKeys"
+          },
+          "children": [
+            {
+              "id": "d24d0f6e92f34b7ca6522816aa5509df",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[d5384d7e761943c583722df41d39fff5].filter.[00f1ac8a52504db7a2dd1ea66c220c25]",
+                "value": "&(self)[f0b78e461dbe4044947cf224df43c062].[faa83d64d5b440b3abedbf4bd9b63e04]",
+                "type": "Field"
+              }
+            }
+          ]
+        },
+        {
+          "id": "4898f5eff6df47a5b161cca95ab7efc9",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "result": "&(self)[d5384d7e761943c583722df41d39fff5].result.[d5384d7e761943c583722df41d39fff5_success]",
+            "type": "Field"
+          }
+        }
+      ]
+    },
+    {
+      "id": "19ecff56494a4f8183c53d6d0b278d03",
+      "widget": "function",
+      "props": {
+        "name": "GetListByCompanyId",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetListByCompanyId",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "eb507eab404545f1b18daa1b14995846",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[7a0009d1d6e34a13a6943e034c649aa5]"
+          },
+          "children": [
+            {
+              "id": "8ee3d52b1a214171859c752029058c51",
+              "widget": "field",
+              "props": {
+                "displayName": "companyIdFilter",
+                "name": "companyIdFilter",
+                "dataType": "$(self)[47f75af02fb4402b9846a281cce9c954]",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "7a0009d1d6e34a13a6943e034c649aa5",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "查询",
+            "next": "$(self)[fb79e3251a9f42178dc60d0fa0774491]",
+            "filter": "$(self)[47f75af02fb4402b9846a281cce9c954]",
+            "strategy": "list"
+          },
+          "children": [
+            {
+              "id": "af2cdd2b413b42e6978e70378a4d37de",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "3a59896926e04c4280c3395c784054b3",
+                    "type": "table",
+                    "name": "CompanyContact",
+                    "target": "$(ref)e6d451ec4ec8411f988661cbb3881a72.[e9496a0de6e744f0bda5526e977cbdd4]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "f7f4492588c94fe381370193554d7c00",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[7a0009d1d6e34a13a6943e034c649aa5].filter.[36dbc6724a1f4995b7d167159ec7cdf6]",
+                "value": "&(self)[eb507eab404545f1b18daa1b14995846].[8ee3d52b1a214171859c752029058c51].[36dbc6724a1f4995b7d167159ec7cdf6]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "6cfdfafc937d4e6a8971f1d00d515e00",
+              "widget": "assign_cascade_field",
+              "props": {
+                "source": "&(self)[af2cdd2b413b42e6978e70378a4d37de].sources.[3a59896926e04c4280c3395c784054b3].[07b0fe61729f4d47b4e2e4902fc42222_9f070de5223045fcac6cebba6b3e2edb_principal]",
+                "sourceValue": "&(self)[af2cdd2b413b42e6978e70378a4d37de].sources.[3a59896926e04c4280c3395c784054b3].[07b0fe61729f4d47b4e2e4902fc42222_9f070de5223045fcac6cebba6b3e2edb_principal]"
+              }
+            },
+            {
+              "id": "690cddfbbbe44e479afa111b3422e1a7",
+              "widget": "assign_cascade_field",
+              "props": {
+                "source": "&(self)[af2cdd2b413b42e6978e70378a4d37de].sources.[3a59896926e04c4280c3395c784054b3].[820fc7ca30c4456cbb4e05086ec9f39c_35e94ddb5eab4072aebdf6fbf845024a_principal]",
+                "sourceValue": "&(self)[af2cdd2b413b42e6978e70378a4d37de].sources.[3a59896926e04c4280c3395c784054b3].[820fc7ca30c4456cbb4e05086ec9f39c_35e94ddb5eab4072aebdf6fbf845024a_principal]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "fb79e3251a9f42178dc60d0fa0774491",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "result": "&(self)[7a0009d1d6e34a13a6943e034c649aa5].result.[e9496a0de6e744f0bda5526e977cbdd4]",
+            "type": "Field"
+          }
+        }
+      ]
+    }
+  ],
+  "references": {
+    "e6d451ec4ec8411f988661cbb3881a72": "..\\DataSource\\Database.sde"
+  }
+}

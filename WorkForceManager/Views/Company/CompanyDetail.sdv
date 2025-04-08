@@ -1,470 +1,746 @@
-{
-  "id": "page_8dc9ab35b7e85ef1120",
+﻿{
+  "id": "page_b8ba2705806b49c680da45d86245a01a",
   "widget": "page",
-  "type": "page",
-  "designVersion": "1.0.0",
-  "version": 1,
+  "version": "1.0.0",
   "props": {
-    "ref": "page_companydetail",
-    "title": {
-      "type": "string",
-      "value": ""
-    },
+    "ref": "page_b8ba2705806b49c680da45d86245a01a",
+    "name": "CompanyDetail",
+    "title": "CompanyDetail",
     "params": [
       {
-        "id": "8dc9ab35b7eb92d1121",
-        "name": "Id",
-        "dataType": "String",
-        "isCollection": false
+        "id": "0bf022ebe494431b972d74e98dda1506",
+        "widget": "parameter",
+        "props": {
+          "name": "id",
+          "dataType": "Number",
+          "isCollection": false,
+          "isNullable": false
+        }
       }
     ]
   },
   "children": [
     {
-      "id": "descriptions_8dc9ab35b7ec22e1122",
+      "id": "descriptions_976c2ea04a764871b2d35c810a9ed3a6",
       "widget": "descriptions",
       "props": {
-        "ref": "descriptions_8dc9ab35b7ec22e1122",
-        "title": {
-          "type": "slot",
-          "slot": {
-            "hide": false,
-            "render": [
+        "ref": "descriptions_976c2ea04a764871b2d35c810a9ed3a6",
+        "dataSource": {
+          "id": "function_75f1db35e2fd4401a5bf0f090b78bf27",
+          "widget": "function",
+          "children": [
+            {
+              "id": "action_9eacd71f027348a2b975c1f3425e901c",
+              "widget": "action_api",
+              "props": {
+                "target": "&(ref)9ec055555c9548a2804c1d7daf123e9f.[75aba5bb4ed9436eb646ade176f5ce3d]",
+                "params": [
+                  {
+                    "id": "assign_param6ef5f2ff3eac41a0bdc3865ec9554005",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "Parameter",
+                        "value": "&(self)[descriptions_976c2ea04a764871b2d35c810a9ed3a6].dataSource.[action_9eacd71f027348a2b975c1f3425e901c].target.params.[6dc247eaa31e4c238192b6f5c8fd2afc]"
+                      },
+                      "value": {
+                        "kind": "Props",
+                        "value": "$(self)[page_b8ba2705806b49c680da45d86245a01a].params.[0bf022ebe494431b972d74e98dda1506]"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "actionAdapter_df2ac5656e7146abafdbe7da713cf42e",
+              "widget": "action_adapter",
+              "children": [
+                {
+                  "id": "adapterParam_9c7cd81cd56047459c1677062fb56280",
+                  "widget": "assign_param",
+                  "props": {
+                    "name": {
+                      "kind": "Members",
+                      "value": "&(self)[descriptions_976c2ea04a764871b2d35c810a9ed3a6].data"
+                    },
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[descriptions_976c2ea04a764871b2d35c810a9ed3a6].dataSource.[action_9eacd71f027348a2b975c1f3425e901c].target.result"
+                    }
+                  }
+                }
+              ],
+              "props": {}
+            }
+          ],
+          "props": {}
+        },
+        "title": [
+          {
+            "id": "space_f76756e7898c484480adc8eeacd3be15",
+            "widget": "space",
+            "props": {
+              "style": {
+                "height": "40px"
+              },
+              "ref": "space_f76756e7898c484480adc8eeacd3be15",
+              "align": "end",
+              "direction": "horizontal",
+              "size": 8
+            },
+            "children": [
               {
-                "id": "title_8dc9ab35b7ec2701123",
+                "id": "title_5750685d1f3b409c99614286e2e73432",
                 "widget": "title",
                 "props": {
-                  "ref": "title_8dc9ab35b7ec2701123",
-                  "value": "详情",
-                  "level": 5
-                }
-              },
-              {
-                "id": "text_8dc9ab35b7ec2891124",
-                "widget": "text",
-                "props": {
-                  "ref": "text_8dc9ab35b7ec2891124",
-                  "value": "Company",
-                  "textType": {
-                    "type": "secondary",
-                    "custom": false
+                  "ref": "title_5750685d1f3b409c99614286e2e73432",
+                  "value": "公司表",
+                  "level": 4,
+                  "style": {
+                    "display": "inline"
                   }
-                },
-                "styles": {
-                  "marginLeft": "8px"
                 }
               }
             ]
           }
-        },
-        "request": {
-          "name": "$(Api)Company.Get",
-          "params": {
-            "Id": "$(Props)8dc9ab35b7eb92d1121"
-          }
-        },
+        ],
         "bordered": true,
-        "column": 8,
+        "column": 3,
+        "layout": "vertical",
         "descriptionsItems": [
           {
-            "label": "Id",
-            "span": 1,
-            "hide": true,
-            "renders": [
+            "id": "descriptionsItem_ad1c3e3cd16543c5bc67fa5254391aa4",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_ad1c3e3cd16543c5bc67fa5254391aa4",
+              "label": "Id",
+              "span": 1,
+              "hide": true
+            },
+            "children": [
               {
-                "id": "text_8dc9ab35b7ecbd61125",
+                "id": "text_b5a646fc98dc487fb51c313d27dc12f5",
                 "widget": "text",
                 "props": {
-                  "ref": "text_8dc9ab35b7ecbd61125",
-                  "value": "$(Field)Company.Id"
+                  "ref": "text_b5a646fc98dc487fb51c313d27dc12f5",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_976c2ea04a764871b2d35c810a9ed3a6].dataSource.[actionAdapter_df2ac5656e7146abafdbe7da713cf42e].[adapterParam_9c7cd81cd56047459c1677062fb56280].[71419c05e9b4445f965aa84aa4554dbe]"
+                  }
                 }
               }
             ]
           },
           {
-            "label": "Logo",
-            "span": 1,
-            "hide": false,
-            "renders": [
+            "id": "descriptionsItem_c4b14227a5a64ef2a422658e9552b850",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_c4b14227a5a64ef2a422658e9552b850",
+              "label": "公司Logo",
+              "span": 1
+            },
+            "children": [
               {
-                "id": "image_4a0a943ee129b80",
+                "id": "image_458352139a2f4459988840871a641328",
                 "widget": "image",
                 "props": {
-                  "ref": "image_3d83d4bd212b100",
-                  "value": "$(Field)Company.Logo"
-                },
-                "styles": {},
-                "children": []
-              }
-            ]
-          },
-          {
-            "label": "公司名称",
-            "span": 3,
-            "renders": [
-              {
-                "id": "text_8dc9ab35b7ecc251126",
-                "widget": "text",
-                "props": {
-                  "ref": "text_8dc9ab35b7ecc251126",
-                  "value": "$(Field)Company.CompanyName"
+                  "ref": "image_458352139a2f4459988840871a641328",
+                  "width": 64,
+                  "height": 64,
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_976c2ea04a764871b2d35c810a9ed3a6].dataSource.[actionAdapter_df2ac5656e7146abafdbe7da713cf42e].[adapterParam_9c7cd81cd56047459c1677062fb56280].[7e0c2bdce96a46318f594d2a739089a1]"
+                  }
                 }
               }
             ]
           },
           {
-            "label": "公司规模",
-            "span": 4,
-            "renders": [
+            "id": "descriptionsItem_99980a627fdd4e6290268baf677d7818",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_99980a627fdd4e6290268baf677d7818",
+              "label": "公司名称",
+              "span": 1
+            },
+            "children": [
               {
-                "id": "tag_8dc9ab35b7ecc351127",
+                "id": "text_362cd57d988a4eb48f98884f1b5aeeb4",
+                "widget": "text",
+                "props": {
+                  "ref": "text_362cd57d988a4eb48f98884f1b5aeeb4",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_976c2ea04a764871b2d35c810a9ed3a6].dataSource.[actionAdapter_df2ac5656e7146abafdbe7da713cf42e].[adapterParam_9c7cd81cd56047459c1677062fb56280].[9019a41bd855421685dacfb9018ef5ba]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_f83aab920460401c976725f6aa4687e3",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_f83aab920460401c976725f6aa4687e3",
+              "label": "公司规模",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "tag_64dd51fc3b4648da9115d95b4e8b5759",
                 "widget": "tag",
                 "props": {
-                  "ref": "tag_8dc9ab35b7ecc351127",
-                  "value": "$(Field)Company.CompanySize"
+                  "ref": "tag_64dd51fc3b4648da9115d95b4e8b5759",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_976c2ea04a764871b2d35c810a9ed3a6].dataSource.[actionAdapter_df2ac5656e7146abafdbe7da713cf42e].[adapterParam_9c7cd81cd56047459c1677062fb56280].[9f45f4a80da24bf38e4012b7a9e0fbc7]"
+                  },
+                  "color": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_976c2ea04a764871b2d35c810a9ed3a6].dataSource.[actionAdapter_df2ac5656e7146abafdbe7da713cf42e].[adapterParam_9c7cd81cd56047459c1677062fb56280].[9f45f4a80da24bf38e4012b7a9e0fbc7]",
+                    "converter": "&(ref)98abb46189a749a5acfa8ec9a619efae.[d893c8e7e88841a1b37a29a838b1697e].converters.[0d3cc2afa4202c8]"
+                  }
                 }
               }
             ]
-          },
-          {
-            "label": "创建时间",
-            "span": 1,
-            "renders": [
-              {
-                "id": "text_8dc9ab35b7ecc411128",
-                "widget": "text",
-                "props": {
-                  "ref": "text_8dc9ab35b7ecc411128",
-                  "value": "$(Field)Company.CreateTime",
-                  "format": "YYYY-MM-DD HH:mm:ss",
-                  "valueFormat": "YYYY-MM-DDTHH:mm:ss"
-                }
-              }
-            ],
-            "hide": true
-          },
-          {
-            "label": "更新时间",
-            "span": 1,
-            "renders": [
-              {
-                "id": "text_8dc9ab35b7ecc541129",
-                "widget": "text",
-                "props": {
-                  "ref": "text_8dc9ab35b7ecc541129",
-                  "value": "$(Field)Company.UpdateTime",
-                  "format": "YYYY-MM-DD HH:mm:ss",
-                  "valueFormat": "YYYY-MM-DDTHH:mm:ss"
-                }
-              }
-            ],
-            "hide": true
           }
-        ]
+        ],
+        "hideActions": true
       },
       "children": [
         {
-          "id": "tabs_8dc9ab35b7ecf631130",
-          "widget": "tabs",
+          "id": "card_83b2bf85415740a58c13b6e3994e9bb0",
+          "widget": "card",
           "props": {
-            "ref": "tabs_8dc9ab35b7ecf631130"
+            "style": {
+              "marginTop": "20px"
+            },
+            "ref": "card_83b2bf85415740a58c13b6e3994e9bb0",
+            "dataSource": {
+              "id": "function_0845eb084b9247079450dad1d73d6173",
+              "widget": "function",
+              "children": [],
+              "props": {}
+            },
+            "extra": [],
+            "hideActions": true,
+            "title": "联系人"
           },
           "children": [
             {
-              "id": "tabPane_8dc9ab35b7ed1501131",
-              "widget": "tabPane",
+              "id": "tableContainer_189934103049869",
+              "widget": "tableContainer",
               "props": {
-                "ref": "tabPane_8dc9ab35b7ed1501131",
-                "key": "$(String)tabPaneId",
-                "tab": "联系人"
-              },
-              "children": [
-                {
-                  "id": "table_8dc9ab35b7ed1751132",
-                  "widget": "table",
-                  "props": {
-                    "ref": "table_8dc9ab35b7ed1751132",
-                    "value": "$(Field)Company.Contactor",
-                    "columns": [
-                      {
-                        "title": "Id",
-                        "dataIndex": "$(Field)Company.Id",
-                        "hide": true,
-                        "render": {
-                          "id": "text_8dc9ab35b7ed3d01133",
-                          "widget": "text",
-                          "props": {
-                            "ref": "text_8dc9ab35b7ed3d01133",
-                            "value": "$(Field)Company.Id"
-                          }
-                        }
+                "style": {},
+                "ref": "tableContainer_6d73224291c0b9d",
+                "columns": [
+                  {
+                    "id": "tableColumn_3b82dffae086490eb048355dea7e21a7",
+                    "widget": "tableColumn",
+                    "props": {
+                      "style": {},
+                      "ref": "tableColumn_3b82dffae086490eb048355dea7e21a7",
+                      "title": "Id",
+                      "dataIndex": {
+                        "kind": "Field",
+                        "value": "&(self)[tableContainer_189934103049869].dataSource.[action_350291d1ebb6bbb].[assign_param_5fb740dedc0b69f].[00f1ac8a52504db7a2dd1ea66c220c25]"
                       },
+                      "hide": true
+                    },
+                    "children": [
                       {
-                        "title": "联系人",
-                        "dataIndex": "$(Field)Company.Contactor.Contact.FullName",
-                        "render": {
-                          "id": "link_8dc9ab35b7ed3f81135",
-                          "widget": "link",
-                          "props": {
-                            "ref": "link_8dc9ab35b7ed3f81135",
-                            "value": "$(Field)Company.Contactor.Contact.FullName"
-                          }
-                        }
-                      },
-                      {
-                        "title": "职务",
-                        "dataIndex": "$(Field)Company.Contactor.ContactPostion",
-                        "render": {
-                          "id": "tag_8dc9ab35b7ed4011136",
-                          "widget": "tag",
-                          "props": {
-                            "ref": "tag_8dc9ab35b7ed4011136",
-                            "value": "$(Field)Company.Contactor.ContactPostion"
-                          }
-                        }
-                      },
-                      {
-                        "title": "创建时间",
-                        "dataIndex": "$(Field)CompanyContact.CreateTime",
-                        "render": {
-                          "id": "text_8dc9ab35b7ed4171137",
-                          "widget": "text",
-                          "props": {
-                            "ref": "text_8dc9ab35b7ed4171137",
-                            "value": "$(Field)CompanyContact.CreateTime"
-                          }
-                        }
-                      },
-                      {
-                        "title": "更新时间",
-                        "dataIndex": "$(Field)CompanyContact.UpdateTime",
-                        "render": {
-                          "id": "text_8dc9ab35b7ed4211138",
-                          "widget": "text",
-                          "props": {
-                            "ref": "text_8dc9ab35b7ed4211138",
-                            "value": "$(Field)CompanyContact.UpdateTime"
-                          }
-                        }
-                      },
-                      {
-                        "title": "标签",
-                        "dataIndex": "$(Field)",
-                        "sort": false,
-                        "width": false,
-                        "align": "left",
-                        "fixed": false,
-                        "hide": false,
-                        "render": {
-                          "id": "space_e8788dbccc05000",
-                          "widget": "space",
-                          "props": {
-                            "ref": "space_684381455bb9d00"
+                        "id": "text_bdba5856b7f74cb1a88297ffcec39018",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_bdba5856b7f74cb1a88297ffcec39018",
+                          "textType": {
+                            "custom": false,
+                            "type": "default"
                           },
-                          "styles": {},
-                          "children": [
-                            {
-                              "id": "popConfirm_26bd3f6a53846a0",
-                              "widget": "popConfirm",
-                              "props": {
-                                "ref": "popConfirm_26bd3f6a53846a0",
-                                "open": false
-                              },
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_189934103049869].dataSource.[action_350291d1ebb6bbb].[assign_param_5fb740dedc0b69f].[00f1ac8a52504db7a2dd1ea66c220c25]"
+                          }
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "tableColumn_d608c5b7fbfd45049146d599f765d0c5",
+                    "widget": "tableColumn",
+                    "props": {
+                      "style": {},
+                      "ref": "tableColumn_d608c5b7fbfd45049146d599f765d0c5",
+                      "title": "公司",
+                      "dataIndex": {
+                        "kind": "Field",
+                        "value": "&(self)[tableContainer_189934103049869].dataSource.[action_350291d1ebb6bbb].[assign_param_5fb740dedc0b69f].[3d82426c63dd4402aac1d0c8f8d8cc69]"
+                      }
+                    },
+                    "children": [
+                      {
+                        "id": "text_100a470d3f37400faf30e3ca328a4215",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_100a470d3f37400faf30e3ca328a4215",
+                          "textType": {
+                            "custom": false,
+                            "type": "default"
+                          },
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_189934103049869].dataSource.[action_350291d1ebb6bbb].[assign_param_5fb740dedc0b69f].[07b0fe61729f4d47b4e2e4902fc42222_9f070de5223045fcac6cebba6b3e2edb_principal].[9019a41bd855421685dacfb9018ef5ba]"
+                          }
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "tableColumn_00f736573bf140f79a682f0af077a33e",
+                    "widget": "tableColumn",
+                    "props": {
+                      "style": {},
+                      "ref": "tableColumn_00f736573bf140f79a682f0af077a33e",
+                      "title": "联系人",
+                      "dataIndex": {
+                        "kind": "Field",
+                        "value": "&(self)[tableContainer_189934103049869].dataSource.[action_350291d1ebb6bbb].[assign_param_5fb740dedc0b69f].[759d7ab029a44281a024874e9cda8749]"
+                      }
+                    },
+                    "children": [
+                      {
+                        "id": "text_bc0e1264d9d84dc699e605b2965b69ac",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_bc0e1264d9d84dc699e605b2965b69ac",
+                          "textType": {
+                            "custom": false,
+                            "type": "default"
+                          },
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_189934103049869].dataSource.[action_350291d1ebb6bbb].[assign_param_5fb740dedc0b69f].[820fc7ca30c4456cbb4e05086ec9f39c_35e94ddb5eab4072aebdf6fbf845024a_principal].[81b2a061e2d94ff38757141ef2f99db6]"
+                          }
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "tableColumn_3dfc3aaf947947709ec157b994285d70",
+                    "widget": "tableColumn",
+                    "props": {
+                      "style": {},
+                      "ref": "tableColumn_3dfc3aaf947947709ec157b994285d70",
+                      "title": "职位",
+                      "dataIndex": {
+                        "kind": "Field",
+                        "value": "&(self)[tableContainer_189934103049869].dataSource.[action_350291d1ebb6bbb].[assign_param_5fb740dedc0b69f].[a113f760a6dd4e46a1d403f2c17c412f]"
+                      }
+                    },
+                    "children": [
+                      {
+                        "id": "tag_118677f4388741dfa7b6e411db5a6109",
+                        "widget": "tag",
+                        "props": {
+                          "ref": "tag_118677f4388741dfa7b6e411db5a6109",
+                          "style": {
+                            "opacity": "100%"
+                          },
+                          "color": "#1F93FFB8",
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_189934103049869].dataSource.[action_350291d1ebb6bbb].[assign_param_5fb740dedc0b69f].[a113f760a6dd4e46a1d403f2c17c412f]"
+                          }
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "tableColumn_79285aa87d991ec",
+                    "widget": "tableColumn",
+                    "props": {
+                      "ref": "tableColumn_79285aa87d991ec",
+                      "dataIndex": "operation",
+                      "fixed": "right",
+                      "title": "操作列",
+                      "width": 180
+                    },
+                    "children": [
+                      {
+                        "id": "space_7c87f506af1d00d",
+                        "widget": "space",
+                        "props": {
+                          "ref": "space_7c87f506af1d00d",
+                          "size": 0
+                        },
+                        "children": [
+                          {
+                            "id": "popConfirm_f99d66cad1700d6",
+                            "widget": "popConfirm",
+                            "props": {
+                              "style": {},
+                              "ref": "popConfirm_0982a5defb47690",
+                              "icon": "antdv://ExclamationCircleOutlined",
                               "events": {
                                 "confirm": {
-                                  "type": "request",
-                                  "member": "$(Event)button_97fbaba10870300.onClick",
-                                  "request": {
-                                    "name": "$(Api)CompanyContact.Delete",
-                                    "params": {
-                                      "Id": "$(Members)[watch]"
+                                  "id": "event_7f2e070f75d53ac",
+                                  "widget": "event",
+                                  "children": [
+                                    {
+                                      "widget": "action_api",
+                                      "id": "action_c4559dffe55d738",
+                                      "props": {
+                                        "target": "&(ref)c5a1764e5fe54dc89728234d583bbc41.[5b15920a09044ee2bf689be94c60560f]",
+                                        "params": [
+                                          {
+                                            "id": "assign_param_85cdb2e9a1936ad",
+                                            "widget": "assign_param",
+                                            "props": {
+                                              "name": {
+                                                "kind": "Parameter",
+                                                "value": "&(self)[tableContainer_189934103049869].columns.[popConfirm_f99d66cad1700d6].events.confirm.[action_c4559dffe55d738].target.params.[faa83d64d5b440b3abedbf4bd9b63e04]"
+                                              },
+                                              "value": {
+                                                "kind": "Members",
+                                                "value": "&(self)[tableContainer_189934103049869].currentRow.[00f1ac8a52504db7a2dd1ea66c220c25]"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "widget": "action_component",
+                                      "id": "action_e81183c58e36cb7",
+                                      "props": {
+                                        "target": "&(self)[tableContainer_189934103049869].loadData"
+                                      }
                                     }
-                                  },
-                                  "callback": "$(Event)include_5f5f72e1a1f7dc0.page.formContainer_8dc9f4e1e62bd4e2030.loadData"
+                                  ],
+                                  "props": {}
                                 }
                               },
-                              "children": [
-                                {
-                                  "id": "button_97fbaba10870300",
-                                  "widget": "button",
-                                  "props": {
-                                    "ref": "button_97fbaba10870300",
-                                    "htmlType": "button",
-                                    "label": "删除",
-                                    "type": "link",
-                                    "size": "small",
-                                    "danger": true,
-                                    "icon": "antdv://WarningFilled"
-                                  }
-                                }
-                              ]
-                            }
-                          ]
-                        }
+                              "title": "删除联系人",
+                              "open": false
+                            },
+                            "children": [
+                              {
+                                "id": "button_a78271f037509c9",
+                                "widget": "button",
+                                "props": {
+                                  "style": {},
+                                  "ref": "button_5d49f8f8723d148",
+                                  "label": "删除",
+                                  "type": "link",
+                                  "size": "small",
+                                  "danger": true
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
                       }
                     ]
                   }
+                ],
+                "search": {
+                  "col": {
+                    "width": {
+                      "kind": "span",
+                      "value": 8
+                    },
+                    "offset": 0
+                  },
+                  "showExpand": false,
+                  "displayRow": 1,
+                  "filter": [
+                    {
+                      "id": "formItem_5cd6a5bae7e341e5a9edd77de3d737b7",
+                      "widget": "formItem",
+                      "props": {
+                        "label": "CompanyId",
+                        "style": {},
+                        "ref": "formItem_5cd6a5bae7e341e5a9edd77de3d737b7",
+                        "application": [],
+                        "rules": [],
+                        "name": {
+                          "kind": "Parameter",
+                          "value": "&(self)[tableContainer_189934103049869].dataSource.[action_f144b183b0cf1c6].target.params.[8ee3d52b1a214171859c752029058c51].[36dbc6724a1f4995b7d167159ec7cdf6]"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "numberInput_6aeee52cf5e6451aaac946e812796a29",
+                          "widget": "numberInput",
+                          "props": {
+                            "ref": "numberInput_6aeee52cf5e6451aaac946e812796a29",
+                            "style": {
+                              "width": "100%"
+                            },
+                            "placeholder": "请输入",
+                            "value": {
+                              "kind": "Parameter",
+                              "value": "&(self)[tableContainer_189934103049869].dataSource.[action_f144b183b0cf1c6].target.params.[8ee3d52b1a214171859c752029058c51].[36dbc6724a1f4995b7d167159ec7cdf6]"
+                            }
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ],
+                  "hideForm": true,
+                  "hideSearchActions": true
+                },
+                "dataSource": {
+                  "id": "function_bde9454134a7d77",
+                  "widget": "function",
+                  "children": [
+                    {
+                      "id": "action_f144b183b0cf1c6",
+                      "widget": "action_api",
+                      "props": {
+                        "target": "&(ref)c5a1764e5fe54dc89728234d583bbc41.[19ecff56494a4f8183c53d6d0b278d03]",
+                        "params": [
+                          {
+                            "id": "assign_param_6fd164dd8ada19f",
+                            "widget": "assign_param",
+                            "props": {
+                              "name": {
+                                "kind": "Parameter",
+                                "value": "&(self)[tableContainer_189934103049869].dataSource.[action_f144b183b0cf1c6].target.params.[8ee3d52b1a214171859c752029058c51]"
+                              }
+                            },
+                            "children": [
+                              {
+                                "id": "assign_param_4b393968788a217",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[tableContainer_189934103049869].dataSource.[action_f144b183b0cf1c6].target.params.[8ee3d52b1a214171859c752029058c51].[36dbc6724a1f4995b7d167159ec7cdf6]"
+                                  },
+                                  "value": {
+                                    "kind": "Props",
+                                    "value": "$(self)[page_b8ba2705806b49c680da45d86245a01a].params.[0bf022ebe494431b972d74e98dda1506]"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "action_350291d1ebb6bbb",
+                      "widget": "action_adapter",
+                      "children": [
+                        {
+                          "id": "assign_param_5fb740dedc0b69f",
+                          "widget": "assign_param",
+                          "props": {
+                            "name": {
+                              "kind": "Members",
+                              "value": "&(self)[tableContainer_189934103049869].data"
+                            },
+                            "value": {
+                              "kind": "Field",
+                              "value": "&(self)[tableContainer_189934103049869].dataSource.[action_f144b183b0cf1c6].target.result"
+                            }
+                          }
+                        },
+                        {
+                          "id": "assign_param_57b4296f77a6a37",
+                          "widget": "assign_param",
+                          "props": {
+                            "name": {
+                              "kind": "Members",
+                              "value": "&(self)[tableContainer_189934103049869].total"
+                            },
+                            "value": {
+                              "kind": "Field",
+                              "value": ""
+                            }
+                          }
+                        }
+                      ],
+                      "props": {}
+                    }
+                  ],
+                  "props": {}
+                },
+                "rowKey": {
+                  "kind": "Field",
+                  "value": "&(self)[tableContainer_189934103049869].dataSource.[action_350291d1ebb6bbb].[assign_param_5fb740dedc0b69f].[00f1ac8a52504db7a2dd1ea66c220c25]"
+                },
+                "hasPagination": false,
+                "hideActions": true,
+                "title": "",
+                "model": {
+                  "data": "&(ref)9112573518644a56ab96c31d94e612e6.[e9496a0de6e744f0bda5526e977cbdd4]"
                 }
-              ]
+              },
+              "children": []
             }
           ]
         }
       ]
     },
     {
-      "id": "button_a1c5c996a57c400",
+      "id": "button_fb34e9ecaea59ca",
       "widget": "button",
       "props": {
-        "ref": "button_de284434610aa00",
-        "htmlType": "button",
-        "type": "link",
+        "style": {},
+        "ref": "button_e4c8d82591da861",
+        "label": "添加联系人",
         "icon": "antdv://PlusCircleFilled",
-        "label": "新增联系人"
-      },
-      "styles": {},
-      "children": [],
-      "events": {
-        "onClick": {
-          "type": "openModalWindow",
-          "component": "modal_805d813177e798"
+        "type": "link",
+        "events": {
+          "onClick": {
+            "id": "event_d5d950712236cae",
+            "widget": "event",
+            "children": [
+              {
+                "widget": "action_component",
+                "id": "action_2dd3bd099f168b0",
+                "props": {
+                  "target": "&(self)[modal_ae1a2e9152995de].onOpen"
+                }
+              }
+            ],
+            "props": {}
+          }
         }
-      }
+      },
+      "children": []
     },
     {
-      "id": "modal_805d813177e798",
+      "id": "modal_ae1a2e9152995de",
       "widget": "modal",
       "props": {
-        "ref": "modal_805d813177e798",
+        "style": {},
+        "ref": "modal_4f4957336a8b87c",
+        "destroyOnClose": true,
         "footer": [
           {
-            "id": "button_7aef60f453b9500",
+            "id": "button_93fbae31c29c7f1",
             "widget": "button",
             "props": {
-              "ref": "button_7aef60f453b9500",
+              "style": {},
+              "ref": "button_0bee7aa81002ec1",
               "label": "确认",
-              "type": "primary"
-            },
-            "events": {
-              "onClick": {
-                "type": "call",
-                "member": "$(Event)include_5f5f72e1a1f7dc0.page.button_8dc9f4e1e6351172040.onClick"
+              "type": "primary",
+              "events": {
+                "onClick": {
+                  "id": "event_10a460ab718f6e4",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "widget": "action_component",
+                      "id": "action_cacb1996483fb52",
+                      "props": {
+                        "target": "&(self)[include_db5883e247fe798].page.link.exposes.[67a8f6c4d6294227b916da043235ce3e]"
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_2a0136e7e15c474",
+                      "props": {
+                        "target": "&(self)[modal_ae1a2e9152995de].onClose"
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_17623a22dd5d508",
+                      "props": {
+                        "target": "&(self)[tableContainer_189934103049869].loadData"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
               }
-            }
+            },
+            "children": []
           },
           {
-            "id": "button_5a83d41a321d480",
+            "id": "button_4b3e3eb02d56766",
             "widget": "button",
             "props": {
-              "ref": "button_5a83d41a321d480",
-              "label": "取消"
-            },
-            "events": {
-              "onClick": {
-                "type": "call",
-                "member": "$(Event)modal_805d813177e798.close"
+              "style": {},
+              "ref": "button_06b62dc3d22e8f9",
+              "label": "取消",
+              "events": {
+                "onClick": {
+                  "id": "event_bda9ccadc344c2a",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "id": "action_component_2ed2d5ea288b9d0",
+                      "widget": "action_component",
+                      "props": {
+                        "target": "&(self)[modal_ae1a2e9152995de].onClose"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
               }
-            }
+            },
+            "children": []
           }
         ],
-        "title": {
-          "type": "string",
-          "value": ""
-        }
+        "title": "添加联系人"
       },
       "children": [
         {
-          "id": "include_5f5f72e1a1f7dc0",
+          "id": "include_db5883e247fe798",
           "widget": "include",
           "props": {
-            "ref": "include_a80a993d8f43e00",
-            "page": "$(Document)CompanyContactAdd",
-            "params": [
-              {
-                "id": "ddc8438d5266f0",
-                "name": "$(VParameter)CompanyContactAdd.8b9bc123f864280.companyid",
-                "value": "$(Members)descriptions_8dc9ab35b7ec22e1122.detailModel.Id"
+            "style": {},
+            "ref": "include_c46269fde64d5af",
+            "page": {
+              "id": "action_4d187a573b0339d",
+              "widget": "action_frame",
+              "props": {
+                "link": {
+                  "kind": "Document",
+                  "value": "$(ref)e4057534ca87466f9d03c2a25c5d44b6"
+                },
+                "params": [
+                  {
+                    "id": "assign_param_8817d833908b704",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "VParameter",
+                        "value": "&(ref)e4057534ca87466f9d03c2a25c5d44b6.[page_46c0a107c1f84fd48ce738886cfc625b].params.[b28cccb4ca9d08b]"
+                      },
+                      "value": {
+                        "kind": "Props",
+                        "value": "$(self)[page_b8ba2705806b49c680da45d86245a01a].params.[0bf022ebe494431b972d74e98dda1506]"
+                      }
+                    }
+                  }
+                ]
               }
-            ]
+            }
           },
-          "styles": {},
           "children": []
         }
       ]
     }
   ],
-  "rules": [
-    {
-      "id": "a12fc5819ca0080",
-      "type": "control",
-      "name": "显示控制-公司规模",
-      "props": {
-        "valueType": "$(Document)CompanySize",
-        "values": {
-          "Tiny": {
-            "color": "#00CED1FF",
-            "displayInfo": "微型企业"
-          },
-          "Small": {
-            "color": "#FFD700FF",
-            "displayInfo": "小型企业"
-          },
-          "Big": {
-            "color": "#1E90FFFF",
-            "displayInfo": "中型企业"
-          },
-          "Large": {
-            "color": "#FF4500FF",
-            "displayInfo": "大型企业"
-          }
-        }
-      },
-      "rule": "colorConfig",
-      "targets": [
-        "tag_8dc9ab35b7ecc351127"
-      ]
-    },
-    {
-      "id": "59245d45fb74940",
-      "type": "control",
-      "name": "显示控制 - 联系人职务",
-      "props": {
-        "valueType": "$(Document)PositionType",
-        "values": {
-          "HR": {
-            "color": "#FFD700FF",
-            "displayInfo": "人事经理"
-          },
-          "MR": {
-            "color": "#1E90FFFF",
-            "displayInfo": "经理"
-          },
-          "Header": {
-            "color": "#C71585FF",
-            "displayInfo": "总经理"
-          }
-        }
-      },
-      "rule": "colorConfig",
-      "targets": [
-        "tag_8dc9ab35b7ed4011136"
-      ]
-    }
-  ],
   "references": {
-    "Company": "..\\..\\Entities\\Company.sde",
-    "CompanyContact": "..\\..\\Entities\\CompanyContact.sde",
-    "CompanySize": "..\\..\\Enums\\CompanySize.sdn",
-    "CompanyContactAdd": "CompanyContactAdd.sdv",
-    "PositionType": "..\\..\\Enums\\PositionType.sdn"
-  },
-  "events": {
-    "onLoad": [
-      {
-        "name": "$(Api)Company.Get",
-        "params": {
-          "Id": "$(Props)8dc9ab35b7eb92d1121"
-        }
-      }
-    ]
+    "9ec055555c9548a2804c1d7daf123e9f": "..\\..\\APIS\\Company.sdlg",
+    "c5a1764e5fe54dc89728234d583bbc41": "..\\..\\APIS\\CompanyContact.sdlg",
+    "e4057534ca87466f9d03c2a25c5d44b6": "..\\CompanyContact\\ContactAdd.sdv",
+    "98abb46189a749a5acfa8ec9a619efae": "..\\..\\Properties\\DataStructures\\CompanySize.json",
+    "9112573518644a56ab96c31d94e612e6": "..\\..\\DataSource\\Database.sde"
   }
 }

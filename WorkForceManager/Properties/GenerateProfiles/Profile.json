@@ -1,0 +1,16 @@
+﻿{
+  "isActive": true,
+  "isSystemTemlate": true,
+  "templateProject": "Templates.ltproj",
+  "targetDirectory": "..\\SourceCode",
+  "writingPolicy": "",
+  "dbSettings": {
+    "9112573518644a56ab96c31d94e612e6": {
+      "dbType": "Sqlite",
+      "connectionString": "Data Source=\"Database.db\""
+    }
+  },
+  "templateSettings": {
+    "31d1981e8e344f2e8b59e12ec5717b95": true
+  }
+}

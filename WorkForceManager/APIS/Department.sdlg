@@ -1,0 +1,435 @@
+﻿{
+  "id": "e57e9736306f4efe87e2e62c748d84fb_api",
+  "widget": "api",
+  "version": "1.0.0",
+  "props": {
+    "name": "Department",
+    "description": "Department",
+    "route": "api/[controller]"
+  },
+  "children": [
+    {
+      "id": "f8688a5504a7447caa75d39c2eec5c3c",
+      "widget": "filter",
+      "props": {
+        "displayName": "CompanyIDFilter",
+        "name": "CompanyIDFilter",
+        "sources": [
+          {
+            "id": "310b037454654f22b5fbd5cb1c2d6e45",
+            "type": "table",
+            "name": "Department",
+            "target": "$(ref)1ca465b78ef5473db1131236c731b5d1.[732e9468e48d4dad884eaf11408ef5f3]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "54a59d0f6a4d4866a5cc2d96ef9bf016",
+          "widget": "field",
+          "props": {
+            "displayName": "CompanyID",
+            "name": "CompanyID",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "c2b7a6d3dee84184b789e24cc69c0a73",
+          "widget": "condition",
+          "props": {
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[54a59d0f6a4d4866a5cc2d96ef9bf016]",
+            "field": "&(self)[f8688a5504a7447caa75d39c2eec5c3c].sources.[310b037454654f22b5fbd5cb1c2d6e45].[cd690bbd547745f79d547f9742529452]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "732e9468e48d4dad884eaf11408ef5f3_add_func",
+      "widget": "function",
+      "props": {
+        "name": "AddDepartment",
+        "openApi": true,
+        "requestMethod": "POST",
+        "route": "AddDepartment"
+      },
+      "children": [
+        {
+          "id": "c2dfca0e9cb44201ace4f4348df7981c",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[289234c83e36427289f56b08814d41cb]"
+          },
+          "children": [
+            {
+              "id": "732e9468e48d4dad884eaf11408ef5f3_add_params",
+              "widget": "field",
+              "props": {
+                "name": "department",
+                "dataType": "$(ref)1ca465b78ef5473db1131236c731b5d1.[732e9468e48d4dad884eaf11408ef5f3]",
+                "parameterFrom": "Body"
+              }
+            }
+          ]
+        },
+        {
+          "id": "289234c83e36427289f56b08814d41cb",
+          "widget": "insert",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "新增",
+            "next": "$(self)[732e9468e48d4dad884eaf11408ef5f3_add_end]",
+            "source": "$(ref)1ca465b78ef5473db1131236c731b5d1.[732e9468e48d4dad884eaf11408ef5f3]",
+            "sourceValue": "$(self)[c2dfca0e9cb44201ace4f4348df7981c].[732e9468e48d4dad884eaf11408ef5f3_add_params]"
+          }
+        },
+        {
+          "id": "732e9468e48d4dad884eaf11408ef5f3_add_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[289234c83e36427289f56b08814d41cb].result.[289234c83e36427289f56b08814d41cb_success]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "268a6754796347eaba39997c61ec1f39",
+      "widget": "function",
+      "props": {
+        "name": "GetDepartmentListByCompanyID",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetDepartmentListByCompanyID",
+        "authStrategy": "",
+        "x": -33,
+        "y": 123
+      },
+      "children": [
+        {
+          "id": "2e8e59053194462bb316fc3264d4ab40",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[301ef89494cf4d849fec3efa242e9d20]"
+          },
+          "children": [
+            {
+              "id": "24ef12d0de9f4ba784bcea15d2fb2544",
+              "widget": "field",
+              "props": {
+                "displayName": "companyIDFilter",
+                "name": "companyIDFilter",
+                "dataType": "$(self)[f8688a5504a7447caa75d39c2eec5c3c]",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "301ef89494cf4d849fec3efa242e9d20",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 249,
+            "name": "查询",
+            "filter": "$(self)[f8688a5504a7447caa75d39c2eec5c3c]",
+            "strategy": "list",
+            "next": "$(self)[3c526780e63a4c79b9bdf50ecc4bb74e]"
+          },
+          "children": [
+            {
+              "id": "cb2a9e3f88d145d1871c98e2c5baefe3",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "4c87a66ec61f4a5eac29114bebb9b2b3",
+                    "type": "table",
+                    "name": "Department",
+                    "target": "$(ref)1ca465b78ef5473db1131236c731b5d1.[732e9468e48d4dad884eaf11408ef5f3]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "1624143a294d4460b71121d78ffe0508",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[301ef89494cf4d849fec3efa242e9d20].filter.[54a59d0f6a4d4866a5cc2d96ef9bf016]",
+                "value": "&(self)[2e8e59053194462bb316fc3264d4ab40].[24ef12d0de9f4ba784bcea15d2fb2544].[54a59d0f6a4d4866a5cc2d96ef9bf016]",
+                "type": "Field"
+              }
+            }
+          ]
+        },
+        {
+          "id": "3c526780e63a4c79b9bdf50ecc4bb74e",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 363,
+            "name": "结束",
+            "result": "&(self)[301ef89494cf4d849fec3efa242e9d20].result.[732e9468e48d4dad884eaf11408ef5f3]",
+            "type": "Field",
+            "isCollection": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "dfce2910ee38418b8c5da8172d4513d3",
+      "widget": "function",
+      "props": {
+        "name": "GetDepartmentList",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetDepartmentList",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "fdf69bee30e3458fbf6c8b722c6a3d4b",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[d331a75ae416483591ab6cead03bbcdf]"
+          },
+          "children": []
+        },
+        {
+          "id": "d331a75ae416483591ab6cead03bbcdf",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "查询",
+            "next": "$(self)[8b56782bb6bc48d798bb95e8105c531e]",
+            "filter": "none",
+            "strategy": "list"
+          },
+          "children": [
+            {
+              "id": "57ae9361dafa4a6d8c618e0c6da0dd09",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "0677d01210214934bd0bbc3efec20486",
+                    "type": "table",
+                    "name": "Department",
+                    "target": "$(ref)1ca465b78ef5473db1131236c731b5d1.[732e9468e48d4dad884eaf11408ef5f3]"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "8b56782bb6bc48d798bb95e8105c531e",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "result": "&(self)[d331a75ae416483591ab6cead03bbcdf].result.[732e9468e48d4dad884eaf11408ef5f3]",
+            "type": "Field",
+            "isCollection": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "f6b02bb9bde240e38572e66ea4c3e57a",
+      "widget": "function",
+      "props": {
+        "name": "GetDepartmentById",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetDepartmentById",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "84a5b0ffeff74eb4b4f99c1d0fdcfeff",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[8697c9e7be3b40a6ad298179ce22c65a]"
+          },
+          "children": [
+            {
+              "id": "74c10dd7e3344835a100089a39bca550",
+              "widget": "field",
+              "props": {
+                "displayName": "id",
+                "name": "id",
+                "dataType": "Int32",
+                "defaultValueType": "Value",
+                "parameterFrom": "Route"
+              }
+            }
+          ]
+        },
+        {
+          "id": "8697c9e7be3b40a6ad298179ce22c65a",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "查询",
+            "next": "$(self)[ab340499683444ed8a481939e16f5733]",
+            "filter": "$(ref)1ca465b78ef5473db1131236c731b5d1.[732e9468e48d4dad884eaf11408ef5f3].PrimaryKeys",
+            "strategy": "first"
+          },
+          "children": [
+            {
+              "id": "214a67896e1f479d8e494bcf12c203ee",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "3aabfdf7c3d24d8db7fda99cd2a81c13",
+                    "type": "table",
+                    "name": "Department",
+                    "target": "$(ref)1ca465b78ef5473db1131236c731b5d1.[732e9468e48d4dad884eaf11408ef5f3]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "4e05b1d68d41474dbdab9c16b5b0c7eb",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[8697c9e7be3b40a6ad298179ce22c65a].filter.[b6d52a1db4b641c982262b54cd0077d7]",
+                "value": "&(self)[84a5b0ffeff74eb4b4f99c1d0fdcfeff].[74c10dd7e3344835a100089a39bca550]",
+                "type": "Field"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ab340499683444ed8a481939e16f5733",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "result": "&(self)[8697c9e7be3b40a6ad298179ce22c65a].result.[732e9468e48d4dad884eaf11408ef5f3]",
+            "type": "Field"
+          }
+        }
+      ]
+    },
+    {
+      "id": "f7aae6248cc949009b3a9d73989f8cc9",
+      "widget": "function",
+      "props": {
+        "name": "UpdateDepartment",
+        "openApi": true,
+        "requestMethod": "PUT",
+        "route": "UpdateDepartment",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "1ac85a1b832d43ec86cdb6a60742dbae",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[95b6b76602d54b0bab242614acea0f2d]"
+          },
+          "children": [
+            {
+              "id": "30d54bbdd12e448283ab4a2bac11e171",
+              "widget": "field",
+              "props": {
+                "displayName": "department",
+                "name": "department",
+                "dataType": "$(ref)1ca465b78ef5473db1131236c731b5d1.[732e9468e48d4dad884eaf11408ef5f3]",
+                "defaultValueType": "Value",
+                "parameterFrom": "Body"
+              }
+            }
+          ]
+        },
+        {
+          "id": "95b6b76602d54b0bab242614acea0f2d",
+          "widget": "update",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "更新",
+            "next": "$(self)[ba7c7246ff3e4afb9b52861046926c63]",
+            "source": "$(ref)1ca465b78ef5473db1131236c731b5d1.[732e9468e48d4dad884eaf11408ef5f3]",
+            "sourceValue": "&(self)[1ac85a1b832d43ec86cdb6a60742dbae].[30d54bbdd12e448283ab4a2bac11e171]",
+            "filter": "$(ref)1ca465b78ef5473db1131236c731b5d1.[732e9468e48d4dad884eaf11408ef5f3].PrimaryKeys"
+          },
+          "children": [
+            {
+              "id": "ce7d0d57011545be820b236692a27939",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[95b6b76602d54b0bab242614acea0f2d].source.[bef77034b04a46959c03a9b1e5b9805d]",
+                "value": "&(self)[1ac85a1b832d43ec86cdb6a60742dbae].[30d54bbdd12e448283ab4a2bac11e171].[bef77034b04a46959c03a9b1e5b9805d]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "7bab8e072b324593933e41e8bed32582",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[95b6b76602d54b0bab242614acea0f2d].source.[cd690bbd547745f79d547f9742529452]",
+                "value": "&(self)[1ac85a1b832d43ec86cdb6a60742dbae].[30d54bbdd12e448283ab4a2bac11e171].[cd690bbd547745f79d547f9742529452]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "0c1c4b7b822342019416c1e4bb8b5725",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[95b6b76602d54b0bab242614acea0f2d].filter.[b6d52a1db4b641c982262b54cd0077d7]",
+                "value": "&(self)[1ac85a1b832d43ec86cdb6a60742dbae].[30d54bbdd12e448283ab4a2bac11e171].[b6d52a1db4b641c982262b54cd0077d7]",
+                "type": "Field"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ba7c7246ff3e4afb9b52861046926c63",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "result": "&(self)[95b6b76602d54b0bab242614acea0f2d].result.[95b6b76602d54b0bab242614acea0f2d_success]",
+            "type": "Field",
+            "isCollection": false
+          }
+        }
+      ]
+    }
+  ],
+  "references": {
+    "1ca465b78ef5473db1131236c731b5d1": "..\\DataSource\\Database.sde"
+  }
+}

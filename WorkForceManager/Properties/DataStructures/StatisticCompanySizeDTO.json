@@ -1,0 +1,36 @@
+﻿{
+  "id": "0f213904c9d54331b8ea3b514d702c9e",
+  "widget": "model",
+  "props": {
+    "name": "StatisticCompanySizeDTO",
+    "displayName": "公司规模统计模型"
+  },
+  "children": [
+    {
+      "id": "c53ed62c374a4aa6b94a2e315480d267",
+      "widget": "field",
+      "props": {
+        "displayName": "CompanySize",
+        "name": "CompanySize",
+        "dataType": "$(ref)c25a24a963164b81a47655012db6de5c",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "5cd09d1c35014d0ab10f6894a0a81b35",
+      "widget": "field",
+      "props": {
+        "displayName": "Count",
+        "name": "Count",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "references": {
+    "c25a24a963164b81a47655012db6de5c": "CompanySize.json"
+  },
+  "version": "1.0.0"
+}

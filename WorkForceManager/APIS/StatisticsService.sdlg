@@ -1,0 +1,1471 @@
+﻿{
+  "id": "b85b69f7c2c84ae9a8e7a59c6cfe7213",
+  "widget": "api",
+  "version": "1.0.0",
+  "props": {
+    "name": "StatisticsService",
+    "description": "StaticService",
+    "route": "api/[controller]"
+  },
+  "children": [
+    {
+      "id": "649a24f2cc464ab58035d750f905ddc1",
+      "widget": "filter",
+      "props": {
+        "displayName": "CityFilter",
+        "name": "CityFilter",
+        "sources": [
+          {
+            "id": "e5c76548f6614b1facbff584f0316b40",
+            "type": "table",
+            "name": "Company",
+            "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[07b0fe61729f4d47b4e2e4902fc42222]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "392611c18c1841a78f6f9408f6bccda2",
+          "widget": "field",
+          "props": {
+            "displayName": "City",
+            "name": "City",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "0a8eea1a974b46b9861a344f00d53517",
+          "widget": "condition",
+          "props": {
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[392611c18c1841a78f6f9408f6bccda2]",
+            "field": "&(self)[649a24f2cc464ab58035d750f905ddc1].sources.[e5c76548f6614b1facbff584f0316b40].[6857107bce88495699087db7ee3dd674]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b706629593184921a78961c845563d62",
+      "widget": "filter",
+      "props": {
+        "displayName": "CompanyIdFilter",
+        "name": "CompanyIdFilter",
+        "sources": [
+          {
+            "id": "917796d6ff33456286d3dd12541c1611",
+            "type": "table",
+            "name": "Company",
+            "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[07b0fe61729f4d47b4e2e4902fc42222]"
+          },
+          {
+            "id": "648e7083ccfa4fd9838c523ddab522e9",
+            "type": "table",
+            "name": "Employee",
+            "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[820fc7ca30c4456cbb4e05086ec9f39c]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "18533cd3c2154d8eb211fbe9e20f4749",
+          "widget": "field",
+          "props": {
+            "displayName": "CompanyId",
+            "name": "CompanyId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "739afefa2e7846b3b164a2340ead6d72",
+          "widget": "condition",
+          "props": {
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[18533cd3c2154d8eb211fbe9e20f4749]",
+            "field": "&(self)[b706629593184921a78961c845563d62].sources.[917796d6ff33456286d3dd12541c1611].[71419c05e9b4445f965aa84aa4554dbe]"
+          }
+        },
+        {
+          "id": "b5d2f152e8d54b96beda5e9579ca95cb",
+          "widget": "condition",
+          "props": {
+            "relation": "And",
+            "type": "Expression",
+            "operator": "None",
+            "expression": "$(exp)&(self)[b706629593184921a78961c845563d62].sources.[648e7083ccfa4fd9838c523ddab522e9].[a315eeba89cd41e18eb16ada89245a6d] != &(ref)8e4ec7b5df634cc3afe04a469679ef32.[692079d338f248f48daa3e909cca8d9e]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fdce4b637d6e4446a8b302343b6087f0",
+      "widget": "filter",
+      "props": {
+        "displayName": "CompanyAndDepartmentFilter",
+        "name": "CompanyAndDepartmentFilter",
+        "sources": [
+          {
+            "id": "58cacb2c32ac40c1baa6910f1da99615",
+            "type": "table",
+            "name": "Employee",
+            "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[820fc7ca30c4456cbb4e05086ec9f39c]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "25943dfc07a248489b572b1b0a422f5e",
+          "widget": "field",
+          "props": {
+            "displayName": "CompanyID",
+            "name": "CompanyID",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "cb7ac7757f9941a28ee01c906547b75a",
+          "widget": "field",
+          "props": {
+            "displayName": "DepartmentID",
+            "name": "DepartmentID",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "260cab329b2f40c4af7e53e8175f0edf",
+          "widget": "condition",
+          "props": {
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[25943dfc07a248489b572b1b0a422f5e]",
+            "field": "&(self)[fdce4b637d6e4446a8b302343b6087f0].sources.[58cacb2c32ac40c1baa6910f1da99615].[001f435a6800421581cc2bab45e9e0bd]"
+          }
+        },
+        {
+          "id": "a04e8b8f110e47728207112962a9d376",
+          "widget": "condition",
+          "props": {
+            "relation": "And",
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[cb7ac7757f9941a28ee01c906547b75a]",
+            "field": "&(self)[fdce4b637d6e4446a8b302343b6087f0].sources.[58cacb2c32ac40c1baa6910f1da99615].[fcc5b824101347009d31c2a377d3512e]"
+          }
+        },
+        {
+          "id": "6d4542401429408c94f5a03bb976f1b6",
+          "widget": "condition",
+          "props": {
+            "relation": "And",
+            "type": "Expression",
+            "operator": "None",
+            "expression": "$(exp)&(self)[fdce4b637d6e4446a8b302343b6087f0].sources.[58cacb2c32ac40c1baa6910f1da99615].[a315eeba89cd41e18eb16ada89245a6d] != &(ref)8e4ec7b5df634cc3afe04a469679ef32.[692079d338f248f48daa3e909cca8d9e]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "edc5217eeee544b8981143990bbfd779",
+      "widget": "filter",
+      "props": {
+        "displayName": "CityFilterNoContainRn",
+        "name": "CityFilterNoContainRn",
+        "sources": [
+          {
+            "id": "1c495acefbf940b9a8180f30a548b037",
+            "type": "table",
+            "name": "Company",
+            "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[07b0fe61729f4d47b4e2e4902fc42222]"
+          },
+          {
+            "id": "35b7834177654aa5969eb0d92d6cc800",
+            "type": "table",
+            "name": "Employee",
+            "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[820fc7ca30c4456cbb4e05086ec9f39c]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "123afa760af64266bd2c116c76a01313",
+          "widget": "field",
+          "props": {
+            "displayName": "City",
+            "name": "City",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "dfb52b7c384c487291f93099e722f843",
+          "widget": "condition",
+          "props": {
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[123afa760af64266bd2c116c76a01313]",
+            "field": "&(self)[edc5217eeee544b8981143990bbfd779].sources.[1c495acefbf940b9a8180f30a548b037].[6857107bce88495699087db7ee3dd674]"
+          }
+        },
+        {
+          "id": "11db4fb4d75a468ba6b52feecb6c0ddc",
+          "widget": "condition",
+          "props": {
+            "relation": "And",
+            "type": "Expression",
+            "operator": "None",
+            "expression": "$(exp)&(self)[edc5217eeee544b8981143990bbfd779].sources.[35b7834177654aa5969eb0d92d6cc800].[a315eeba89cd41e18eb16ada89245a6d] != &(ref)8e4ec7b5df634cc3afe04a469679ef32.[692079d338f248f48daa3e909cca8d9e]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "f2a548cb7c914147906997fda01a503f",
+      "widget": "filter",
+      "props": {
+        "displayName": "CityRnContainFilter",
+        "name": "CityRnContainFilter",
+        "sources": [
+          {
+            "id": "b0dd4be6c84a46cd91532ff5d4507212",
+            "type": "table",
+            "name": "Company",
+            "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[07b0fe61729f4d47b4e2e4902fc42222]"
+          },
+          {
+            "id": "011051ef7d3e4cf5bd910b18e99f0d35",
+            "type": "table",
+            "name": "Employee",
+            "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[820fc7ca30c4456cbb4e05086ec9f39c]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "6c6ec1c4548a433abb3887ef56bb52b1",
+          "widget": "field",
+          "props": {
+            "displayName": "City",
+            "name": "City",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "3cd0d84f1ff9443f8489df4e6dc94e08",
+          "widget": "field",
+          "props": {
+            "displayName": "Include",
+            "name": "Include",
+            "dataType": "Boolean",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "44d47b92c2864db5a7fc42362fea9f7d",
+          "widget": "condition",
+          "props": {
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[6c6ec1c4548a433abb3887ef56bb52b1]",
+            "field": "&(self)[f2a548cb7c914147906997fda01a503f].sources.[b0dd4be6c84a46cd91532ff5d4507212].[6857107bce88495699087db7ee3dd674]"
+          }
+        },
+        {
+          "id": "0e47adbc02154eb5ac1bc62aff004bb3",
+          "widget": "condition",
+          "props": {
+            "relation": "And",
+            "type": "Expression",
+            "operator": "None",
+            "expression": "$(exp)If(&(self)[f2a548cb7c914147906997fda01a503f].[3cd0d84f1ff9443f8489df4e6dc94e08], true, &(self)[f2a548cb7c914147906997fda01a503f].sources.[011051ef7d3e4cf5bd910b18e99f0d35].[a315eeba89cd41e18eb16ada89245a6d] != &(ref)8e4ec7b5df634cc3afe04a469679ef32.[692079d338f248f48daa3e909cca8d9e])"
+          }
+        }
+      ]
+    },
+    {
+      "id": "65f07217cd0c4c3f8d8dc1e9a44087d5",
+      "widget": "filter",
+      "props": {
+        "displayName": "RnFilter",
+        "name": "RnFilter",
+        "sources": [
+          {
+            "id": "3947132600ce4e22aa9ec97d2f9b7bd6",
+            "type": "table",
+            "name": "Employee",
+            "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[820fc7ca30c4456cbb4e05086ec9f39c]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "4634ec5f868f4890a6ca8c09a92f88e5",
+          "widget": "field",
+          "props": {
+            "displayName": "公司ID",
+            "name": "CompanyID",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "a7c5c0cea6194a2386781c7c8e1404e2",
+          "widget": "field",
+          "props": {
+            "displayName": "年份",
+            "name": "Year",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "c17e74e5bb3a4ee1b0efac333f52afb2",
+          "widget": "condition",
+          "props": {
+            "type": "Expression",
+            "operator": "None",
+            "expression": "$(exp)&(ref)8e4ec7b5df634cc3afe04a469679ef32.[692079d338f248f48daa3e909cca8d9e] == &(self)[65f07217cd0c4c3f8d8dc1e9a44087d5].sources.[3947132600ce4e22aa9ec97d2f9b7bd6].[a315eeba89cd41e18eb16ada89245a6d]"
+          }
+        },
+        {
+          "id": "ec1ac38f52e440ffbf2ecfa5ad0f7536",
+          "widget": "condition",
+          "props": {
+            "relation": "And",
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[4634ec5f868f4890a6ca8c09a92f88e5]",
+            "field": "&(self)[65f07217cd0c4c3f8d8dc1e9a44087d5].sources.[3947132600ce4e22aa9ec97d2f9b7bd6].[001f435a6800421581cc2bab45e9e0bd]"
+          }
+        },
+        {
+          "id": "e024afe7bbff4b5495abbef5e63e12f6",
+          "widget": "condition",
+          "props": {
+            "relation": "And",
+            "type": "Expression",
+            "operator": "None",
+            "expression": "$(exp)Year(&(self)[65f07217cd0c4c3f8d8dc1e9a44087d5].sources.[3947132600ce4e22aa9ec97d2f9b7bd6].[e60694eb63054da7b868d9c113d924ce]) == &(self)[65f07217cd0c4c3f8d8dc1e9a44087d5].[a7c5c0cea6194a2386781c7c8e1404e2]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ca4a1a12696a47d5880e43b8e5aabc68",
+      "widget": "function",
+      "props": {
+        "name": "StatisticCompanySize",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "StatisticCompanySize",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "d2dd53756036414f95bd453db457c950",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[8747691ce2f1470a8bfdf3d53a1cddc5]"
+          },
+          "children": [
+            {
+              "id": "7aa8d8bc86af49359815e90c95bd3d44",
+              "widget": "field",
+              "props": {
+                "displayName": "CityFilter",
+                "name": "CityFilter",
+                "dataType": "$(self)[649a24f2cc464ab58035d750f905ddc1]",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "8747691ce2f1470a8bfdf3d53a1cddc5",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 249,
+            "name": "查询",
+            "filter": "$(self)[649a24f2cc464ab58035d750f905ddc1]",
+            "strategy": "list",
+            "next": "$(self)[2efd20ee6db446f98375994d46f3d268]"
+          },
+          "children": [
+            {
+              "id": "e31d153e4d7e474ab25c3833f2e60c49",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "56468c7c013e433e9b4eddbaa5b2f78a",
+                    "type": "table",
+                    "name": "Company",
+                    "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[07b0fe61729f4d47b4e2e4902fc42222]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "742cc4e92c2f473da46ee5df86a9605d",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[8747691ce2f1470a8bfdf3d53a1cddc5].filter.[392611c18c1841a78f6f9408f6bccda2]",
+                "value": "&(self)[d2dd53756036414f95bd453db457c950].[7aa8d8bc86af49359815e90c95bd3d44].[392611c18c1841a78f6f9408f6bccda2]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "638e31eda8b54961bbe73b71f615901b",
+              "widget": "groupbys",
+              "props": {
+                "keys": [
+                  {
+                    "id": "9050971d9e4f4c858a0abba51a6056ad",
+                    "type": "Field",
+                    "target": "&(self)[e31d153e4d7e474ab25c3833f2e60c49].sources.[56468c7c013e433e9b4eddbaa5b2f78a].[9f45f4a80da24bf38e4012b7a9e0fbc7]",
+                    "name": "&(self)[e31d153e4d7e474ab25c3833f2e60c49].sources.[56468c7c013e433e9b4eddbaa5b2f78a].[9f45f4a80da24bf38e4012b7a9e0fbc7].name"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "0a790728045a43dfb4ddcd9805f2d6e8",
+              "widget": "query_adapter",
+              "props": {},
+              "children": [
+                {
+                  "id": "bf1faa6d812a44878e5ebbcd1c4c5dbd",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "CompanySize",
+                    "type": "Field",
+                    "value": "&(self)[638e31eda8b54961bbe73b71f615901b].keys.[9050971d9e4f4c858a0abba51a6056ad]"
+                  }
+                },
+                {
+                  "id": "de88345f4c7c4541a2f0e0cb8d296bae",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "Count",
+                    "type": "Expression",
+                    "value": "$(exp)Count(&(self)[638e31eda8b54961bbe73b71f615901b].values.[56468c7c013e433e9b4eddbaa5b2f78a])"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2efd20ee6db446f98375994d46f3d268",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 363,
+            "name": "结束",
+            "type": "Field",
+            "result": "$(ref)cb085c3dab6649caa376eb536cb336ae",
+            "isCollection": true,
+            "source": "&(self)[8747691ce2f1470a8bfdf3d53a1cddc5].result.[0a790728045a43dfb4ddcd9805f2d6e8_result]"
+          },
+          "children": [
+            {
+              "id": "15836315670d40e8b197e1eef217390d",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[2efd20ee6db446f98375994d46f3d268].result.[c53ed62c374a4aa6b94a2e315480d267]",
+                "value": "&(self)[8747691ce2f1470a8bfdf3d53a1cddc5].result.[0a790728045a43dfb4ddcd9805f2d6e8_result].[bf1faa6d812a44878e5ebbcd1c4c5dbd]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "71910e5978ad458b8cc3c90e399c0d6e",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[2efd20ee6db446f98375994d46f3d268].result.[5cd09d1c35014d0ab10f6894a0a81b35]",
+                "value": "&(self)[8747691ce2f1470a8bfdf3d53a1cddc5].result.[0a790728045a43dfb4ddcd9805f2d6e8_result].[de88345f4c7c4541a2f0e0cb8d296bae]",
+                "type": "Field"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04677b288f054127aff4301725520e04",
+      "widget": "function",
+      "props": {
+        "name": "StatisticEmployeeGender",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "StatisticEmployeeGender",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "ee2425cb77854ee9a3140afa413ddfde",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[cc94992370e64287ad55131d09547e02]"
+          },
+          "children": [
+            {
+              "id": "73d67320b6a64196accdc001dd2d001f",
+              "widget": "field",
+              "props": {
+                "displayName": "CityFilter",
+                "name": "CityFilter",
+                "dataType": "$(self)[edc5217eeee544b8981143990bbfd779]",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cc94992370e64287ad55131d09547e02",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 249,
+            "name": "查询",
+            "filter": "$(self)[edc5217eeee544b8981143990bbfd779]",
+            "strategy": "list",
+            "next": "$(self)[28979fef0eae4b3ca423536d9c64ae9a]"
+          },
+          "children": [
+            {
+              "id": "f795ff36260c40b68bd79b6fa265574c",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "1eaf87c978034bfab4e7d8973d92cace",
+                    "type": "table",
+                    "name": "Company",
+                    "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[07b0fe61729f4d47b4e2e4902fc42222]"
+                  },
+                  {
+                    "id": "ee4e2f1e4112465fa5fd4934e1a25d99",
+                    "type": "table",
+                    "name": "Employee",
+                    "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[820fc7ca30c4456cbb4e05086ec9f39c]"
+                  }
+                ]
+              },
+              "children": [
+                {
+                  "id": "ee5c5f96fe8d47ee8615476ac1edf948",
+                  "widget": "join_relationship",
+                  "props": {
+                    "type": "InnerJoin",
+                    "left": "&(self)[f795ff36260c40b68bd79b6fa265574c].sources.[1eaf87c978034bfab4e7d8973d92cace]",
+                    "right": "&(self)[f795ff36260c40b68bd79b6fa265574c].sources.[ee4e2f1e4112465fa5fd4934e1a25d99]"
+                  },
+                  "children": [
+                    {
+                      "id": "f9afa03d9b5d49a1a914a7d52248bd07",
+                      "widget": "join_condition",
+                      "props": {
+                        "left": "&(self)[ee5c5f96fe8d47ee8615476ac1edf948].left.[71419c05e9b4445f965aa84aa4554dbe]",
+                        "right": "&(self)[ee5c5f96fe8d47ee8615476ac1edf948].right.[001f435a6800421581cc2bab45e9e0bd]",
+                        "type": "=",
+                        "leftType": "Field",
+                        "rightType": "Field"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "c3837e2844c54f8481bbd2a4b1bc8975",
+              "widget": "groupbys",
+              "props": {
+                "keys": [
+                  {
+                    "id": "d8e550c635404aac80859d6743d6d94f",
+                    "type": "Field",
+                    "target": "&(self)[f795ff36260c40b68bd79b6fa265574c].sources.[ee4e2f1e4112465fa5fd4934e1a25d99].[e0c5c5b6f28945d583ffa411ab743895]",
+                    "name": "&(self)[f795ff36260c40b68bd79b6fa265574c].sources.[ee4e2f1e4112465fa5fd4934e1a25d99].[e0c5c5b6f28945d583ffa411ab743895].name"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "34c295a82f994275be09971c1a96d0d5",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[cc94992370e64287ad55131d09547e02].filter.[123afa760af64266bd2c116c76a01313]",
+                "value": "&(self)[ee2425cb77854ee9a3140afa413ddfde].[73d67320b6a64196accdc001dd2d001f].[123afa760af64266bd2c116c76a01313]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "45188eafa0a0491b85a6553a72c0cfb2",
+              "widget": "query_adapter",
+              "props": {},
+              "children": [
+                {
+                  "id": "953776029d9e431cb7330d2ef902054a",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "Gender",
+                    "type": "Field",
+                    "value": "&(self)[c3837e2844c54f8481bbd2a4b1bc8975].keys.[d8e550c635404aac80859d6743d6d94f]"
+                  }
+                },
+                {
+                  "id": "2c5d848e99714930a5051d97d50bfabf",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "Count",
+                    "type": "Expression",
+                    "value": "$(exp)Count(&(self)[c3837e2844c54f8481bbd2a4b1bc8975].values.[ee4e2f1e4112465fa5fd4934e1a25d99])"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "28979fef0eae4b3ca423536d9c64ae9a",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 363,
+            "name": "结束",
+            "type": "Field",
+            "result": "$(ref)874985a9882b424d93c1c853333a746e",
+            "isCollection": true,
+            "source": "&(self)[cc94992370e64287ad55131d09547e02].result.[45188eafa0a0491b85a6553a72c0cfb2_result]"
+          },
+          "children": [
+            {
+              "id": "d993a138f535415a8cd66e8f4b99520f",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[28979fef0eae4b3ca423536d9c64ae9a].result.[8265139edd4440ee9078d7a234f9fa78]",
+                "value": "&(self)[cc94992370e64287ad55131d09547e02].result.[45188eafa0a0491b85a6553a72c0cfb2_result].[953776029d9e431cb7330d2ef902054a]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "7f95b9ab113346b9bfb618a9730bb6bd",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[28979fef0eae4b3ca423536d9c64ae9a].result.[e512eb9c07ce42a19060923fd0f240f8]",
+                "value": "&(self)[cc94992370e64287ad55131d09547e02].result.[45188eafa0a0491b85a6553a72c0cfb2_result].[2c5d848e99714930a5051d97d50bfabf]",
+                "type": "Field"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "46d4d160a0044638ba418ae8cc06301e",
+      "widget": "function",
+      "props": {
+        "name": "StatisticEmployeeStatus",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "StatisticEmployeeStatus",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "3c246f9414434bbd995362dc8f5ee72b",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[d897caa0d99d49d3b657342339433a84]"
+          },
+          "children": [
+            {
+              "id": "b704e0e9d1004e8e86e784e805b97150",
+              "widget": "field",
+              "props": {
+                "displayName": "CompanyAndDepartmentFilter",
+                "name": "CompanyAndDepartmentFilter",
+                "dataType": "$(self)[fdce4b637d6e4446a8b302343b6087f0]",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "d897caa0d99d49d3b657342339433a84",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 249,
+            "name": "查询",
+            "filter": "$(self)[fdce4b637d6e4446a8b302343b6087f0]",
+            "strategy": "list",
+            "next": "$(self)[4be72c2d09c2426f81c5f992de662dfd]"
+          },
+          "children": [
+            {
+              "id": "b7c8bf03c77745519b46817150ef1bd2",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "cc186527e2d94a648c83005d3324596e",
+                    "type": "table",
+                    "name": "Employee",
+                    "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[820fc7ca30c4456cbb4e05086ec9f39c]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "9d6f23cd1fd341eebe6898486c0731c5",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[d897caa0d99d49d3b657342339433a84].filter.[25943dfc07a248489b572b1b0a422f5e]",
+                "value": "&(self)[3c246f9414434bbd995362dc8f5ee72b].[b704e0e9d1004e8e86e784e805b97150].[25943dfc07a248489b572b1b0a422f5e]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "16376d2cd0da48569169226fa03340cd",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[d897caa0d99d49d3b657342339433a84].filter.[cb7ac7757f9941a28ee01c906547b75a]",
+                "value": "&(self)[3c246f9414434bbd995362dc8f5ee72b].[b704e0e9d1004e8e86e784e805b97150].[cb7ac7757f9941a28ee01c906547b75a]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "da4e6e00a542432aa7f0dc651da17d17",
+              "widget": "groupbys",
+              "props": {
+                "keys": [
+                  {
+                    "id": "19c55817077c425c8d0c8a9f7ec7fc70",
+                    "type": "Field",
+                    "target": "&(self)[b7c8bf03c77745519b46817150ef1bd2].sources.[cc186527e2d94a648c83005d3324596e].[a315eeba89cd41e18eb16ada89245a6d]",
+                    "name": "&(self)[b7c8bf03c77745519b46817150ef1bd2].sources.[cc186527e2d94a648c83005d3324596e].[a315eeba89cd41e18eb16ada89245a6d].name"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b6dd6a576ec44ce2817d22d011bf15f3",
+              "widget": "query_adapter",
+              "props": {},
+              "children": [
+                {
+                  "id": "90bd8ae8a92a4992b9ba1a060a7ceb95",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "Status",
+                    "type": "Field",
+                    "value": "&(self)[da4e6e00a542432aa7f0dc651da17d17].keys.[19c55817077c425c8d0c8a9f7ec7fc70]"
+                  }
+                },
+                {
+                  "id": "cd48b3078de640fd903cff3761039d9c",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "Count",
+                    "type": "Expression",
+                    "value": "$(exp)Count(&(self)[da4e6e00a542432aa7f0dc651da17d17].values.[cc186527e2d94a648c83005d3324596e])"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4be72c2d09c2426f81c5f992de662dfd",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 363,
+            "name": "结束",
+            "type": "Field",
+            "result": "$(ref)ecbc3f2da3e34642a9fe61c3563f23ed",
+            "isCollection": true,
+            "source": "&(self)[d897caa0d99d49d3b657342339433a84].result.[b6dd6a576ec44ce2817d22d011bf15f3_result]"
+          },
+          "children": [
+            {
+              "id": "1129a22d471e4cbaabdda4eaed7d7f29",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[4be72c2d09c2426f81c5f992de662dfd].result.[35b9ff44ce904e9b8d50728960917a9d]",
+                "value": "&(self)[d897caa0d99d49d3b657342339433a84].result.[b6dd6a576ec44ce2817d22d011bf15f3_result].[90bd8ae8a92a4992b9ba1a060a7ceb95]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "08f516b189c24eae82cd5c53c2d27c23",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[4be72c2d09c2426f81c5f992de662dfd].result.[731996ea0aad484eacde322712c7c201]",
+                "value": "&(self)[d897caa0d99d49d3b657342339433a84].result.[b6dd6a576ec44ce2817d22d011bf15f3_result].[cd48b3078de640fd903cff3761039d9c]",
+                "type": "Field"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dac6a17959e64778bcc08b62cc5a7733",
+      "widget": "function",
+      "props": {
+        "name": "StatisticEmployeeWorkYear",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "StatisticEmployeeWorkYear",
+        "authStrategy": "",
+        "x": 119,
+        "y": 8
+      },
+      "children": [
+        {
+          "id": "2500525690c44e6da71bbd8e885231be",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[f1785e7538954d41b898e5c9bffcfe96]"
+          },
+          "children": [
+            {
+              "id": "9e8ce301330a4c54a2b58fb72ee70cdc",
+              "widget": "field",
+              "props": {
+                "displayName": "CompanyIdFilter",
+                "name": "CompanyIdFilter",
+                "dataType": "$(self)[b706629593184921a78961c845563d62]",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "f1785e7538954d41b898e5c9bffcfe96",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 249,
+            "name": "查询",
+            "filter": "$(self)[b706629593184921a78961c845563d62]",
+            "strategy": "list",
+            "next": "$(self)[6c9b42be675e4a62ba2d81973d6adcbf]"
+          },
+          "children": [
+            {
+              "id": "087256a015d64cc29796699d3ba1168e",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "798542c8def0461f850fd8da76e8ce1f",
+                    "type": "table",
+                    "name": "Company",
+                    "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[07b0fe61729f4d47b4e2e4902fc42222]"
+                  },
+                  {
+                    "id": "fd596a3316474e94856d989432e4ac02",
+                    "type": "table",
+                    "name": "Employee",
+                    "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[820fc7ca30c4456cbb4e05086ec9f39c]"
+                  }
+                ]
+              },
+              "children": [
+                {
+                  "id": "4f04e378b8ce4d00a040d6e2ccf60349",
+                  "widget": "join_relationship",
+                  "props": {
+                    "type": "InnerJoin",
+                    "left": "&(self)[087256a015d64cc29796699d3ba1168e].sources.[798542c8def0461f850fd8da76e8ce1f]",
+                    "right": "&(self)[087256a015d64cc29796699d3ba1168e].sources.[fd596a3316474e94856d989432e4ac02]"
+                  },
+                  "children": [
+                    {
+                      "id": "57087cbc01f24c7d89d6a46322efc1a3",
+                      "widget": "join_condition",
+                      "props": {
+                        "left": "&(self)[4f04e378b8ce4d00a040d6e2ccf60349].left.[71419c05e9b4445f965aa84aa4554dbe]",
+                        "right": "&(self)[4f04e378b8ce4d00a040d6e2ccf60349].right.[001f435a6800421581cc2bab45e9e0bd]",
+                        "type": "=",
+                        "leftType": "Field",
+                        "rightType": "Field"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1cd0178ddbca48c99ea7e874a15a69cc",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[f1785e7538954d41b898e5c9bffcfe96].filter.[18533cd3c2154d8eb211fbe9e20f4749]",
+                "value": "&(self)[2500525690c44e6da71bbd8e885231be].[9e8ce301330a4c54a2b58fb72ee70cdc].[18533cd3c2154d8eb211fbe9e20f4749]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "cf0458f9eef444f1abfd88acbf57c17e",
+              "widget": "groupbys",
+              "props": {
+                "keys": [
+                  {
+                    "id": "f2371eb7ef8a4f21bad6f3c0d3fbe51f",
+                    "type": "Expression",
+                    "name": "WorkYear",
+                    "target": "$(exp)If(DateDif(&(self)[087256a015d64cc29796699d3ba1168e].sources.[fd596a3316474e94856d989432e4ac02].[ab81b6c3dde64733b578a0eea95849d6], DateOnly(Now()), \"y\") < 3, \"三年以下\", If(DateDif(&(self)[087256a015d64cc29796699d3ba1168e].sources.[fd596a3316474e94856d989432e4ac02].[ab81b6c3dde64733b578a0eea95849d6], DateOnly(Now()), \"y\") < 5 && DateDif(&(self)[087256a015d64cc29796699d3ba1168e].sources.[fd596a3316474e94856d989432e4ac02].[ab81b6c3dde64733b578a0eea95849d6], DateOnly(Now()), \"y\") >= 3, \"三到五年\", \"五年以上\"))"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "6722b58d025349dab661d0c9d2e39d4b",
+              "widget": "query_adapter",
+              "props": {},
+              "children": [
+                {
+                  "id": "2edc632783da4e7da564baa510457d78",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "WorkYear",
+                    "type": "Field",
+                    "value": "&(self)[cf0458f9eef444f1abfd88acbf57c17e].keys.[f2371eb7ef8a4f21bad6f3c0d3fbe51f]"
+                  }
+                },
+                {
+                  "id": "6963c294f0af4e79b2ba58ab3ab71cae",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "Count",
+                    "type": "Expression",
+                    "value": "$(exp)Count(&(self)[cf0458f9eef444f1abfd88acbf57c17e].values.[fd596a3316474e94856d989432e4ac02])"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6c9b42be675e4a62ba2d81973d6adcbf",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 363,
+            "name": "结束",
+            "type": "Field",
+            "result": "$(ref)2675b72c9563427683f2f3aed2330174",
+            "isCollection": true,
+            "source": "&(self)[f1785e7538954d41b898e5c9bffcfe96].result.[6722b58d025349dab661d0c9d2e39d4b_result]"
+          },
+          "children": [
+            {
+              "id": "733a78b651a44d50bc022d25339a0bdb",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[6c9b42be675e4a62ba2d81973d6adcbf].result.[dcb7c18797504493bca4ad611cff5315]",
+                "value": "&(self)[f1785e7538954d41b898e5c9bffcfe96].result.[6722b58d025349dab661d0c9d2e39d4b_result].[2edc632783da4e7da564baa510457d78]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "2eab3e321c8d46928b875b27c55e7d46",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[6c9b42be675e4a62ba2d81973d6adcbf].result.[ade77c2c21594c53b7b53b3f31509243]",
+                "value": "&(self)[f1785e7538954d41b898e5c9bffcfe96].result.[6722b58d025349dab661d0c9d2e39d4b_result].[6963c294f0af4e79b2ba58ab3ab71cae]",
+                "type": "Field"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ceb949beb3724189b219b1da05c78748",
+      "widget": "function",
+      "props": {
+        "name": "StatisticDegreeByCity",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "StatisticDegreeByCity",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "f7e15cf3d6bd438d96a16b1f6605cad8",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[d19f4d69b008448399b5cdd1423068c5]"
+          },
+          "children": [
+            {
+              "id": "5c64e5c0430a42818d1ed687c395cdc2",
+              "widget": "field",
+              "props": {
+                "displayName": "parameter1",
+                "name": "parameter1",
+                "dataType": "$(self)[f2a548cb7c914147906997fda01a503f]",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "d19f4d69b008448399b5cdd1423068c5",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 249,
+            "name": "查询",
+            "filter": "$(self)[f2a548cb7c914147906997fda01a503f]",
+            "strategy": "list",
+            "next": "$(self)[275e180c4b5e4135b26cdb36501fa9ba]"
+          },
+          "children": [
+            {
+              "id": "87449a7dbf65406b851926b03c4879dd",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "92556ca3f86f4e94ab0c550da17fa170",
+                    "type": "table",
+                    "name": "Company",
+                    "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[07b0fe61729f4d47b4e2e4902fc42222]"
+                  },
+                  {
+                    "id": "a2866a09476f469ea685007ef78afdec",
+                    "type": "table",
+                    "name": "Employee",
+                    "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[820fc7ca30c4456cbb4e05086ec9f39c]"
+                  }
+                ]
+              },
+              "children": [
+                {
+                  "id": "045c7b9c819c413ba8e2e58bd1a0fa14",
+                  "widget": "join_relationship",
+                  "props": {
+                    "type": "InnerJoin",
+                    "left": "&(self)[87449a7dbf65406b851926b03c4879dd].sources.[92556ca3f86f4e94ab0c550da17fa170]",
+                    "right": "&(self)[87449a7dbf65406b851926b03c4879dd].sources.[a2866a09476f469ea685007ef78afdec]"
+                  },
+                  "children": [
+                    {
+                      "id": "7eaeffb496004ed99362d284784adea8",
+                      "widget": "join_condition",
+                      "props": {
+                        "left": "&(self)[045c7b9c819c413ba8e2e58bd1a0fa14].left.[71419c05e9b4445f965aa84aa4554dbe]",
+                        "right": "&(self)[045c7b9c819c413ba8e2e58bd1a0fa14].right.[001f435a6800421581cc2bab45e9e0bd]",
+                        "type": "=",
+                        "leftType": "Field",
+                        "rightType": "Field"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "91b6f02e314b4ac3ae3f32a5eb80191c",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[d19f4d69b008448399b5cdd1423068c5].filter.[6c6ec1c4548a433abb3887ef56bb52b1]",
+                "type": "Field",
+                "value": "&(self)[f7e15cf3d6bd438d96a16b1f6605cad8].[5c64e5c0430a42818d1ed687c395cdc2].[6c6ec1c4548a433abb3887ef56bb52b1]"
+              }
+            },
+            {
+              "id": "d77549a3d63d477bba09912337b0613e",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[d19f4d69b008448399b5cdd1423068c5].filter.[3cd0d84f1ff9443f8489df4e6dc94e08]",
+                "type": "Field",
+                "value": "&(self)[f7e15cf3d6bd438d96a16b1f6605cad8].[5c64e5c0430a42818d1ed687c395cdc2].[3cd0d84f1ff9443f8489df4e6dc94e08]"
+              }
+            },
+            {
+              "id": "519ed5977e1843dfadc71392920b61d8",
+              "widget": "groupbys",
+              "props": {
+                "keys": [
+                  {
+                    "id": "6c50e825ebe0470c99ae692bfb05f076",
+                    "type": "Field",
+                    "target": "&(self)[87449a7dbf65406b851926b03c4879dd].sources.[a2866a09476f469ea685007ef78afdec].[541d9cadc4c5402cb8e97bf625317ed0]",
+                    "name": "&(self)[87449a7dbf65406b851926b03c4879dd].sources.[a2866a09476f469ea685007ef78afdec].[541d9cadc4c5402cb8e97bf625317ed0].name"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "edd527c62cd7464db87e44b1d8ff7908",
+              "widget": "query_adapter",
+              "props": {},
+              "children": [
+                {
+                  "id": "c308b7a7b03a447fb3281b70eabf4ca8",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "Degree",
+                    "type": "Field",
+                    "value": "&(self)[519ed5977e1843dfadc71392920b61d8].keys.[6c50e825ebe0470c99ae692bfb05f076]"
+                  }
+                },
+                {
+                  "id": "07d6634ee25948cfaece455a30f528e2",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "Count",
+                    "type": "Expression",
+                    "value": "$(exp)Count(&(self)[519ed5977e1843dfadc71392920b61d8].values.[a2866a09476f469ea685007ef78afdec])"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "275e180c4b5e4135b26cdb36501fa9ba",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 363,
+            "name": "结束",
+            "type": "Field",
+            "result": "$(ref)7eb339885e7c44a2a0ed7675a7c28446",
+            "isCollection": true,
+            "source": "&(self)[d19f4d69b008448399b5cdd1423068c5].result.[edd527c62cd7464db87e44b1d8ff7908_result]"
+          },
+          "children": [
+            {
+              "id": "b65e4c39839844afb72dfa5073037416",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[275e180c4b5e4135b26cdb36501fa9ba].result.[4210e62483cf453c9ae3a4277f4b60bd]",
+                "value": "&(self)[d19f4d69b008448399b5cdd1423068c5].result.[edd527c62cd7464db87e44b1d8ff7908_result].[c308b7a7b03a447fb3281b70eabf4ca8]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "b94a8f6ebdfb45fbad023ad05ef78d16",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[275e180c4b5e4135b26cdb36501fa9ba].result.[ae5463643225419499123bd272bba1f7]",
+                "value": "&(self)[d19f4d69b008448399b5cdd1423068c5].result.[edd527c62cd7464db87e44b1d8ff7908_result].[07d6634ee25948cfaece455a30f528e2]",
+                "type": "Field"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2df2ecbf34a14d7da1b4ccc5699a7717",
+      "widget": "function",
+      "props": {
+        "name": "StatisticReignByCompany",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "StatisticReignByCompany",
+        "authStrategy": "",
+        "x": 60.137196,
+        "y": 98.604164
+      },
+      "children": [
+        {
+          "id": "caefb55f564d4a32b469c5696596975d",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[0a3843d9d62e418a99606c5a1a95ec6e]"
+          },
+          "children": [
+            {
+              "id": "0a9411f97cdf470e95c38ff5094b8a5a",
+              "widget": "field",
+              "props": {
+                "displayName": "RnFilter",
+                "name": "RnFilter",
+                "dataType": "$(self)[65f07217cd0c4c3f8d8dc1e9a44087d5]",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "0a3843d9d62e418a99606c5a1a95ec6e",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 249,
+            "name": "查询",
+            "filter": "$(self)[65f07217cd0c4c3f8d8dc1e9a44087d5]",
+            "strategy": "list",
+            "next": "$(self)[a642d6bf04a74ad7bf4d17546cc6378b]"
+          },
+          "children": [
+            {
+              "id": "062bc4b579834fef9cda6cf4b993c3c2",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "ddbdb809a4144ae681f1fbe50907dd17",
+                    "type": "table",
+                    "name": "Employee",
+                    "target": "$(ref)d67c2ac1eef748b890af39e3fec945a7.[820fc7ca30c4456cbb4e05086ec9f39c]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "8039d84d7d0146d7bd4678346b192b4e",
+              "widget": "groupbys",
+              "props": {
+                "keys": [
+                  {
+                    "id": "4c48abcc54124ff4b1b944fffee460bf",
+                    "type": "Expression",
+                    "name": "Month",
+                    "target": "$(exp)Month(&(self)[062bc4b579834fef9cda6cf4b993c3c2].sources.[ddbdb809a4144ae681f1fbe50907dd17].[e60694eb63054da7b868d9c113d924ce])"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "6d7c2a0f99b144c78e272fcf81e3269e",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[0a3843d9d62e418a99606c5a1a95ec6e].filter.[4634ec5f868f4890a6ca8c09a92f88e5]",
+                "value": "&(self)[caefb55f564d4a32b469c5696596975d].[0a9411f97cdf470e95c38ff5094b8a5a].[4634ec5f868f4890a6ca8c09a92f88e5]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "991e0cd8f4f743f193f08ba74d05a80c",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[0a3843d9d62e418a99606c5a1a95ec6e].filter.[a7c5c0cea6194a2386781c7c8e1404e2]",
+                "value": "&(self)[caefb55f564d4a32b469c5696596975d].[0a9411f97cdf470e95c38ff5094b8a5a].[a7c5c0cea6194a2386781c7c8e1404e2]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "b003a10a43144a5d979214a64a4a679e",
+              "widget": "query_adapter",
+              "props": {},
+              "children": [
+                {
+                  "id": "3400212c06bf49119ff1a266eebd1564",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "Month",
+                    "type": "Field",
+                    "value": "&(self)[8039d84d7d0146d7bd4678346b192b4e].keys.[4c48abcc54124ff4b1b944fffee460bf]"
+                  }
+                },
+                {
+                  "id": "59e1950b94604b01b8245018f278de01",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "RnCount",
+                    "type": "Expression",
+                    "value": "$(exp)Count(&(self)[8039d84d7d0146d7bd4678346b192b4e].values.[ddbdb809a4144ae681f1fbe50907dd17])"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "a642d6bf04a74ad7bf4d17546cc6378b",
+          "widget": "variable",
+          "props": {
+            "x": 165,
+            "y": 363,
+            "name": "变量定义",
+            "next": "$(self)[b2edbe9fbbcf46f39ef165d8ec0b3823]"
+          },
+          "children": [
+            {
+              "id": "67ad3a83c5d74c0381b397ae4314589d",
+              "widget": "variable_field",
+              "props": {
+                "name": "resultList",
+                "dataType": "$(ref)838e71ad00054ebba0615c0698954aa0",
+                "type": "Field",
+                "isCollection": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "b2edbe9fbbcf46f39ef165d8ec0b3823",
+          "widget": "loop",
+          "props": {
+            "x": 165,
+            "y": 477,
+            "name": "遍历",
+            "strategy": "Step",
+            "countType": "Ascending",
+            "initValueType": "Value",
+            "next": "$(self)[23f7888902b347c2bcbfcfa4536fb6f7]",
+            "terminateType": "Value",
+            "initValue": "1",
+            "seed": 1,
+            "terminate": "12"
+          },
+          "children": [
+            {
+              "id": "cb5f274ed8b1495c9bef6146871a3764",
+              "widget": "loop_var",
+              "props": {
+                "name": "当前项",
+                "next": "$(self)[c65adbbfaed3493480846daf6c35b25d]"
+              },
+              "children": [
+                {
+                  "id": "c65adbbfaed3493480846daf6c35b25d",
+                  "widget": "variable",
+                  "props": {
+                    "x": 471,
+                    "y": 559.4,
+                    "name": "定义临时变量",
+                    "next": "$(self)[bf48c9a0517542b0a6aae2804b2494b7]"
+                  },
+                  "children": [
+                    {
+                      "id": "a4e4eb79be5c4d5193c08567383f507e",
+                      "widget": "variable_field",
+                      "props": {
+                        "name": "item",
+                        "dataType": "$(ref)838e71ad00054ebba0615c0698954aa0",
+                        "type": "Field"
+                      },
+                      "children": [
+                        {
+                          "id": "191ebc7f925342e6a6d4c2e4a494ff80",
+                          "widget": "variable_field",
+                          "props": {
+                            "name": "$(ref)838e71ad00054ebba0615c0698954aa0.[3f9d5bb312ae4274b5f59e1d50a5f952]",
+                            "dataType": "String",
+                            "type": "Expression",
+                            "value": "$(exp)&(self)[b2edbe9fbbcf46f39ef165d8ec0b3823].[cb5f274ed8b1495c9bef6146871a3764] + \"月\""
+                          }
+                        },
+                        {
+                          "id": "b73d70eb6bda44e4ade44e06c77cbede",
+                          "widget": "variable_field",
+                          "props": {
+                            "name": "$(ref)838e71ad00054ebba0615c0698954aa0.[a449c3888d4a4a99b4b8e154ec727c96]",
+                            "dataType": "Int32",
+                            "type": "Expression",
+                            "value": "$(exp)FirstIf(&(self)[0a3843d9d62e418a99606c5a1a95ec6e].result.[b003a10a43144a5d979214a64a4a679e_result].[59e1950b94604b01b8245018f278de01], &(self)[b2edbe9fbbcf46f39ef165d8ec0b3823].[cb5f274ed8b1495c9bef6146871a3764] == &(self)[0a3843d9d62e418a99606c5a1a95ec6e].result.[b003a10a43144a5d979214a64a4a679e_result].[3400212c06bf49119ff1a266eebd1564])"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "bf48c9a0517542b0a6aae2804b2494b7",
+                  "widget": "collection_accessor",
+                  "props": {
+                    "x": 471,
+                    "y": 673.4,
+                    "name": "集合访问器",
+                    "next": "$(self)[0ca6696460a5483583f97025f110a88b]"
+                  },
+                  "children": [
+                    {
+                      "id": "72520a1af1294831877ff6e62593013a",
+                      "widget": "collection_accessor_field",
+                      "props": {
+                        "operator": "Add",
+                        "type": "Field",
+                        "source": "&(self)[a642d6bf04a74ad7bf4d17546cc6378b].[67ad3a83c5d74c0381b397ae4314589d]",
+                        "data": "&(self)[c65adbbfaed3493480846daf6c35b25d].[a4e4eb79be5c4d5193c08567383f507e]"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "0ca6696460a5483583f97025f110a88b",
+                  "widget": "back",
+                  "props": {
+                    "next": "$(self)[b2edbe9fbbcf46f39ef165d8ec0b3823]"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "23f7888902b347c2bcbfcfa4536fb6f7",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 921.4,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[a642d6bf04a74ad7bf4d17546cc6378b].[67ad3a83c5d74c0381b397ae4314589d]",
+            "isCollection": false
+          }
+        }
+      ]
+    }
+  ],
+  "references": {
+    "d67c2ac1eef748b890af39e3fec945a7": "..\\DataSource\\Database.sde",
+    "cb085c3dab6649caa376eb536cb336ae": "..\\Properties\\DataStructures\\StatisticCompanySizeDTO.json",
+    "874985a9882b424d93c1c853333a746e": "..\\Properties\\DataStructures\\StatisticGenderDTO.json",
+    "7eb339885e7c44a2a0ed7675a7c28446": "..\\Properties\\DataStructures\\StatisticEmployeeDegree.json",
+    "ecbc3f2da3e34642a9fe61c3563f23ed": "..\\Properties\\DataStructures\\StatisticEmployeeStatusDTO.json",
+    "8e4ec7b5df634cc3afe04a469679ef32": "..\\Properties\\DataStructures\\EmployeeStatus.json",
+    "2675b72c9563427683f2f3aed2330174": "..\\Properties\\DataStructures\\StatisticEmployeeWorkYearDTO.json",
+    "838e71ad00054ebba0615c0698954aa0": "..\\Properties\\DataStructures\\StatisticReignDTO.json"
+  }
+}

@@ -1,439 +1,256 @@
-{
-  "id": "page_8dc9b6b14b30751989",
+﻿{
+  "id": "page_8dd5cc9b102383b",
   "widget": "page",
-  "type": "page",
-  "designVersion": "1.0.0",
-  "version": 1,
   "props": {
-    "ref": "page_8dc9b6b14b30751989",
-    "title": {
-      "type": "string",
-      "value": ""
-    },
+    "ref": "page_8dd5cc9b102383b",
+    "name": "EmployeeDetail",
+    "title": "员工详情",
     "params": [
       {
-        "id": "8dc9b6b14b308d4990",
-        "name": "Id",
-        "dataType": "String",
-        "isCollection": false
-      },
-      {
-        "id": "6b8ad1259d30d00",
-        "name": "companyid",
-        "dataType": "String",
-        "isCollection": false,
-        "isNullable": false
+        "id": "45b8f1dd29da4d1",
+        "widget": "parameter",
+        "props": {
+          "name": "EmployeeID",
+          "dataType": "Number",
+          "isCollection": false,
+          "isNullable": false
+        }
       }
     ]
   },
+  "rules": [],
   "children": [
     {
-      "id": "modal_39e727e58eea620",
-      "widget": "modal",
-      "props": {
-        "ref": "modal_resign",
-        "footer": [
-          {
-            "id": "button_58e46e2f8c7ac40",
-            "widget": "button",
-            "props": {
-              "ref": "button_58e46e2f8c7ac40",
-              "label": "确认",
-              "type": "primary"
-            },
-            "events": {
-              "onClick": {
-                "type": "call",
-                "member": "$(Event)include_6e37c6ed22527c0.page.button_2a72c0509420b80.onClick"
-              }
-            }
-          },
-          {
-            "id": "button_b7a7cf8493fce00",
-            "widget": "button",
-            "props": {
-              "ref": "button_b7a7cf8493fce00",
-              "label": "取消"
-            },
-            "events": {
-              "onClick": {
-                "type": "call",
-                "member": "$(Event)modal_39e727e58eea620.close"
-              }
-            }
-          }
-        ],
-        "title": {
-          "type": "string",
-          "value": "办理离职"
-        }
-      },
-      "children": [
-        {
-          "id": "include_6e37c6ed22527c0",
-          "widget": "include",
-          "props": {
-            "ref": "include_deb14fe1e115f00",
-            "page": "$(Document)EmployeeResign",
-            "params": [
-              {
-                "id": "90391c32ad80d80",
-                "name": "$(VParameter)EmployeeResign.bd99a7f2fd0d180.employeeid",
-                "value": "$(Props)8dc9b6b14b308d4990"
-              }
-            ]
-          },
-          "styles": {},
-          "children": []
-        }
-      ]
-    },
-    {
-      "id": "modal_549f38873c55d40",
-      "widget": "modal",
-      "props": {
-        "ref": "modal_edit",
-        "footer": [
-          {
-            "id": "button_399865c48997a80",
-            "widget": "button",
-            "props": {
-              "ref": "button_399865c48997a80",
-              "label": "确认",
-              "type": "primary"
-            },
-            "events": {
-              "onClick": {
-                "type": "call",
-                "member": "$(Event)include_90843b11ead7e00.page.button_57b9baca5787680.onClick"
-              }
-            }
-          },
-          {
-            "id": "button_3519b4a77bdb480",
-            "widget": "button",
-            "props": {
-              "ref": "button_3519b4a77bdb480",
-              "label": "取消"
-            },
-            "events": {
-              "onClick": {
-                "type": "call",
-                "member": "$(Event)modal_549f38873c55d40.close"
-              }
-            }
-          }
-        ],
-        "width": 1400,
-        "title": {
-          "type": "string",
-          "value": ""
-        },
-        "keyboard": false,
-        "destroyOnClose": false,
-        "centered": true,
-        "hide": false
-      },
-      "children": [
-        {
-          "id": "include_90843b11ead7e00",
-          "widget": "include",
-          "props": {
-            "ref": "include_9e5e3296a4b1500",
-            "page": "$(Document)EmployeeUpdate",
-            "params": [
-              {
-                "id": "d09178cf8308f80",
-                "name": "$(VParameter)EmployeeUpdate.56657f5ab11e9c0.employeeid",
-                "value": "$(Props)8dc9b6b14b308d4990"
-              },
-              {
-                "id": "c123fba5747ec80",
-                "name": "$(VParameter)EmployeeUpdate.d1ced0a2d8da48.companyid",
-                "value": "$(Props)6b8ad1259d30d00"
-              }
-            ]
-          },
-          "styles": {
-            "marginTop": "30px"
-          },
-          "children": []
-        }
-      ]
-    },
-    {
-      "id": "modal_31e3373fa9f85a0",
-      "widget": "modal",
-      "props": {
-        "ref": "modal_educationadd",
-        "footer": [
-          {
-            "id": "button_d52dec9dfdcc700",
-            "widget": "button",
-            "props": {
-              "ref": "button_d52dec9dfdcc700",
-              "label": "确认",
-              "type": "primary"
-            },
-            "events": {
-              "onClick": {
-                "type": "call",
-                "member": "$(Event)include_bb192b19ec30a00.page.button_8dca1bdf02e6ffe490.onClick"
-              }
-            }
-          },
-          {
-            "id": "button_f821f327b52d200",
-            "widget": "button",
-            "props": {
-              "ref": "button_f821f327b52d200",
-              "label": "取消"
-            },
-            "events": {
-              "onClick": {
-                "type": "call",
-                "member": "$(Event)modal_31e3373fa9f85a0.close"
-              }
-            }
-          }
-        ],
-        "title": {
-          "type": "string",
-          "value": ""
-        }
-      },
-      "children": [
-        {
-          "id": "include_bb192b19ec30a00",
-          "widget": "include",
-          "props": {
-            "ref": "include_c7a436ab2758080",
-            "page": "$(Document)EducationAdd",
-            "params": [
-              {
-                "id": "57e06f915282880",
-                "name": "$(VParameter)EducationAdd.b13a163ddf1c700.employeeid",
-                "value": "$(Props)8dc9b6b14b308d4990"
-              }
-            ]
-          },
-          "styles": {},
-          "children": []
-        }
-      ]
-    },
-    {
-      "id": "modal_45a85fa8f314240",
-      "widget": "modal",
-      "props": {
-        "ref": "modal_jobadd",
-        "footer": [
-          {
-            "id": "button_4c507d8ed2f8380",
-            "widget": "button",
-            "props": {
-              "ref": "button_4c507d8ed2f8380",
-              "label": "确认",
-              "type": "primary"
-            },
-            "events": {
-              "onClick": {
-                "type": "call",
-                "member": "$(Event)include_3fe92949fdbf9c0.page.button_8dca1c554476e10936.onClick"
-              }
-            }
-          },
-          {
-            "id": "button_744178200427f80",
-            "widget": "button",
-            "props": {
-              "ref": "button_744178200427f80",
-              "label": "取消"
-            },
-            "events": {
-              "onClick": {
-                "type": "call",
-                "member": "$(Event)modal_45a85fa8f314240.close"
-              }
-            }
-          }
-        ],
-        "title": {
-          "type": "string",
-          "value": ""
-        }
-      },
-      "children": [
-        {
-          "id": "include_3fe92949fdbf9c0",
-          "widget": "include",
-          "props": {
-            "ref": "include_bf7a824341c6100",
-            "page": "$(Document)JobAdd",
-            "params": [
-              {
-                "id": "106889fc1e9c110",
-                "name": "$(VParameter)JobAdd.5a4e06a5e721cc.employeeid",
-                "value": "$(Props)8dc9b6b14b308d4990"
-              }
-            ]
-          },
-          "styles": {},
-          "children": []
-        }
-      ]
-    },
-    {
-      "id": "card_27528ef36298860",
+      "id": "card_283566e755b1295",
       "widget": "card",
       "props": {
-        "ref": "card_789d60a5140f580",
-        "title": {
-          "type": "string",
-          "value": ""
-        },
+        "style": {},
+        "ref": "card_f34a57fb44cd00e",
         "extra": [],
         "hideActions": true,
-        "size": "default"
+        "title": "",
+        "model": {
+          "data": "&(ref)EmployeeJobedf5b54a97eb4d0d803efb81554fd77b.[820fc7ca30c4456cbb4e05086ec9f39c]"
+        },
+        "dataSource": {
+          "id": "function_b5dbaee08ae866c",
+          "widget": "function",
+          "children": [
+            {
+              "id": "action_8ac4ab81667b616",
+              "widget": "action_api",
+              "props": {
+                "target": "&(ref)cf345cb6b637414bb6619b02a12770bb.[15725cac23804f15ad095b2cf53ae0ad]",
+                "params": [
+                  {
+                    "id": "assign_param_fb619fdce7465aa",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "Parameter",
+                        "value": "&(self)[card_283566e755b1295].dataSource.[action_8ac4ab81667b616].target.params.[b1a9f475680c4241ae01d6f71b369d32]"
+                      },
+                      "value": {
+                        "kind": "Props",
+                        "value": "$(self)[page_8dd5cc9b102383b].params.[45b8f1dd29da4d1]"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "action_24c2a984f519462",
+              "widget": "action_adapter",
+              "children": [
+                {
+                  "id": "assign_param_94f8c7d9df554d3",
+                  "widget": "assign_param",
+                  "props": {
+                    "name": {
+                      "kind": "Members",
+                      "value": "&(self)[card_283566e755b1295].data"
+                    },
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[card_283566e755b1295].dataSource.[action_8ac4ab81667b616].target.result"
+                    }
+                  }
+                }
+              ],
+              "props": {}
+            }
+          ],
+          "props": {}
+        }
       },
-      "styles": {},
       "children": [
         {
-          "id": "row_50dbcd5262b4f4",
+          "id": "row_94665f41e11aeb8",
           "widget": "row",
           "props": {
-            "ref": "row_50dbcd5262b4f4"
+            "style": {},
+            "ref": "row_e1f86861e6ed295",
+            "gutter": {
+              "enabled": false
+            }
           },
           "children": [
             {
-              "id": "col_60a50015e690200",
+              "id": "col_cc98f944a172b4b",
               "widget": "col",
               "props": {
-                "ref": "col_60a50015e690200",
-                "width": "${span}4"
+                "style": {},
+                "ref": "col_3b5c6ff024ca08d",
+                "width": {
+                  "kind": "percent",
+                  "value": 28
+                }
               },
               "children": [
                 {
-                  "id": "grid_63e39bf6b299f00",
+                  "id": "grid_86c66ed34b8287a",
                   "widget": "grid",
                   "props": {
-                    "ref": "grid_f0ebc6a96437c00",
-                    "colNum": 1,
-                    "rowNum": 3
+                    "style": {},
+                    "ref": "grid_eaae92792a62e9e",
+                    "rowNum": 3,
+                    "colNum": 1
                   },
-                  "styles": {},
                   "children": [
                     {
-                      "id": "row_2314ec902197cc0",
+                      "id": "row_41a7b8d79751255",
                       "widget": "row",
                       "props": {
-                        "ref": "row_2314ec902197cc0",
-                        "grid": true,
+                        "style": {},
+                        "ref": "row_cb526b19c043401",
                         "gutter": {
                           "enabled": true,
                           "value": [
                             0,
                             0
                           ]
-                        }
+                        },
+                        "grid": true
                       },
                       "children": [
                         {
-                          "id": "col_83353b9383e9280",
+                          "id": "col_e82ec2a0f587229",
                           "widget": "col",
                           "props": {
-                            "ref": "col_83353b9383e9280"
+                            "style": {},
+                            "ref": "col_e7553796082ac5a",
+                            "width": {
+                              "kind": "flex",
+                              "value": 1
+                            }
                           },
                           "children": [
                             {
-                              "id": "row_5606cc7683f8e00",
+                              "id": "row_d5dd0e25c33c4ac",
                               "widget": "row",
                               "props": {
-                                "ref": "row_5606cc7683f8e00"
+                                "style": {},
+                                "ref": "row_5b3d88c78000ce4",
+                                "gutter": {
+                                  "enabled": false
+                                }
                               },
                               "children": [
                                 {
-                                  "id": "col_82e388398270d00",
+                                  "id": "col_8ab562774b0209d",
                                   "widget": "col",
                                   "props": {
-                                    "ref": "col_82e388398270d00"
+                                    "style": {},
+                                    "ref": "col_4f64df9e608ef7d",
+                                    "width": {
+                                      "kind": "flex",
+                                      "value": 1
+                                    }
                                   },
                                   "children": [
                                     {
-                                      "id": "image_8af31f765f1ac00",
+                                      "id": "image_77c556559934848",
                                       "widget": "image",
                                       "props": {
-                                        "ref": "image_54105ce7eeaefc0",
-                                        "value": "$(onLoad)Employee.Get.Avatar"
+                                        "style": {},
+                                        "ref": "image_dcdb690d9ab0f22",
+                                        "width": 120,
+                                        "height": 120,
+                                        "value": {
+                                          "kind": "Field",
+                                          "value": "&(self)[card_283566e755b1295].dataSource.[action_24c2a984f519462].[assign_param_94f8c7d9df554d3].[cd6038335b884141a586576a4a42a129]"
+                                        }
                                       },
-                                      "styles": {},
                                       "children": []
                                     }
                                   ]
                                 },
                                 {
-                                  "id": "col_2d592c600303640",
+                                  "id": "col_a31300ec455699e",
                                   "widget": "col",
                                   "props": {
-                                    "ref": "col_2d592c600303640"
+                                    "style": {},
+                                    "ref": "col_cafc036efe58e74",
+                                    "width": {
+                                      "kind": "flex",
+                                      "value": 1
+                                    }
                                   },
                                   "children": [
                                     {
-                                      "id": "grid_e3aacf799b98100",
+                                      "id": "grid_1b30d3a82a48127",
                                       "widget": "grid",
                                       "props": {
-                                        "ref": "grid_302d1bdb793a220",
-                                        "colNum": 1,
-                                        "rowNum": 3
-                                      },
-                                      "styles": {
-                                        "marginTop": "10px",
-                                        "marginBottom": "10px"
+                                        "style": {},
+                                        "ref": "grid_863c2308ceda6fb",
+                                        "rowNum": 3,
+                                        "colNum": 1
                                       },
                                       "children": [
                                         {
-                                          "id": "row_217b6f5bb940b40",
+                                          "id": "row_008d742ff16ff75",
                                           "widget": "row",
                                           "props": {
-                                            "ref": "row_217b6f5bb940b40",
-                                            "grid": true,
+                                            "style": {},
+                                            "ref": "row_a78deba59dc951c",
                                             "gutter": {
                                               "enabled": true,
                                               "value": [
                                                 0,
                                                 0
                                               ]
-                                            }
+                                            },
+                                            "grid": true
                                           },
                                           "children": [
                                             {
-                                              "id": "col_e49a52e5e68c980",
+                                              "id": "col_5393d822fc45e58",
                                               "widget": "col",
                                               "props": {
-                                                "ref": "col_e49a52e5e68c980"
+                                                "style": {},
+                                                "ref": "col_d9a8628b67d46aa",
+                                                "width": {
+                                                  "kind": "flex",
+                                                  "value": 1
+                                                }
                                               },
                                               "children": [
                                                 {
-                                                  "id": "title_d131ce99e231f0",
-                                                  "widget": "title",
-                                                  "props": {
-                                                    "ref": "title_40733d740827680",
-                                                    "level": 4,
-                                                    "value": "$(onLoad)Employee.Get.FullName"
-                                                  },
-                                                  "styles": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "id": "tag_d161a251af67880",
+                                                  "id": "tag_6820098909d1fb4",
                                                   "widget": "tag",
                                                   "props": {
-                                                    "ref": "tag_status",
-                                                    "color": "#0000FFFF",
-                                                    "value": "$(onLoad)Employee.Get.Status"
-                                                  },
-                                                  "styles": {
-                                                    "marginLeft": "5px"
+                                                    "style": {},
+                                                    "ref": "tag_f8c542a68f81604",
+                                                    "value": {
+                                                      "kind": "Field",
+                                                      "value": "&(self)[card_283566e755b1295].dataSource.[action_24c2a984f519462].[assign_param_94f8c7d9df554d3].[a315eeba89cd41e18eb16ada89245a6d]"
+                                                    },
+                                                    "color": {
+                                                      "kind": "Field",
+                                                      "value": "&(self)[card_283566e755b1295].dataSource.[action_24c2a984f519462].[assign_param_94f8c7d9df554d3].[a315eeba89cd41e18eb16ada89245a6d]",
+                                                      "converter": "&(ref)be09cb7a5f4a447d8767a9260b2c1ef2.[c1375195ba3049dd9dcea7705bb35cd5].converters.[9ba0b7b11925c23]"
+                                                    }
                                                   },
                                                   "children": []
                                                 }
@@ -442,39 +259,42 @@
                                           ]
                                         },
                                         {
-                                          "id": "row_a8808e0b27c7280",
+                                          "id": "row_6a795e576fc21e4",
                                           "widget": "row",
                                           "props": {
-                                            "ref": "row_a8808e0b27c7280",
-                                            "grid": true,
+                                            "style": {},
+                                            "ref": "row_ebfc7ad01f97765",
                                             "gutter": {
                                               "enabled": true,
                                               "value": [
                                                 0,
                                                 0
                                               ]
-                                            }
+                                            },
+                                            "grid": true
                                           },
                                           "children": [
                                             {
-                                              "id": "col_b7cb95eb1c8f100",
+                                              "id": "col_f9f471432cee212",
                                               "widget": "col",
                                               "props": {
-                                                "ref": "col_b7cb95eb1c8f100"
+                                                "style": {},
+                                                "ref": "col_0b8baf07fe6c294",
+                                                "width": {
+                                                  "kind": "flex",
+                                                  "value": 1
+                                                }
                                               },
                                               "children": [
                                                 {
-                                                  "id": "divider_39f0e1d3827aa60",
+                                                  "id": "divider_76623856c299066",
                                                   "widget": "divider",
                                                   "props": {
-                                                    "ref": "divider_e4dd8e421a30980",
-                                                    "title": {
-                                                      "type": "string",
-                                                      "value": ""
-                                                    },
-                                                    "dashed": true
+                                                    "style": {},
+                                                    "ref": "divider_5f08f3e1280e2d2",
+                                                    "orientation": "center",
+                                                    "title": ""
                                                   },
-                                                  "styles": {},
                                                   "children": []
                                                 }
                                               ]
@@ -482,60 +302,63 @@
                                           ]
                                         },
                                         {
-                                          "id": "row_86ea67212581880",
+                                          "id": "row_06378773750afb6",
                                           "widget": "row",
                                           "props": {
-                                            "ref": "row_86ea67212581880",
-                                            "grid": true,
+                                            "style": {},
+                                            "ref": "row_88ac2722b2727c0",
                                             "gutter": {
                                               "enabled": true,
                                               "value": [
                                                 0,
                                                 0
                                               ]
-                                            }
+                                            },
+                                            "grid": true
                                           },
                                           "children": [
                                             {
-                                              "id": "col_b16a26f1813ed80",
+                                              "id": "col_126347b3fbd8e4e",
                                               "widget": "col",
                                               "props": {
-                                                "ref": "col_b16a26f1813ed80"
+                                                "style": {},
+                                                "ref": "col_add6644c5275c4c",
+                                                "width": {
+                                                  "kind": "flex",
+                                                  "value": 1
+                                                }
                                               },
                                               "children": [
                                                 {
-                                                  "id": "text_2ccf81f174c6a60",
+                                                  "id": "text_afc962022a7f678",
                                                   "widget": "text",
                                                   "props": {
-                                                    "ref": "text_1a31e60aa206d50",
+                                                    "style": {},
+                                                    "ref": "text_b098c33fc117114",
                                                     "textType": {
                                                       "custom": false,
                                                       "type": "default"
                                                     },
-                                                    "value": "上司：",
-                                                    "prefix": ""
+                                                    "value": "上级领导："
                                                   },
-                                                  "styles": {},
                                                   "children": []
                                                 },
                                                 {
-                                                  "id": "text_55b231de3ae9740",
+                                                  "id": "text_deacee7fa5291e7",
                                                   "widget": "text",
                                                   "props": {
-                                                    "ref": "text_6fa493234fe8c40",
+                                                    "style": {},
+                                                    "ref": "text_a96414de044bc04",
                                                     "textType": {
                                                       "custom": false,
                                                       "type": "default"
                                                     },
-                                                    "value": "$(onLoad)Employee.Get.Manager.FullName"
-                                                  },
-                                                  "styles": {},
-                                                  "children": [],
-                                                  "events": {
-                                                    "onClick": {
-                                                      "params": []
+                                                    "value": {
+                                                      "kind": "Field",
+                                                      "value": "&(self)[card_283566e755b1295].dataSource.[action_24c2a984f519462].[assign_param_94f8c7d9df554d3].[21b441dab6ba4084920e71d77f619fdd]"
                                                     }
-                                                  }
+                                                  },
+                                                  "children": []
                                                 }
                                               ]
                                             }
@@ -552,39 +375,42 @@
                       ]
                     },
                     {
-                      "id": "row_f0203e97cb3ab00",
+                      "id": "row_810f8458e4dba5e",
                       "widget": "row",
                       "props": {
-                        "ref": "row_f0203e97cb3ab00",
-                        "grid": true,
+                        "style": {},
+                        "ref": "row_bcdcf8cdbd9d8bb",
                         "gutter": {
                           "enabled": true,
                           "value": [
                             0,
                             0
                           ]
-                        }
+                        },
+                        "grid": true
                       },
                       "children": [
                         {
-                          "id": "col_40e8576b307d2c0",
+                          "id": "col_d61902d5113b555",
                           "widget": "col",
                           "props": {
-                            "ref": "col_40e8576b307d2c0"
+                            "style": {},
+                            "ref": "col_fe2292bfd54834f",
+                            "width": {
+                              "kind": "flex",
+                              "value": 1
+                            }
                           },
                           "children": [
                             {
-                              "id": "divider_e245d500fd4c180",
+                              "id": "divider_8dbde5f7acb1019",
                               "widget": "divider",
                               "props": {
-                                "ref": "divider_e78a3325e427180",
-                                "title": {
-                                  "type": "string",
-                                  "value": ""
-                                },
-                                "dashed": true
+                                "style": {},
+                                "ref": "divider_8d444bf1ec9259a",
+                                "orientation": "center",
+                                "title": ""
                               },
-                              "styles": {},
                               "children": []
                             }
                           ]
@@ -592,194 +418,249 @@
                       ]
                     },
                     {
-                      "id": "row_9615fca0f179380",
+                      "id": "row_1cc96e139526a4e",
                       "widget": "row",
                       "props": {
-                        "ref": "row_9615fca0f179380",
-                        "grid": true,
+                        "style": {},
+                        "ref": "row_45cbbe98f721420",
                         "gutter": {
                           "enabled": true,
                           "value": [
                             0,
                             0
                           ]
-                        }
+                        },
+                        "grid": true
                       },
                       "children": [
                         {
-                          "id": "col_903c938061af000",
+                          "id": "col_2f38b2fe95646aa",
                           "widget": "col",
                           "props": {
-                            "ref": "col_903c938061af000"
+                            "style": {},
+                            "ref": "col_e860f6c4df28cbe",
+                            "width": {
+                              "kind": "flex",
+                              "value": 1
+                            }
                           },
                           "children": [
                             {
-                              "id": "descriptionList_e16aa0ad649d080",
+                              "id": "descriptionList_de496990ed21fa4",
                               "widget": "descriptionList",
                               "props": {
-                                "ref": "descriptionList_55e426db9e8f5c0",
+                                "style": {},
+                                "ref": "descriptionList_0437c680c5a7a37",
                                 "descriptionsItems": [
                                   {
-                                    "label": "学校",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
+                                    "id": "descriptionsItem_f25d292f28b8ca0",
+                                    "widget": "descriptionsItem",
+                                    "props": {
+                                      "ref": "descriptionsItem_f25d292f28b8ca0",
+                                      "label": "学校",
+                                      "span": 1,
+                                      "hide": false
+                                    },
+                                    "children": [
                                       {
-                                        "id": "text_4b901156d777880",
+                                        "id": "text_7f436f12c392b3a",
                                         "widget": "text",
                                         "props": {
-                                          "ref": "text_4b901156d777880",
+                                          "ref": "text_7f436f12c392b3a",
                                           "binding": {
                                             "value": "text"
                                           },
-                                          "value": "$(onLoad)Employee.Get.EducateSchool",
-                                          "prefix": "antdv://HomeOutlined"
+                                          "value": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[a7b09df7ee094b44a41ec89a86594fb3]"
+                                          }
                                         },
                                         "children": []
                                       }
                                     ]
                                   },
                                   {
-                                    "label": "职位",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
+                                    "id": "descriptionsItem_8932cfc20e3bb60",
+                                    "widget": "descriptionsItem",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "descriptionsItem_89e034b5f1b16d9",
+                                      "label": "职位"
+                                    },
+                                    "children": [
                                       {
-                                        "id": "text_f8d11a0c4cf7080",
+                                        "id": "text_de29a89a12cd517",
                                         "widget": "text",
                                         "props": {
-                                          "ref": "text_ba5255d67ea0d80",
-                                          "binding": {
-                                            "value": "text"
+                                          "style": {},
+                                          "ref": "text_3ae3db6e9f09ea6",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
                                           },
-                                          "value": "$(onLoad)Employee.Get.Postion",
-                                          "prefix": "antdv://TeamOutlined"
+                                          "value": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[ba5e8980f95840b88ad6fbf9135711f2]"
+                                          }
                                         },
-                                        "styles": {},
                                         "children": []
                                       }
                                     ]
                                   },
                                   {
-                                    "label": "邮箱",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
+                                    "id": "descriptionsItem_acbd217b43ece11",
+                                    "widget": "descriptionsItem",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "descriptionsItem_09104abe709c91b",
+                                      "label": "邮箱"
+                                    },
+                                    "children": [
                                       {
-                                        "id": "text_890e08ad0c27700",
+                                        "id": "text_7eaf3bfddf3ad9c",
                                         "widget": "text",
                                         "props": {
-                                          "ref": "text_2b6ce3d1c486360",
-                                          "binding": {
-                                            "value": "text"
+                                          "style": {},
+                                          "ref": "text_79560a8c1c9add8",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
                                           },
-                                          "value": "$(onLoad)Employee.Get.Email",
-                                          "prefix": "antdv://MailOutlined"
+                                          "value": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[087fe91d88a542a8bea27eacbc92e156]"
+                                          }
                                         },
-                                        "styles": {},
                                         "children": []
                                       }
                                     ]
                                   },
                                   {
-                                    "label": "手机号码",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
+                                    "id": "descriptionsItem_40fd9ebe4a855ad",
+                                    "widget": "descriptionsItem",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "descriptionsItem_69dace216219dae",
+                                      "label": "电话"
+                                    },
+                                    "children": [
                                       {
-                                        "id": "text_d60ef18ada1838",
+                                        "id": "text_abd11890bbb59ac",
                                         "widget": "text",
                                         "props": {
-                                          "ref": "text_d0f9640a5432a80",
-                                          "binding": {
-                                            "value": "text"
+                                          "style": {},
+                                          "ref": "text_fa1a5cde73d7b5f",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
                                           },
-                                          "value": "$(onLoad)Employee.Get.PhoneNumber",
-                                          "prefix": "antdv://PhoneOutlined"
+                                          "value": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[e58226365df24db39b500b8d0b5c9941]"
+                                          },
+                                          "prefix": "antdv://PhoneFilled"
                                         },
-                                        "styles": {},
                                         "children": []
                                       }
                                     ]
                                   },
                                   {
-                                    "label": "入职时间",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
+                                    "id": "descriptionsItem_10f98edbfc4e447",
+                                    "widget": "descriptionsItem",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "descriptionsItem_54b3be2d282de4f",
+                                      "label": "入职日期"
+                                    },
+                                    "children": [
                                       {
-                                        "id": "text_bd7d89fd4f18880",
+                                        "id": "text_2ecba36bb8a8bc5",
                                         "widget": "text",
                                         "props": {
-                                          "ref": "text_5a84ebe43aa0e80",
-                                          "binding": {
-                                            "value": "text"
+                                          "style": {},
+                                          "ref": "text_0dce6f30c2994e3",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
                                           },
-                                          "value": "$(onLoad)Employee.Get.HireDate",
-                                          "prefix": "antdv://FieldTimeOutlined"
+                                          "value": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[03a9800324ab44a89ce05eb9177ce253]"
+                                          }
                                         },
-                                        "styles": {},
                                         "children": []
                                       }
                                     ]
                                   }
                                 ],
-                                "layout": "horizontal",
                                 "column": 1,
-                                "colon": true,
-                                "bordered": false,
-                                "size": "small"
-                              },
-                              "styles": {
-                                "marginBottom": "15px"
+                                "value": {
+                                  "kind": "Members",
+                                  "value": "&(self)[card_283566e755b1295].data"
+                                }
                               },
                               "children": []
                             },
                             {
-                              "id": "button_345516984877900",
+                              "id": "button_dd9ab74beff7d49",
                               "widget": "button",
                               "props": {
-                                "ref": "button_e88a9f1a847bd80",
-                                "htmlType": "button",
-                                "icon": "antdv://EditFilled",
-                                "label": "编辑",
-                                "size": "small",
+                                "style": {},
+                                "ref": "button_7f940910abac69c",
                                 "type": "primary",
-                                "shape": "round"
-                              },
-                              "styles": {},
-                              "children": [],
-                              "events": {
-                                "onClick": {
-                                  "type": "openModalWindow",
-                                  "component": "modal_549f38873c55d40"
+                                "label": "编辑",
+                                "icon": "antdv://EditFilled",
+                                "size": "small",
+                                "shape": "round",
+                                "events": {
+                                  "onClick": {
+                                    "id": "event_84d4994115ca8d3",
+                                    "widget": "event",
+                                    "children": [
+                                      {
+                                        "widget": "action_component",
+                                        "id": "action_24b1246ce00cdf4",
+                                        "props": {
+                                          "target": "&(self)[modal_9cc3bebfe14da1c].onOpen"
+                                        }
+                                      }
+                                    ],
+                                    "props": {}
+                                  }
                                 }
-                              }
+                              },
+                              "children": []
                             },
                             {
-                              "id": "button_9c11b819e1d0000",
+                              "id": "button_d9e3052d08977a5",
                               "widget": "button",
                               "props": {
-                                "ref": "button_ea45534970e7d80",
-                                "htmlType": "button",
-                                "shape": "round",
-                                "icon": "antdv://AlertFilled",
+                                "style": {},
+                                "ref": "button_ca4ad23762a7e3d",
                                 "label": "办理离职",
-                                "danger": true,
                                 "type": "primary",
-                                "size": "small"
-                              },
-                              "styles": {
-                                "flexBasis": "nullpx",
-                                "marginLeft": "5px"
-                              },
-                              "children": [],
-                              "events": {
-                                "onClick": {
-                                  "type": "openModalWindow",
-                                  "component": "modal_39e727e58eea620"
+                                "danger": true,
+                                "icon": "antdv://BulbFilled",
+                                "size": "small",
+                                "shape": "round",
+                                "events": {
+                                  "onClick": {
+                                    "id": "event_0bcbd2eaac0f2b5",
+                                    "widget": "event",
+                                    "children": [
+                                      {
+                                        "widget": "action_component",
+                                        "id": "action_e8dbbb7c915a131",
+                                        "props": {
+                                          "target": "&(self)[modal_93a2e09309986a9].onOpen"
+                                        }
+                                      }
+                                    ],
+                                    "props": {}
+                                  }
                                 }
-                              }
+                              },
+                              "children": []
                             }
                           ]
                         }
@@ -787,259 +668,280 @@
                     }
                   ]
                 }
-              ],
-              "styles": {}
+              ]
             },
             {
-              "id": "col_11a7eccf98d69b0",
+              "id": "col_d05297b69b14905",
               "widget": "col",
               "props": {
-                "ref": "col_2b885eaa6e81d40",
-                "width": "${span}1"
-              },
-              "styles": {
-                "height": "100%"
+                "style": {},
+                "ref": "col_2c45506e857525c",
+                "width": {
+                  "kind": "percent",
+                  "value": 2
+                }
               },
               "children": [
                 {
-                  "id": "divider_fda8f6c05c69480",
+                  "id": "divider_50ba034db7e1206",
                   "widget": "divider",
                   "props": {
-                    "ref": "divider_47e79d792372480",
-                    "title": {
-                      "type": "string",
-                      "value": ""
+                    "style": {
+                      "height": "750px"
                     },
+                    "ref": "divider_5e99f9d07259108",
+                    "orientation": "center",
                     "type": "vertical"
-                  },
-                  "styles": {
-                    "height": "900px"
                   },
                   "children": []
                 }
               ]
             },
             {
-              "id": "col_9846429b197200",
+              "id": "col_8af40f1395f6ef0",
               "widget": "col",
               "props": {
-                "ref": "col_9846429b197200"
+                "style": {},
+                "ref": "col_f43b805c9d53ced",
+                "width": {
+                  "kind": "percent",
+                  "value": 70
+                }
               },
               "children": [
                 {
-                  "id": "grid_8b34a9be6fbd500",
+                  "id": "grid_001488e179e1899",
                   "widget": "grid",
                   "props": {
-                    "ref": "grid_b28891bef0abc00",
-                    "rowNum": 2,
+                    "style": {},
+                    "ref": "grid_b6a76243d7ad8cf",
                     "colNum": 1
                   },
-                  "styles": {},
                   "children": [
                     {
-                      "id": "row_ef04649d01b5500",
+                      "id": "row_5387fd5d27d98ae",
                       "widget": "row",
                       "props": {
-                        "ref": "row_ef04649d01b5500",
-                        "grid": true,
+                        "style": {},
+                        "ref": "row_ea5a608ea5828ae",
                         "gutter": {
                           "enabled": true,
                           "value": [
                             0,
                             0
                           ]
-                        }
+                        },
+                        "grid": true
                       },
                       "children": [
                         {
-                          "id": "col_7e2399d9761d700",
+                          "id": "col_291e9ae0b6ca814",
                           "widget": "col",
                           "props": {
-                            "ref": "col_7e2399d9761d700"
+                            "style": {},
+                            "ref": "col_3db84fb2221984d",
+                            "width": {
+                              "kind": "flex",
+                              "value": 1
+                            }
                           },
                           "children": [
                             {
-                              "id": "title_5d050eb6f748cc0",
+                              "id": "title_e7a1da670b2b27f",
                               "widget": "title",
                               "props": {
-                                "ref": "title_a1e1b61f491c980",
-                                "level": 4,
+                                "style": {},
+                                "ref": "title_5cbcaec815d20b5",
+                                "level": 2,
                                 "value": "基本信息"
                               },
-                              "styles": {},
                               "children": []
                             },
                             {
-                              "id": "descriptionList_924e695f8405480",
+                              "id": "descriptionList_9ca614e48aa6c3c",
                               "widget": "descriptionList",
                               "props": {
-                                "ref": "descriptionList_198ebdf5909af60",
+                                "style": {},
+                                "ref": "descriptionList_98028814cf9d4bc",
                                 "descriptionsItems": [
                                   {
-                                    "label": "性别",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
+                                    "id": "descriptionsItem_4517eceea61df3b",
+                                    "widget": "descriptionsItem",
+                                    "props": {
+                                      "ref": "descriptionsItem_4517eceea61df3b",
+                                      "label": "性别",
+                                      "span": 1,
+                                      "hide": false
+                                    },
+                                    "children": [
                                       {
-                                        "id": "tag_6e4cb69b435d5c0",
+                                        "id": "tag_a9e7f0aa328c94c",
                                         "widget": "tag",
                                         "props": {
-                                          "ref": "tag_gender",
-                                          "value": "$(onLoad)Employee.Get.Gender"
+                                          "style": {},
+                                          "ref": "tag_986aa269cc14102",
+                                          "value": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[e0c5c5b6f28945d583ffa411ab743895]"
+                                          },
+                                          "color": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[e0c5c5b6f28945d583ffa411ab743895]",
+                                            "converter": "&(ref)f2145bb7b98e4432a090555b0aa2f26b.[3f93e06f5f904e57b838cd019abf1db2].converters.[f6a89a8fc80ab57]"
+                                          }
                                         },
-                                        "styles": {},
                                         "children": []
                                       }
                                     ]
                                   },
                                   {
-                                    "label": "身份证号码",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
+                                    "id": "descriptionsItem_a55973d7e0450f6",
+                                    "widget": "descriptionsItem",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "descriptionsItem_22d8ff2d6e0b4c6",
+                                      "label": "身份证号码"
+                                    },
+                                    "children": [
                                       {
-                                        "id": "text_45f77222714bf40",
+                                        "id": "text_2a3f8a821101250",
                                         "widget": "text",
                                         "props": {
-                                          "ref": "text_1ea329f0d877d10",
-                                          "binding": {
-                                            "value": "text"
+                                          "style": {},
+                                          "ref": "text_80839084905bfac",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
                                           },
-                                          "value": "$(onLoad)Employee.Get.IdCard",
-                                          "prefix": "antdv://IdcardOutlined",
-                                          "copyable": true
+                                          "value": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[f91e6be84b0640d49a0eda28217a7247]"
+                                          }
                                         },
-                                        "styles": {},
                                         "children": []
                                       }
                                     ]
                                   },
                                   {
-                                    "label": "出生日期",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
+                                    "id": "descriptionsItem_5194ef4085dd92a",
+                                    "widget": "descriptionsItem",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "descriptionsItem_446ebfda4fa9b57",
+                                      "label": "生日"
+                                    },
+                                    "children": [
                                       {
-                                        "id": "text_9525483ec23b680",
+                                        "id": "text_1c323537c5a4d3f",
                                         "widget": "text",
                                         "props": {
-                                          "ref": "text_38225cfd95f63e0",
-                                          "binding": {
-                                            "value": "text"
+                                          "style": {},
+                                          "ref": "text_80125815aaa660a",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
                                           },
-                                          "value": "$(onLoad)Employee.Get.BirthDay"
+                                          "value": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[329bd62e311944b7b5ac8d9917af6c81]"
+                                          }
                                         },
-                                        "styles": {},
                                         "children": []
                                       }
                                     ]
                                   },
                                   {
-                                    "label": "最高学历",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
+                                    "id": "descriptionsItem_3765cb3c9c4d919",
+                                    "widget": "descriptionsItem",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "descriptionsItem_0b2bd870018aa33",
+                                      "label": "学历"
+                                    },
+                                    "children": [
                                       {
-                                        "id": "badge_99f60635d9c6400",
+                                        "id": "badge_7d485f83a84b6dd",
                                         "widget": "badge",
-                                        "styles": {
-                                          "width": "100%"
-                                        },
                                         "props": {
-                                          "ref": "badge_99f60635d9c6400",
-                                          "value": "$(onLoad)Employee.Get.Degree"
-                                        }
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "label": "毕业时间",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
-                                      {
-                                        "id": "text_81c398d36743a80",
-                                        "widget": "text",
-                                        "props": {
-                                          "ref": "text_5d4570fae3b5bc0",
-                                          "binding": {
-                                            "value": "text"
+                                          "style": {
+                                            "width": "100%"
                                           },
-                                          "value": "$(onLoad)Employee.Get.EducateDate"
+                                          "ref": "badge_858c3208275b0fa",
+                                          "color": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[541d9cadc4c5402cb8e97bf625317ed0]",
+                                            "converter": "&(ref)5a48a495019f4f8b9f5e9c2e975fb70e.[0a50063933594d59a1aea3169d00ce5e].converters.[02a094f03005863]"
+                                          },
+                                          "value": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[541d9cadc4c5402cb8e97bf625317ed0]"
+                                          }
                                         },
-                                        "styles": {},
                                         "children": []
                                       }
                                     ]
                                   },
                                   {
-                                    "label": "所属部门",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
+                                    "id": "descriptionsItem_e2816acfc566d3c",
+                                    "widget": "descriptionsItem",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "descriptionsItem_1f6ea1c71bac7f9",
+                                      "label": "毕业日期"
+                                    },
+                                    "children": [
                                       {
-                                        "id": "text_d45a8a8f64b0300",
+                                        "id": "text_890e694d83e001c",
                                         "widget": "text",
                                         "props": {
-                                          "ref": "text_56a2acc5cd55800",
-                                          "binding": {
-                                            "value": "text"
+                                          "style": {},
+                                          "ref": "text_3db848db6b90563",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
                                           },
-                                          "value": "$(onLoad)Employee.Get.Department.DepartmentName"
+                                          "value": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[ab81b6c3dde64733b578a0eea95849d6]"
+                                          }
                                         },
-                                        "styles": {},
                                         "children": []
                                       }
                                     ]
                                   },
                                   {
-                                    "label": "创建时间",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
+                                    "id": "descriptionsItem_4af3e5d219f0a50",
+                                    "widget": "descriptionsItem",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "descriptionsItem_0e6d5ca6f317d83",
+                                      "label": "部门"
+                                    },
+                                    "children": [
                                       {
-                                        "id": "text_d044c272b7b9780",
+                                        "id": "text_90a9fa0d3fb84f5",
                                         "widget": "text",
                                         "props": {
-                                          "ref": "text_aa8067f8e8b8f00",
-                                          "binding": {
-                                            "value": "text"
+                                          "style": {},
+                                          "ref": "text_ab805f0435fa551",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
                                           },
-                                          "value": "$(onLoad)Employee.Get.CreateTime"
+                                          "value": {
+                                            "kind": "MemberField",
+                                            "value": "&(self)[card_283566e755b1295].data.[f297159d1fb249809f1260441a9c135a]"
+                                          }
                                         },
-                                        "styles": {},
-                                        "children": []
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "label": "更新时间",
-                                    "span": 1,
-                                    "hide": false,
-                                    "renders": [
-                                      {
-                                        "id": "text_8430928f89fc180",
-                                        "widget": "text",
-                                        "props": {
-                                          "ref": "text_73cc2e2082ece00",
-                                          "binding": {
-                                            "value": "text"
-                                          },
-                                          "value": "$(onLoad)Employee.Get.UpdateTime"
-                                        },
-                                        "styles": {},
                                         "children": []
                                       }
                                     ]
                                   }
                                 ],
-                                "column": 3,
-                                "layout": "horizontal",
-                                "size": "small",
-                                "colon": true
-                              },
-                              "styles": {
-                                "marginTop": "20px"
+                                "value": {
+                                  "kind": "Members",
+                                  "value": "&(self)[card_283566e755b1295].data"
+                                }
                               },
                               "children": []
                             }
@@ -1048,462 +950,471 @@
                       ]
                     },
                     {
-                      "id": "row_d5043add7f10600",
+                      "id": "row_70bd0c2a07824dc",
                       "widget": "row",
                       "props": {
-                        "ref": "row_d5043add7f10600",
-                        "grid": true,
+                        "style": {},
+                        "ref": "row_f3e3e91e9bd49a1",
                         "gutter": {
                           "enabled": true,
                           "value": [
                             0,
                             0
                           ]
-                        }
+                        },
+                        "grid": true
                       },
                       "children": [
                         {
-                          "id": "col_156625225506310",
+                          "id": "col_1a7f83bfafa1166",
                           "widget": "col",
                           "props": {
-                            "ref": "col_156625225506310"
+                            "style": {},
+                            "ref": "col_aa2bf8173503edc",
+                            "width": {
+                              "kind": "flex",
+                              "value": 1
+                            }
                           },
                           "children": [
                             {
-                              "id": "tableContainer_d5fe91aff097500",
+                              "id": "tableContainer_2b352a813512c94",
                               "widget": "tableContainer",
                               "props": {
-                                "ref": "tableContainer_bd02e65e7848b80",
-                                "title": {
-                                  "type": "string",
-                                  "value": "教育经历"
-                                },
-                                "request": {
-                                  "name": "$(Api)Education.GetPageByEmployeeFilter",
-                                  "params": {
-                                    "EmployeeId": "$(Props)8dc9b6b14b308d4990"
-                                  }
-                                },
-                                "search": {
-                                  "col": {
-                                    "width": "${span}8",
-                                    "offset": 0
-                                  },
-                                  "showExpand": false,
-                                  "displayRow": 1,
-                                  "filter": [],
-                                  "hideForm": true,
-                                  "hideSearchActions": false
-                                },
+                                "style": {},
+                                "ref": "tableContainer_3011ddba7ded1f6",
                                 "columns": [
                                   {
-                                    "hide": true,
-                                    "title": "Id",
-                                    "dataIndex": "$(Field)Education.Id",
-                                    "render": {
-                                      "id": "text_f986786b573dd80",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)Education.Id",
-                                        "ref": "text_fce348250cc5100"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": false,
-                                    "title": "学校",
-                                    "dataIndex": "$(Field)Education.School",
-                                    "render": {
-                                      "id": "text_ba9e80f21d69a00",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)Education.School",
-                                        "ref": "text_d14d2d4f8e0e680"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": false,
-                                    "title": "起始日期",
-                                    "dataIndex": "$(Field)Education.StartDate",
-                                    "render": {
-                                      "id": "text_827e034c7e4a400",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)Education.StartDate",
-                                        "ref": "text_8d46466bbc08580"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": false,
-                                    "title": "结束日期",
-                                    "dataIndex": "$(Field)Education.EndDate",
-                                    "render": {
-                                      "id": "text_774e0b29a34ce40",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)Education.EndDate",
-                                        "ref": "text_74a2c5847497140"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": false,
-                                    "title": "专业",
-                                    "dataIndex": "$(Field)Education.Major",
-                                    "render": {
-                                      "id": "text_915db9a95995180",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)Education.Major",
-                                        "ref": "text_96c985cbf043780"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": false,
-                                    "title": "学历",
-                                    "dataIndex": "$(Field)Education.Degree",
-                                    "render": {
-                                      "id": "tag_26a599ab343bc00",
-                                      "widget": "tag",
-                                      "props": {
-                                        "value": "$(Field)Education.Degree",
-                                        "ref": "tag_bbd6d1575c49880"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": true,
-                                    "title": "员工",
-                                    "dataIndex": "$(Field)Education.BelongEmployeeId",
-                                    "render": {
-                                      "id": "text_4bfe39b669f6000",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)Education.BelongEmployeeId",
-                                        "ref": "text_c2c59979d241900"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "dataIndex": "operation",
-                                    "fixed": "right",
-                                    "title": "操作列",
-                                    "width": 180,
-                                    "render": {
-                                      "id": "space_e8412a7cc393400",
-                                      "widget": "space",
-                                      "props": {
-                                        "ref": "space_e8412a7cc393400",
-                                        "size": 0
-                                      },
-                                      "children": [
-                                        {
-                                          "id": "popConfirm_e8fbbf0196f5500",
-                                          "widget": "popConfirm",
-                                          "props": {
-                                            "ref": "popConfirm_e8fbbf0196f5500",
-                                            "open": false
-                                          },
-                                          "events": {
-                                            "confirm": {
-                                              "type": "request",
-                                              "request": {
-                                                "name": "$(Api)Education.Delete",
-                                                "params": {
-                                                  "Id": "$(Members)[watch]tableContainer_d5fe91aff097500.currentRow.Id"
-                                                }
-                                              },
-                                              "callback": "$(Event)tableContainer_d5fe91aff097500.onSearch"
-                                            }
-                                          },
-                                          "children": [
-                                            {
-                                              "id": "button_50777c7cbda6dc0",
-                                              "widget": "button",
-                                              "props": {
-                                                "ref": "button_50777c7cbda6dc0",
-                                                "htmlType": "button",
-                                                "label": "删除",
-                                                "type": "link",
-                                                "size": "small",
-                                                "danger": true
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  }
-                                ],
-                                "extra": [
-                                  {
-                                    "id": "button_311f7ae947ea5c0",
-                                    "widget": "button",
+                                    "id": "tableColumn_de3d7f673be54c1e8b40d7075a135656",
+                                    "widget": "tableColumn",
                                     "props": {
-                                      "ref": "button_67541770a8d1080",
-                                      "htmlType": "button",
-                                      "type": "link",
-                                      "label": "新增",
-                                      "icon": "antdv://PlusCircleFilled"
+                                      "style": {},
+                                      "ref": "tableColumn_de3d7f673be54c1e8b40d7075a135656",
+                                      "title": "Id",
+                                      "dataIndex": {
+                                        "kind": "Field",
+                                        "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[370e18f5e6a1453894a17df560582fa5]"
+                                      },
+                                      "hide": true
                                     },
-                                    "styles": {},
-                                    "children": [],
-                                    "events": {
-                                      "onClick": {
-                                        "type": "openModalWindow",
-                                        "component": "modal_31e3373fa9f85a0"
+                                    "children": [
+                                      {
+                                        "id": "text_881f5405330b4e59ac0c3ecf511485c3",
+                                        "widget": "text",
+                                        "props": {
+                                          "ref": "text_881f5405330b4e59ac0c3ecf511485c3",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
+                                          },
+                                          "value": {
+                                            "kind": "Field",
+                                            "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[370e18f5e6a1453894a17df560582fa5]"
+                                          }
+                                        },
+                                        "children": []
                                       }
-                                    }
+                                    ]
+                                  },
+                                  {
+                                    "id": "tableColumn_d53bbbb97b1a4c1c8d304a1655092598",
+                                    "widget": "tableColumn",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "tableColumn_d53bbbb97b1a4c1c8d304a1655092598",
+                                      "title": "学校",
+                                      "dataIndex": {
+                                        "kind": "Field",
+                                        "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[33eb0af92e0a4906a1f7237bbcca5317]"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "text_9c482b7567d044848b0160b1c9d0c010",
+                                        "widget": "text",
+                                        "props": {
+                                          "ref": "text_9c482b7567d044848b0160b1c9d0c010",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
+                                          },
+                                          "value": {
+                                            "kind": "Field",
+                                            "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[33eb0af92e0a4906a1f7237bbcca5317]"
+                                          }
+                                        },
+                                        "children": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "tableColumn_a5b5013d39464437bea192decc48b253",
+                                    "widget": "tableColumn",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "tableColumn_a5b5013d39464437bea192decc48b253",
+                                      "title": "开始时间",
+                                      "dataIndex": {
+                                        "kind": "Field",
+                                        "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[9644fcb7c3754bbeb370327f8dd46c1d]"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "text_e7c6b93481124123b08df5d8ad03071e",
+                                        "widget": "text",
+                                        "props": {
+                                          "ref": "text_e7c6b93481124123b08df5d8ad03071e",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
+                                          },
+                                          "value": {
+                                            "kind": "Field",
+                                            "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[9644fcb7c3754bbeb370327f8dd46c1d]"
+                                          }
+                                        },
+                                        "children": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "tableColumn_b5a7c06200c8485aba9daafe00886f94",
+                                    "widget": "tableColumn",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "tableColumn_b5a7c06200c8485aba9daafe00886f94",
+                                      "title": "结束时间",
+                                      "dataIndex": {
+                                        "kind": "Field",
+                                        "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[1bbe1cb2a7d846d4aaf782b2dd771258]"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "text_80b91dabd82e4290819576a45278f683",
+                                        "widget": "text",
+                                        "props": {
+                                          "ref": "text_80b91dabd82e4290819576a45278f683",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
+                                          },
+                                          "value": {
+                                            "kind": "Field",
+                                            "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[1bbe1cb2a7d846d4aaf782b2dd771258]"
+                                          }
+                                        },
+                                        "children": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "tableColumn_d20b3da6ff0340939eed2d445985881e",
+                                    "widget": "tableColumn",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "tableColumn_d20b3da6ff0340939eed2d445985881e",
+                                      "title": "专业",
+                                      "dataIndex": {
+                                        "kind": "Field",
+                                        "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[6811ae92ca554901921fade39a4f7159]"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "text_a4d66afaf35f48ffb21b0f68c10eff38",
+                                        "widget": "text",
+                                        "props": {
+                                          "ref": "text_a4d66afaf35f48ffb21b0f68c10eff38",
+                                          "textType": {
+                                            "custom": false,
+                                            "type": "default"
+                                          },
+                                          "value": {
+                                            "kind": "Field",
+                                            "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[6811ae92ca554901921fade39a4f7159]"
+                                          }
+                                        },
+                                        "children": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "tableColumn_fb43c7ab970643c88e0e7321f7755609",
+                                    "widget": "tableColumn",
+                                    "props": {
+                                      "style": {},
+                                      "ref": "tableColumn_fb43c7ab970643c88e0e7321f7755609",
+                                      "title": "学位",
+                                      "dataIndex": {
+                                        "kind": "Field",
+                                        "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[d77fff4b25274384a4dc9e9bef5faae5]"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "tag_81245f1486fd452aa322f4d1a3561d41",
+                                        "widget": "tag",
+                                        "props": {
+                                          "ref": "tag_81245f1486fd452aa322f4d1a3561d41",
+                                          "style": {
+                                            "opacity": "100%"
+                                          },
+                                          "color": {
+                                            "kind": "Field",
+                                            "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[d77fff4b25274384a4dc9e9bef5faae5]",
+                                            "converter": "&(ref)5a48a495019f4f8b9f5e9c2e975fb70e.[0a50063933594d59a1aea3169d00ce5e].converters.[02a094f03005863]"
+                                          },
+                                          "value": {
+                                            "kind": "Field",
+                                            "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[d77fff4b25274384a4dc9e9bef5faae5]"
+                                          }
+                                        },
+                                        "children": []
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "tableColumn_9297eeee97a33b7",
+                                    "widget": "tableColumn",
+                                    "props": {
+                                      "ref": "tableColumn_9297eeee97a33b7",
+                                      "dataIndex": "operation",
+                                      "fixed": "right",
+                                      "title": "操作列",
+                                      "width": 180
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "space_ec04089196601fd",
+                                        "widget": "space",
+                                        "props": {
+                                          "ref": "space_ec04089196601fd",
+                                          "size": 0
+                                        },
+                                        "children": [
+                                          {
+                                            "id": "button_65bc192554f8b61",
+                                            "widget": "button",
+                                            "props": {
+                                              "events": {
+                                                "onClick": {
+                                                  "id": "event_473aacc9654a758",
+                                                  "widget": "event",
+                                                  "children": [
+                                                    {
+                                                      "widget": "action_api",
+                                                      "id": "action_5c56ec601095a56",
+                                                      "props": {
+                                                        "target": "&(ref)0c48ed5ed0fe472ab906600e0b52bd4b.[8c18e0506e4248b386f95712b5b6b754]",
+                                                        "params": [
+                                                          {
+                                                            "id": "assign_param_397dda7270a35f6",
+                                                            "widget": "assign_param",
+                                                            "props": {
+                                                              "name": {
+                                                                "kind": "Parameter",
+                                                                "value": "&(self)[tableContainer_2b352a813512c94].columns.[button_65bc192554f8b61].events.onClick.[action_5c56ec601095a56].target.params.[7ef6554dc42e42ecb65c8e648f120ca4]"
+                                                              },
+                                                              "value": {
+                                                                "kind": "Members",
+                                                                "value": "&(self)[tableContainer_2b352a813512c94].currentRow.[370e18f5e6a1453894a17df560582fa5]"
+                                                              }
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    },
+                                                    {
+                                                      "widget": "action_component",
+                                                      "id": "action_9c3bcafd68a71c1",
+                                                      "props": {
+                                                        "target": "&(self)[tableContainer_2b352a813512c94].loadData"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "props": {}
+                                                }
+                                              },
+                                              "ref": "button_65bc192554f8b61",
+                                              "htmlType": "button",
+                                              "label": "删除",
+                                              "type": "link",
+                                              "size": "small",
+                                              "danger": true
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
                                   }
                                 ],
-                                "hideActions": false,
-                                "hasPagination": true
-                              },
-                              "styles": {
-                                "marginTop": "20px"
-                              },
-                              "children": []
-                            },
-                            {
-                              "id": "tableContainer_f2a965dcda34c80",
-                              "widget": "tableContainer",
-                              "props": {
-                                "ref": "tableContainer_147a94a141547b0",
-                                "title": {
-                                  "type": "string",
-                                  "value": "工作经历"
-                                },
-                                "request": {
-                                  "name": "$(Api)EmployeeJob.GetPageByEmployeeFilter",
-                                  "params": {
-                                    "EmployeeId": "$(Props)8dc9b6b14b308d4990"
-                                  }
-                                },
                                 "search": {
                                   "col": {
-                                    "width": "${span}8",
+                                    "width": {
+                                      "kind": "span",
+                                      "value": 8
+                                    },
                                     "offset": 0
                                   },
                                   "showExpand": false,
                                   "displayRow": 1,
-                                  "filter": [],
-                                  "hideForm": true,
-                                  "hideSearchActions": false
-                                },
-                                "columns": [
-                                  {
-                                    "hide": true,
-                                    "title": "Id",
-                                    "dataIndex": "$(Field)EmployeeJob.Id",
-                                    "render": {
-                                      "id": "text_1077689fbc4a790",
-                                      "widget": "text",
+                                  "filter": [
+                                    {
+                                      "id": "formItem_dc97ec640a8747d78c5788f8fc74374c",
+                                      "widget": "formItem",
                                       "props": {
-                                        "value": "$(Field)EmployeeJob.Id",
-                                        "ref": "text_890fbd9c84e0d00"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": false,
-                                    "title": "企业",
-                                    "dataIndex": "$(Field)EmployeeJob.Company",
-                                    "render": {
-                                      "id": "text_76449d5a0216e00",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)EmployeeJob.Company",
-                                        "ref": "text_1a89b893ee50220"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": false,
-                                    "title": "职位",
-                                    "dataIndex": "$(Field)EmployeeJob.Title",
-                                    "render": {
-                                      "id": "text_663a84dffcd6340",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)EmployeeJob.Title",
-                                        "ref": "text_f9d864e44d24800"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": false,
-                                    "title": "开始日期",
-                                    "dataIndex": "$(Field)EmployeeJob.StartDate",
-                                    "render": {
-                                      "id": "text_a8c5c1ed8e1e180",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)EmployeeJob.StartDate",
-                                        "ref": "text_9cdb3ebe08fbb80"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": false,
-                                    "title": "结束日期",
-                                    "dataIndex": "$(Field)EmployeeJob.EndDate",
-                                    "render": {
-                                      "id": "text_a22461c755f5a80",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)EmployeeJob.EndDate",
-                                        "ref": "text_bd0581973ce6d00"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": false,
-                                    "title": "离职原因",
-                                    "dataIndex": "$(Field)EmployeeJob.ResignReason",
-                                    "render": {
-                                      "id": "text_26511327f7f87c",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)EmployeeJob.ResignReason",
-                                        "ref": "text_9e4ccdf0116e200"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": false,
-                                    "title": "联系人",
-                                    "dataIndex": "$(Field)EmployeeJob.Contact",
-                                    "render": {
-                                      "id": "text_2c5748cc787a4e0",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)EmployeeJob.Contact",
-                                        "ref": "text_f886ffc6f0d3300"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "hide": false,
-                                    "title": "联系电话",
-                                    "dataIndex": "$(Field)EmployeeJob.ContactPhone",
-                                    "render": {
-                                      "id": "text_211f4f847498460",
-                                      "widget": "text",
-                                      "props": {
-                                        "value": "$(Field)EmployeeJob.ContactPhone",
-                                        "ref": "text_f8d1ca64fe2688"
-                                      },
-                                      "styles": {},
-                                      "children": []
-                                    }
-                                  },
-                                  {
-                                    "dataIndex": "operation",
-                                    "fixed": "right",
-                                    "title": "操作列",
-                                    "width": 180,
-                                    "render": {
-                                      "id": "space_2ad0ef42c7e1060",
-                                      "widget": "space",
-                                      "props": {
-                                        "ref": "space_f4ea18628c96b00",
-                                        "size": 0
+                                        "label": "EmployeeId",
+                                        "style": {},
+                                        "ref": "formItem_dc97ec640a8747d78c5788f8fc74374c",
+                                        "application": [],
+                                        "rules": [],
+                                        "name": {
+                                          "kind": "Parameter",
+                                          "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_17b93893cf066c5].target.params.[1673fd2486d6458d9f9eac32ae1f4a6a].[2d437ed294a348708becddcb16e52164]"
+                                        }
                                       },
                                       "children": [
                                         {
-                                          "id": "popConfirm_778d204c1333c00",
-                                          "widget": "popConfirm",
+                                          "id": "numberInput_5dbef4b2e168475e8f3b36e0dd6c5edd",
+                                          "widget": "numberInput",
                                           "props": {
-                                            "ref": "popConfirm_778d204c1333c00",
-                                            "open": false
-                                          },
-                                          "events": {
-                                            "confirm": {
-                                              "type": "request",
-                                              "request": {
-                                                "name": "$(Api)EmployeeJob.Delete",
-                                                "params": {
-                                                  "Id": "$(Members)[watch]tableContainer_f2a965dcda34c80.currentRow.Id"
-                                                }
-                                              },
-                                              "callback": "$(Event)tableContainer_f2a965dcda34c80.onSearch"
+                                            "ref": "numberInput_5dbef4b2e168475e8f3b36e0dd6c5edd",
+                                            "style": {
+                                              "width": "100%"
+                                            },
+                                            "placeholder": "请输入",
+                                            "value": {
+                                              "kind": "Parameter",
+                                              "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_17b93893cf066c5].target.params.[1673fd2486d6458d9f9eac32ae1f4a6a].[2d437ed294a348708becddcb16e52164]"
                                             }
                                           },
-                                          "children": [
-                                            {
-                                              "id": "button_459af608ec63c80",
-                                              "widget": "button",
-                                              "props": {
-                                                "ref": "button_459af608ec63c80",
-                                                "htmlType": "button",
-                                                "label": "删除",
-                                                "type": "link",
-                                                "size": "small",
-                                                "danger": true
-                                              }
-                                            }
-                                          ]
+                                          "children": []
                                         }
                                       ]
                                     }
-                                  }
-                                ],
+                                  ],
+                                  "hideForm": true,
+                                  "hideSearchActions": false
+                                },
+                                "hasPagination": false,
+                                "dataSource": {
+                                  "id": "function_82c213ed063f7ca",
+                                  "widget": "function",
+                                  "children": [
+                                    {
+                                      "id": "action_17b93893cf066c5",
+                                      "widget": "action_api",
+                                      "props": {
+                                        "target": "&(ref)0c48ed5ed0fe472ab906600e0b52bd4b.[d7f186f077484b24948b88c2ce574306]",
+                                        "params": [
+                                          {
+                                            "id": "assign_param_a6eefb398712797",
+                                            "widget": "assign_param",
+                                            "props": {
+                                              "name": {
+                                                "kind": "Parameter",
+                                                "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_17b93893cf066c5].target.params.[1673fd2486d6458d9f9eac32ae1f4a6a]"
+                                              }
+                                            },
+                                            "children": [
+                                              {
+                                                "id": "assign_param_0496724be8e7ef0",
+                                                "widget": "assign_param",
+                                                "props": {
+                                                  "name": {
+                                                    "kind": "Parameter",
+                                                    "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_17b93893cf066c5].target.params.[1673fd2486d6458d9f9eac32ae1f4a6a].[2d437ed294a348708becddcb16e52164]"
+                                                  },
+                                                  "value": {
+                                                    "kind": "Props",
+                                                    "value": "$(self)[page_8dd5cc9b102383b].params.[45b8f1dd29da4d1]"
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "id": "action_d05ca7802d269d1",
+                                      "widget": "action_adapter",
+                                      "children": [
+                                        {
+                                          "id": "assign_param_0ad1acb741232d8",
+                                          "widget": "assign_param",
+                                          "props": {
+                                            "name": {
+                                              "kind": "Members",
+                                              "value": "&(self)[tableContainer_2b352a813512c94].data"
+                                            },
+                                            "value": {
+                                              "kind": "Field",
+                                              "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_17b93893cf066c5].target.result"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "id": "assign_param_7381b6ae7ab2c2e",
+                                          "widget": "assign_param",
+                                          "props": {
+                                            "name": {
+                                              "kind": "Members",
+                                              "value": "&(self)[tableContainer_2b352a813512c94].total"
+                                            },
+                                            "value": {
+                                              "kind": "Field",
+                                              "value": ""
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "props": {}
+                                    }
+                                  ],
+                                  "props": {}
+                                },
+                                "rowKey": {
+                                  "kind": "Field",
+                                  "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[370e18f5e6a1453894a17df560582fa5]"
+                                },
+                                "title": "教育经历",
                                 "extra": [
                                   {
-                                    "id": "button_6c55853107334c0",
+                                    "id": "button_ce102f71d0afddd",
                                     "widget": "button",
                                     "props": {
-                                      "ref": "button_b40e47b05bf8180",
-                                      "htmlType": "button",
+                                      "style": {},
+                                      "ref": "button_1fb278ad46e60f1",
                                       "icon": "antdv://PlusCircleFilled",
-                                      "type": "link",
-                                      "label": "新增"
-                                    },
-                                    "styles": {},
-                                    "children": [],
-                                    "events": {
-                                      "onClick": {
-                                        "type": "openModalWindow",
-                                        "component": "modal_45a85fa8f314240"
+                                      "label": "添加",
+                                      "type": "primary",
+                                      "events": {
+                                        "onClick": {
+                                          "id": "event_8f5be4693409ee4",
+                                          "widget": "event",
+                                          "children": [
+                                            {
+                                              "widget": "action_component",
+                                              "id": "action_2da6b4c5955d588",
+                                              "props": {
+                                                "target": "&(self)[modal_b519e31fdcb3c85].onOpen"
+                                              }
+                                            }
+                                          ],
+                                          "props": {}
+                                        }
                                       }
-                                    }
+                                    },
+                                    "children": []
                                   }
                                 ],
-                                "hideActions": false,
-                                "hasPagination": true
+                                "model": {
+                                  "data": "&(ref)EmployeeJobedf5b54a97eb4d0d803efb81554fd77b.[561ce6553a1a46da96d9b5c9c0799b43]"
+                                }
                               },
-                              "styles": {},
                               "children": []
                             }
                           ]
@@ -1511,128 +1422,1006 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "id": "tableContainer_99a90b295d35944",
+                  "widget": "tableContainer",
+                  "props": {
+                    "style": {},
+                    "ref": "tableContainer_0be711f1b154cb2",
+                    "columns": [
+                      {
+                        "id": "tableColumn_c335f95a48c04adeba1a26acc66cb5f7",
+                        "widget": "tableColumn",
+                        "props": {
+                          "style": {},
+                          "ref": "tableColumn_c335f95a48c04adeba1a26acc66cb5f7",
+                          "title": "Id",
+                          "dataIndex": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[742ab60b43d34fba81e4a566b6fc5aa4]"
+                          },
+                          "hide": true
+                        },
+                        "children": [
+                          {
+                            "id": "text_bf8118462dcd451293aa31b7fba1e089",
+                            "widget": "text",
+                            "props": {
+                              "ref": "text_bf8118462dcd451293aa31b7fba1e089",
+                              "textType": {
+                                "custom": false,
+                                "type": "default"
+                              },
+                              "value": {
+                                "kind": "Field",
+                                "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[742ab60b43d34fba81e4a566b6fc5aa4]"
+                              }
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "tableColumn_1021f5c18c9a4b808afa60bb702322cd",
+                        "widget": "tableColumn",
+                        "props": {
+                          "style": {},
+                          "ref": "tableColumn_1021f5c18c9a4b808afa60bb702322cd",
+                          "title": "公司",
+                          "dataIndex": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[e1025413eac442e8a143215d62e0da85]"
+                          }
+                        },
+                        "children": [
+                          {
+                            "id": "text_6b6dc9e89de4450dae448e2c34f36a93",
+                            "widget": "text",
+                            "props": {
+                              "ref": "text_6b6dc9e89de4450dae448e2c34f36a93",
+                              "textType": {
+                                "custom": false,
+                                "type": "default"
+                              },
+                              "value": {
+                                "kind": "Field",
+                                "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[e1025413eac442e8a143215d62e0da85]"
+                              }
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "tableColumn_42c72a68615d4856aac2bb4d09e44c92",
+                        "widget": "tableColumn",
+                        "props": {
+                          "style": {},
+                          "ref": "tableColumn_42c72a68615d4856aac2bb4d09e44c92",
+                          "title": "标题",
+                          "dataIndex": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[72e3e8bbef9241bb9bf9e874b3491a5c]"
+                          }
+                        },
+                        "children": [
+                          {
+                            "id": "text_768a022b92a74d188cd4f2d4ec14a419",
+                            "widget": "text",
+                            "props": {
+                              "ref": "text_768a022b92a74d188cd4f2d4ec14a419",
+                              "textType": {
+                                "custom": false,
+                                "type": "default"
+                              },
+                              "value": {
+                                "kind": "Field",
+                                "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[72e3e8bbef9241bb9bf9e874b3491a5c]"
+                              }
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "tableColumn_8a3f51c3acf24202b53f194e176afb6d",
+                        "widget": "tableColumn",
+                        "props": {
+                          "style": {},
+                          "ref": "tableColumn_8a3f51c3acf24202b53f194e176afb6d",
+                          "title": "开始日期",
+                          "dataIndex": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[796ee5360720453ba1f66bdc76181366]"
+                          }
+                        },
+                        "children": [
+                          {
+                            "id": "text_f4072d26b0634bcfa01b2cc476864d66",
+                            "widget": "text",
+                            "props": {
+                              "ref": "text_f4072d26b0634bcfa01b2cc476864d66",
+                              "textType": {
+                                "custom": false,
+                                "type": "default"
+                              },
+                              "value": {
+                                "kind": "Field",
+                                "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[796ee5360720453ba1f66bdc76181366]"
+                              }
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "tableColumn_72fcda05e3f84c4f8d452aebc00c7a98",
+                        "widget": "tableColumn",
+                        "props": {
+                          "style": {},
+                          "ref": "tableColumn_72fcda05e3f84c4f8d452aebc00c7a98",
+                          "title": "结束日期",
+                          "dataIndex": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[01f462e8063d4f32b3e5b565f3c8b530]"
+                          }
+                        },
+                        "children": [
+                          {
+                            "id": "text_7a63772e529345d9b1a59102394dc29e",
+                            "widget": "text",
+                            "props": {
+                              "ref": "text_7a63772e529345d9b1a59102394dc29e",
+                              "textType": {
+                                "custom": false,
+                                "type": "default"
+                              },
+                              "value": {
+                                "kind": "Field",
+                                "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[01f462e8063d4f32b3e5b565f3c8b530]"
+                              }
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "tableColumn_8da528d0af54485e99ceff55ab435572",
+                        "widget": "tableColumn",
+                        "props": {
+                          "style": {},
+                          "ref": "tableColumn_8da528d0af54485e99ceff55ab435572",
+                          "title": "离职原因",
+                          "dataIndex": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[3c88c07a8e044c5295af13cd7180749e]"
+                          }
+                        },
+                        "children": [
+                          {
+                            "id": "text_5af7c6c54a3840ebb06766abfd8ffa00",
+                            "widget": "text",
+                            "props": {
+                              "ref": "text_5af7c6c54a3840ebb06766abfd8ffa00",
+                              "textType": {
+                                "custom": false,
+                                "type": "default"
+                              },
+                              "value": {
+                                "kind": "Field",
+                                "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[3c88c07a8e044c5295af13cd7180749e]"
+                              }
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "tableColumn_57fd56475c5b4fd9bb0911ff8998fb5c",
+                        "widget": "tableColumn",
+                        "props": {
+                          "style": {},
+                          "ref": "tableColumn_57fd56475c5b4fd9bb0911ff8998fb5c",
+                          "title": "联系人",
+                          "dataIndex": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[4cdea3111ddf4ff5b48f3c8b3ac3abac]"
+                          }
+                        },
+                        "children": [
+                          {
+                            "id": "text_53e6e13d3ba8453d96fa44470e2aedc1",
+                            "widget": "text",
+                            "props": {
+                              "ref": "text_53e6e13d3ba8453d96fa44470e2aedc1",
+                              "textType": {
+                                "custom": false,
+                                "type": "default"
+                              },
+                              "value": {
+                                "kind": "Field",
+                                "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[4cdea3111ddf4ff5b48f3c8b3ac3abac]"
+                              }
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "tableColumn_62ad990a3cf34ea492dd1b63755a8924",
+                        "widget": "tableColumn",
+                        "props": {
+                          "style": {},
+                          "ref": "tableColumn_62ad990a3cf34ea492dd1b63755a8924",
+                          "title": "联系方式",
+                          "dataIndex": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[6278c5ff901b42989e4a6a31f31d15c7]"
+                          }
+                        },
+                        "children": [
+                          {
+                            "id": "text_821afe59d8e646b4b5a7748d06cc2cf2",
+                            "widget": "text",
+                            "props": {
+                              "ref": "text_821afe59d8e646b4b5a7748d06cc2cf2",
+                              "textType": {
+                                "custom": false,
+                                "type": "default"
+                              },
+                              "value": {
+                                "kind": "Field",
+                                "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[6278c5ff901b42989e4a6a31f31d15c7]"
+                              }
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "tableColumn_4b34135cf6be6ab",
+                        "widget": "tableColumn",
+                        "props": {
+                          "ref": "tableColumn_4b34135cf6be6ab",
+                          "dataIndex": "operation",
+                          "fixed": "right",
+                          "title": "操作列",
+                          "width": 180
+                        },
+                        "children": [
+                          {
+                            "id": "space_33965dddfaeb3fc",
+                            "widget": "space",
+                            "props": {
+                              "ref": "space_33965dddfaeb3fc",
+                              "size": 0
+                            },
+                            "children": [
+                              {
+                                "id": "button_00738f617799ed1",
+                                "widget": "button",
+                                "props": {
+                                  "events": {
+                                    "onClick": {
+                                      "id": "event_ffbb323f2236ea0",
+                                      "widget": "event",
+                                      "children": [
+                                        {
+                                          "widget": "action_api",
+                                          "id": "action_4f82fa9c8222b73",
+                                          "props": {
+                                            "target": "&(ref)abd24aa208cf48f1a5a957bb6b059750.[2e94e29fcd634ae883afa5b3203841fa]",
+                                            "params": [
+                                              {
+                                                "id": "assign_param_462dcb6317a22e8",
+                                                "widget": "assign_param",
+                                                "props": {
+                                                  "name": {
+                                                    "kind": "Parameter",
+                                                    "value": "&(self)[tableContainer_99a90b295d35944].columns.[button_00738f617799ed1].events.onClick.[action_4f82fa9c8222b73].target.params.[063073f2a66a42efb0c207b51e3287d2]"
+                                                  },
+                                                  "value": {
+                                                    "kind": "Members",
+                                                    "value": "&(self)[tableContainer_99a90b295d35944].currentRow.[742ab60b43d34fba81e4a566b6fc5aa4]"
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "widget": "action_component",
+                                          "id": "action_6a02d42e91e8b83",
+                                          "props": {
+                                            "target": "&(self)[tableContainer_99a90b295d35944].loadData"
+                                          }
+                                        }
+                                      ],
+                                      "props": {}
+                                    }
+                                  },
+                                  "ref": "button_00738f617799ed1",
+                                  "htmlType": "button",
+                                  "label": "删除",
+                                  "type": "link",
+                                  "size": "small",
+                                  "danger": true
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "search": {
+                      "col": {
+                        "width": {
+                          "kind": "span",
+                          "value": 8
+                        },
+                        "offset": 0
+                      },
+                      "showExpand": false,
+                      "displayRow": 1,
+                      "filter": [
+                        {
+                          "id": "formItem_d61782d7d82d44d1b4f60cadd2fca5c9",
+                          "widget": "formItem",
+                          "props": {
+                            "label": "EmployeeID",
+                            "style": {},
+                            "ref": "formItem_d61782d7d82d44d1b4f60cadd2fca5c9",
+                            "application": [],
+                            "rules": [],
+                            "name": {
+                              "kind": "Parameter",
+                              "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e89a6d08972f472].target.params.[a4a85571980641c5a78284b2d59c383c].[e260d1609bee4a968cb3b1ef3a066ac2]"
+                            }
+                          },
+                          "children": [
+                            {
+                              "id": "numberInput_731c581b96784f86a6c9b3600a9c8b55",
+                              "widget": "numberInput",
+                              "props": {
+                                "ref": "numberInput_731c581b96784f86a6c9b3600a9c8b55",
+                                "style": {
+                                  "width": "100%"
+                                },
+                                "placeholder": "请输入",
+                                "value": {
+                                  "kind": "Parameter",
+                                  "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e89a6d08972f472].target.params.[a4a85571980641c5a78284b2d59c383c].[e260d1609bee4a968cb3b1ef3a066ac2]"
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ],
+                      "hideForm": true,
+                      "hideSearchActions": false
+                    },
+                    "hideActions": false,
+                    "hasPagination": false,
+                    "dataSource": {
+                      "id": "function_46bb66e416ee356",
+                      "widget": "function",
+                      "children": [
+                        {
+                          "id": "action_e89a6d08972f472",
+                          "widget": "action_api",
+                          "props": {
+                            "target": "&(ref)abd24aa208cf48f1a5a957bb6b059750.[3da0ee997f434c23ac2144a44213c53e]",
+                            "params": [
+                              {
+                                "id": "assign_param_f192d6e756f14ac",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e89a6d08972f472].target.params.[a4a85571980641c5a78284b2d59c383c]"
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "id": "assign_param_b0b2e0fc39dcf26",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e89a6d08972f472].target.params.[a4a85571980641c5a78284b2d59c383c].[e260d1609bee4a968cb3b1ef3a066ac2]"
+                                      },
+                                      "value": {
+                                        "kind": "Props",
+                                        "value": "$(self)[page_8dd5cc9b102383b].params.[45b8f1dd29da4d1]"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "action_e0f5a5b5e32482b",
+                          "widget": "action_adapter",
+                          "children": [
+                            {
+                              "id": "assign_param_d2414e7d552f8f4",
+                              "widget": "assign_param",
+                              "props": {
+                                "name": {
+                                  "kind": "Members",
+                                  "value": "&(self)[tableContainer_99a90b295d35944].data"
+                                },
+                                "value": {
+                                  "kind": "Field",
+                                  "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e89a6d08972f472].target.result"
+                                }
+                              }
+                            },
+                            {
+                              "id": "assign_param_1dd5f6613b7f93f",
+                              "widget": "assign_param",
+                              "props": {
+                                "name": {
+                                  "kind": "Members",
+                                  "value": "&(self)[tableContainer_99a90b295d35944].total"
+                                },
+                                "value": {
+                                  "kind": "Field",
+                                  "value": ""
+                                }
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      ],
+                      "props": {}
+                    },
+                    "rowKey": {
+                      "kind": "Field",
+                      "value": "&(self)[tableContainer_99a90b295d35944].dataSource.[action_e0f5a5b5e32482b].[assign_param_d2414e7d552f8f4].[742ab60b43d34fba81e4a566b6fc5aa4]"
+                    },
+                    "title": "工作经历",
+                    "extra": [
+                      {
+                        "id": "button_e2a4ceb0d508d62",
+                        "widget": "button",
+                        "props": {
+                          "style": {},
+                          "ref": "button_aefa5e087529161",
+                          "icon": "antdv://PlusCircleFilled",
+                          "label": "添加",
+                          "type": "primary",
+                          "events": {
+                            "onClick": {
+                              "id": "event_b53eecfe8d19f4c",
+                              "widget": "event",
+                              "children": [
+                                {
+                                  "widget": "action_component",
+                                  "id": "action_809efd191efadf1",
+                                  "props": {
+                                    "target": "&(self)[modal_8a67d98fc99e2c8].onOpen"
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          }
+                        },
+                        "children": []
+                      }
+                    ],
+                    "events": {
+                      "onRowClick": {
+                        "id": "event_1a9e092f06f944f",
+                        "widget": "event",
+                        "children": [
+                          {
+                            "widget": "action_api",
+                            "id": "action_24039c4a9239d7f",
+                            "props": {
+                              "target": ""
+                            }
+                          }
+                        ],
+                        "props": {}
+                      }
+                    },
+                    "model": {
+                      "data": "&(ref)EmployeeJobedf5b54a97eb4d0d803efb81554fd77b.[edf5b54a97eb4d0d803efb81554fd77b]"
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "id": "modal_b519e31fdcb3c85",
+                  "widget": "modal",
+                  "props": {
+                    "style": {},
+                    "ref": "modal_bdf4f66e8d680ac",
+                    "destroyOnClose": true,
+                    "footer": [
+                      {
+                        "id": "button_9c28e8002252546",
+                        "widget": "button",
+                        "props": {
+                          "style": {},
+                          "ref": "button_668d7abe746b9b0",
+                          "label": "确认",
+                          "type": "primary",
+                          "events": {
+                            "onClick": {
+                              "id": "event_a6feb6ee10c18da",
+                              "widget": "event",
+                              "children": [
+                                {
+                                  "widget": "action_component",
+                                  "id": "action_5aa222aabb662f9",
+                                  "props": {
+                                    "target": "&(self)[include_30b47bf71871741].page.link.exposes.[3e0396597d4c4b6c9b7accd8f06c8409]"
+                                  }
+                                },
+                                {
+                                  "widget": "action_component",
+                                  "id": "action_c4569f39122aa66",
+                                  "props": {
+                                    "target": "&(self)[modal_b519e31fdcb3c85].onClose"
+                                  }
+                                },
+                                {
+                                  "widget": "action_component",
+                                  "id": "action_c8f853320925aa3",
+                                  "props": {
+                                    "target": "&(self)[tableContainer_2b352a813512c94].loadData"
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "id": "button_307257b17afa241",
+                        "widget": "button",
+                        "props": {
+                          "style": {},
+                          "ref": "button_edb0af62bffc548",
+                          "label": "取消",
+                          "events": {
+                            "onClick": {
+                              "id": "event_66e73cc99ff77a4",
+                              "widget": "event",
+                              "children": [
+                                {
+                                  "id": "action_component_fb1ef481bc96bce",
+                                  "widget": "action_component",
+                                  "props": {
+                                    "target": "&(self)[modal_b519e31fdcb3c85].onClose"
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          }
+                        },
+                        "children": []
+                      }
+                    ],
+                    "title": "添加教育经历"
+                  },
+                  "children": [
+                    {
+                      "id": "include_30b47bf71871741",
+                      "widget": "include",
+                      "props": {
+                        "style": {},
+                        "ref": "include_d5bd7ee918c4069",
+                        "page": {
+                          "id": "action_872cf6e1fa60483",
+                          "widget": "action_frame",
+                          "props": {
+                            "link": {
+                              "kind": "Document",
+                              "value": "$(ref)ae26d21704db418bb76ae9382de6a8b4"
+                            },
+                            "params": [
+                              {
+                                "id": "assign_param_a52a81bdcff5951",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "VParameter",
+                                    "value": "&(ref)ae26d21704db418bb76ae9382de6a8b4.[page_669b89c06bb64f03a63a9e5427fb8945].params.[8a7b934d8762444]"
+                                  },
+                                  "value": {
+                                    "kind": "Props",
+                                    "value": "$(self)[page_8dd5cc9b102383b].params.[45b8f1dd29da4d1]"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "modal_8a67d98fc99e2c8",
+                  "widget": "modal",
+                  "props": {
+                    "style": {},
+                    "ref": "modal_42e99feb81d179a",
+                    "destroyOnClose": true,
+                    "footer": [
+                      {
+                        "id": "button_7dd807ae7b3107e",
+                        "widget": "button",
+                        "props": {
+                          "style": {},
+                          "ref": "button_a2ded1663ed0370",
+                          "label": "确认",
+                          "type": "primary",
+                          "events": {
+                            "onClick": {
+                              "id": "event_f53cbef50b8e5de",
+                              "widget": "event",
+                              "children": [
+                                {
+                                  "widget": "action_component",
+                                  "id": "action_57f94b7f88ae20d",
+                                  "props": {
+                                    "target": "&(self)[include_7fded36940e73a0].page.link.exposes.[10d814d1fd43469b93028dd681388237]"
+                                  }
+                                },
+                                {
+                                  "widget": "action_component",
+                                  "id": "action_771d75a71d2236a",
+                                  "props": {
+                                    "target": "&(self)[modal_8a67d98fc99e2c8].onClose"
+                                  }
+                                },
+                                {
+                                  "widget": "action_component",
+                                  "id": "action_3daa8d9f5009fa9",
+                                  "props": {
+                                    "target": "&(self)[tableContainer_99a90b295d35944].loadData"
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          }
+                        },
+                        "children": []
+                      },
+                      {
+                        "id": "button_453546ac8a1d777",
+                        "widget": "button",
+                        "props": {
+                          "style": {},
+                          "ref": "button_c45e0c8d5f3f004",
+                          "label": "取消",
+                          "events": {
+                            "onClick": {
+                              "id": "event_c74170612faf6a6",
+                              "widget": "event",
+                              "children": [
+                                {
+                                  "id": "action_component_3bc466f5bd45460",
+                                  "widget": "action_component",
+                                  "props": {
+                                    "target": "&(self)[modal_8a67d98fc99e2c8].onClose"
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          }
+                        },
+                        "children": []
+                      }
+                    ],
+                    "title": "添加工作经历"
+                  },
+                  "children": [
+                    {
+                      "id": "include_7fded36940e73a0",
+                      "widget": "include",
+                      "props": {
+                        "style": {},
+                        "ref": "include_b9a30f3fa4e8771",
+                        "page": {
+                          "id": "action_c74861d8f29eeaf",
+                          "widget": "action_frame",
+                          "props": {
+                            "link": {
+                              "kind": "Document",
+                              "value": "$(ref)b0f9efb944c048459489c0c5bdb40bcb"
+                            },
+                            "params": [
+                              {
+                                "id": "assign_param_c08f5cce3822480",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "VParameter",
+                                    "value": "&(ref)b0f9efb944c048459489c0c5bdb40bcb.[page_12e1ff47de6744ff9eeb1430974e30fe].params.[049c3693317f631]"
+                                  },
+                                  "value": {
+                                    "kind": "Props",
+                                    "value": "$(self)[page_8dd5cc9b102383b].params.[45b8f1dd29da4d1]"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
                 }
-              ],
-              "styles": {
-                "marginRight": "10px"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modal_93a2e09309986a9",
+      "widget": "modal",
+      "props": {
+        "style": {},
+        "ref": "modal_4b567a07f6313c3",
+        "destroyOnClose": true,
+        "footer": [
+          {
+            "id": "button_bf56297c2ddba8a",
+            "widget": "button",
+            "props": {
+              "style": {},
+              "ref": "button_9b3986d3d61e872",
+              "label": "确认",
+              "type": "primary",
+              "events": {
+                "onClick": {
+                  "id": "event_c8067d7cbc77805",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "widget": "action_component",
+                      "id": "action_16344a6a08af736",
+                      "props": {
+                        "target": "&(self)[include_b9d191e5661045d].page.link.exposes.[808f7d0ed84648d996988dce5d8584f8]"
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_8e54aedd8d41253",
+                      "props": {
+                        "target": "&(self)[modal_93a2e09309986a9].onClose"
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_2300190b9ed4d2e",
+                      "props": {
+                        "target": "&(self)[card_283566e755b1295].loadData"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
+          },
+          {
+            "id": "button_0fb9db72bb57cdd",
+            "widget": "button",
+            "props": {
+              "style": {},
+              "ref": "button_ae23ab0cc9684b3",
+              "label": "取消",
+              "events": {
+                "onClick": {
+                  "id": "event_79265a2fdc042bc",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "id": "action_component_b6332d633e90dc9",
+                      "widget": "action_component",
+                      "props": {
+                        "target": "&(self)[modal_93a2e09309986a9].onClose"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
+          }
+        ],
+        "title": "办理离职"
+      },
+      "children": [
+        {
+          "id": "include_b9d191e5661045d",
+          "widget": "include",
+          "props": {
+            "style": {},
+            "ref": "include_9939883d385ae36",
+            "page": {
+              "id": "action_b2ef5d842d817a5",
+              "widget": "action_frame",
+              "props": {
+                "link": {
+                  "kind": "Document",
+                  "value": "$(ref)f488c65108b74ffab2c1de49abb5083e"
+                },
+                "params": [
+                  {
+                    "id": "assign_param_66cf3a26f7137df",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "VParameter",
+                        "value": "&(ref)f488c65108b74ffab2c1de49abb5083e.[page_7f59c0570461456a97d08ec559afdb61].params.[f36fab57a59563d]"
+                      },
+                      "value": {
+                        "kind": "Props",
+                        "value": "$(self)[page_8dd5cc9b102383b].params.[45b8f1dd29da4d1]"
+                      }
+                    }
+                  }
+                ]
               }
             }
-          ],
-          "styles": {
-            "marginLeft": "10px",
-            "marginRight": "10px",
-            "marginTop": "5px",
-            "marginBottom": "5px"
-          }
-        }
-      ]
-    }
-  ],
-  "rules": [
-    {
-      "id": "d46d5f4fb51b500",
-      "type": "control",
-      "name": "显示控制 - 性别",
-      "props": {
-        "valueType": "$(Document)Gender",
-        "values": {
-          "Male": {
-            "color": "#66AAEBFF",
-            "displayInfo": "男"
           },
-          "Female": {
-            "color": "#EB5566FF",
-            "displayInfo": "女"
-          }
+          "children": []
         }
-      },
-      "rule": "colorConfig",
-      "targets": [
-        "tag_6e4cb69b435d5c0"
       ]
     },
     {
-      "id": "72f721203b78000",
-      "type": "control",
-      "name": "显示控制 - 状态",
+      "id": "modal_9cc3bebfe14da1c",
+      "widget": "modal",
       "props": {
-        "valueType": "$(Document)EmployeeStatus",
-        "values": {
-          "IS": {
-            "color": "#F3D9D9FF",
-            "displayInfo": "实习"
+        "style": {},
+        "ref": "modal_2b5c1bf726442d4",
+        "destroyOnClose": true,
+        "footer": [
+          {
+            "id": "button_e294387a91ea64a",
+            "widget": "button",
+            "props": {
+              "style": {},
+              "ref": "button_55ef63bbd69b44f",
+              "label": "确认",
+              "type": "primary",
+              "events": {
+                "onClick": {
+                  "id": "event_89bd2e432777aa7",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "widget": "action_component",
+                      "id": "action_5cc3b445f2fa652",
+                      "props": {
+                        "target": "&(self)[include_f1c1fd0c55913fc].page.link.exposes.[8322564b5b9e4c89bf130688507814b1]"
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_e5b0c5cf7cce096",
+                      "props": {
+                        "target": "&(self)[modal_9cc3bebfe14da1c].onClose"
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_cb31942b7e18dbc",
+                      "props": {
+                        "target": "&(self)[card_283566e755b1295].loadData"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
           },
-          "TR": {
-            "color": "#D8CC9EFF",
-            "displayInfo": "试用"
-          },
-          "FL": {
-            "color": "#4EB9E7FF",
-            "displayInfo": "正式"
-          },
-          "RN": {
-            "color": "#E72727FF",
-            "displayInfo": "离职"
+          {
+            "id": "button_d004e64aec7a641",
+            "widget": "button",
+            "props": {
+              "style": {},
+              "ref": "button_e081f8322829310",
+              "label": "取消",
+              "events": {
+                "onClick": {
+                  "id": "event_3d825abfafca482",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "id": "action_component_524b3033d9a3d00",
+                      "widget": "action_component",
+                      "props": {
+                        "target": "&(self)[modal_9cc3bebfe14da1c].onClose"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
           }
-        }
+        ],
+        "width": 1200,
+        "title": ""
       },
-      "rule": "colorConfig",
-      "targets": [
-        "tag_d161a251af67880"
-      ]
-    },
-    {
-      "id": "713f491cef35ac0",
-      "type": "control",
-      "name": "显示控制 - 学历",
-      "props": {
-        "valueType": "$(Document)DegreeType",
-        "values": {
-          "HS": {
-            "color": "#FFD700FF",
-            "displayInfo": "高中"
+      "children": [
+        {
+          "id": "include_f1c1fd0c55913fc",
+          "widget": "include",
+          "props": {
+            "style": {},
+            "ref": "include_ade4527bc24f5f3",
+            "page": {
+              "id": "action_7bb63bf2952b37a",
+              "widget": "action_frame",
+              "props": {
+                "link": {
+                  "kind": "Document",
+                  "value": "$(ref)394405d93a774776960b5b2ae1d7fff6"
+                },
+                "params": [
+                  {
+                    "id": "assign_param_d0ccbd643a008e9",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "VParameter",
+                        "value": "&(ref)394405d93a774776960b5b2ae1d7fff6.[ab16c70d89f84547a6d258f37b0027eb].params.[d6457a62dff0c28]"
+                      },
+                      "value": {
+                        "kind": "Props",
+                        "value": "$(self)[page_8dd5cc9b102383b].params.[45b8f1dd29da4d1]"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
           },
-          "JC": {
-            "color": "#00CED1FF",
-            "displayInfo": "大专"
-          },
-          "UG": {
-            "color": "#1E90FFFF",
-            "displayInfo": "本科"
-          },
-          "MT": {
-            "color": "#C71585FF",
-            "displayInfo": "硕士"
-          }
+          "children": []
         }
-      },
-      "rule": "colorConfig",
-      "targets": [
-        "badge_99f60635d9c6400",
-        "tag_26a599ab343bc00"
       ]
     }
   ],
   "references": {
-    "Employee": "..\\..\\Entities\\Employee.sde",
-    "Gender": "..\\..\\Enums\\Gender.sdn",
-    "EmployeeStatus": "..\\..\\Enums\\EmployeeStatus.sdn",
-    "DegreeType": "..\\..\\Enums\\DegreeType.sdn",
-    "EmployeeUpdate": "EmployeeUpdate.sdv",
-    "EmployeeResign": "EmployeeResign.sdv",
-    "EducationAdd": "..\\Education\\EducationAdd.sdv",
-    "JobAdd": "..\\EmployeeJob\\JobAdd.sdv",
-    "EmployeeJob": "..\\..\\Entities\\EmployeeJob.sde",
-    "Education": "..\\..\\Entities\\Education.sde"
+    "cf345cb6b637414bb6619b02a12770bb": "..\\..\\APIS\\Employee.sdlg",
+    "b0f9efb944c048459489c0c5bdb40bcb": "EmployeeJobAdd.sdv",
+    "ae26d21704db418bb76ae9382de6a8b4": "EducationAdd.sdv",
+    "0c48ed5ed0fe472ab906600e0b52bd4b": "..\\..\\APIS\\Education.sdlg",
+    "abd24aa208cf48f1a5a957bb6b059750": "..\\..\\APIS\\EmployeeJob.sdlg",
+    "394405d93a774776960b5b2ae1d7fff6": "EmployeeUpdate.sdv",
+    "f488c65108b74ffab2c1de49abb5083e": "EmployeeResgin.sdv",
+    "EmployeeJobedf5b54a97eb4d0d803efb81554fd77b": "..\\..\\DataSource\\Database.sde",
+    "be09cb7a5f4a447d8767a9260b2c1ef2": "..\\..\\Properties\\DataStructures\\EmployeeStatus.json",
+    "5a48a495019f4f8b9f5e9c2e975fb70e": "..\\..\\Properties\\DataStructures\\DegreeType.json",
+    "f2145bb7b98e4432a090555b0aa2f26b": "..\\..\\Properties\\DataStructures\\Gender.json"
   },
-  "events": {
-    "onLoad": [
-      {
-        "name": "$(Api)Employee.Get",
-        "params": {
-          "Id": "$(Props)8dc9b6b14b308d4990"
-        }
-      }
-    ]
-  }
+  "version": "1.0.0"
 }

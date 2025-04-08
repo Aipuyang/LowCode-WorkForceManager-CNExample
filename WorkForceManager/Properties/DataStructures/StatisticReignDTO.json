@@ -1,0 +1,32 @@
+﻿{
+  "id": "4a13585bd46b480fb62779a669674472",
+  "widget": "model",
+  "props": {
+    "name": "StatisticReignDTO",
+    "displayName": "StatisticReignDTO"
+  },
+  "children": [
+    {
+      "id": "3f9d5bb312ae4274b5f59e1d50a5f952",
+      "widget": "field",
+      "props": {
+        "displayName": "Month",
+        "name": "Month",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "a449c3888d4a4a99b4b8e154ec727c96",
+      "widget": "field",
+      "props": {
+        "displayName": "RnCount",
+        "name": "RnCount",
+        "dataType": "Int32",
+        "nullable": false,
+        "defaultValueType": "Value"
+      }
+    }
+  ]
+}

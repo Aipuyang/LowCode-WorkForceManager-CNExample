@@ -1,0 +1,287 @@
+﻿{
+  "id": "page_6af5045ea24848249a67af42bc9ac70e",
+  "widget": "page",
+  "props": {
+    "ref": "page_6af5045ea24848249a67af42bc9ac70e",
+    "name": "DepartmentEidt",
+    "title": "部门表",
+    "params": [
+      {
+        "id": "d038fc4b7c3048c08ec045d1cc191211",
+        "widget": "parameter",
+        "props": {
+          "name": "id",
+          "dataType": "Number",
+          "isCollection": false,
+          "isNullable": false
+        }
+      }
+    ],
+    "rules": [],
+    "exposes": [
+      {
+        "id": "30adcde98370443ca4ef7cc1c7bc4da8",
+        "target": "&(self)[formContainer_a2e448d1c58343e8815c485507deac84].submit"
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "card_46f95c1513f0484ea26c51bae14350ff",
+      "widget": "card",
+      "props": {
+        "ref": "card_46f95c1513f0484ea26c51bae14350ff",
+        "title": "",
+        "extra": [],
+        "hideActions": true
+      },
+      "children": [
+        {
+          "id": "formContainer_a2e448d1c58343e8815c485507deac84",
+          "widget": "formContainer",
+          "props": {
+            "ref": "formContainer_a2e448d1c58343e8815c485507deac84",
+            "labelAlign": "left",
+            "layout": "horizontal",
+            "colon": false,
+            "labelCol": {
+              "width": {
+                "kind": "span",
+                "value": 4
+              }
+            },
+            "dataSource": {
+              "id": "function_35c552e357dc4f6987eb77aae4486f19",
+              "widget": "function",
+              "children": [
+                {
+                  "id": "action_f828af3ef8c34ff289142ee515b559aa",
+                  "widget": "action_api",
+                  "props": {
+                    "target": "&(ref)427356ec73694e70b61c0092df206c48.[f6b02bb9bde240e38572e66ea4c3e57a]",
+                    "params": [
+                      {
+                        "id": "assign_param62fa5a5c35014e2594a27134a0a22dad",
+                        "widget": "assign_param",
+                        "props": {
+                          "name": {
+                            "kind": "Parameter",
+                            "value": "&(self)[formContainer_a2e448d1c58343e8815c485507deac84].dataSource.[action_f828af3ef8c34ff289142ee515b559aa].target.params.[74c10dd7e3344835a100089a39bca550]"
+                          },
+                          "value": {
+                            "kind": "Props",
+                            "value": "$(self)[page_6af5045ea24848249a67af42bc9ac70e].params.[d038fc4b7c3048c08ec045d1cc191211]"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "actionAdapter_a71ebb83b4724d4a98f42d8e003b0549",
+                  "widget": "action_adapter",
+                  "children": [
+                    {
+                      "id": "adapterParam_3a5a8f83a4d0424ab3144e4d12cbc18a",
+                      "widget": "assign_param",
+                      "props": {
+                        "name": {
+                          "kind": "Members",
+                          "value": "&(self)[formContainer_a2e448d1c58343e8815c485507deac84].formModel"
+                        },
+                        "value": {
+                          "kind": "Field",
+                          "value": "&(self)[formContainer_a2e448d1c58343e8815c485507deac84].dataSource.[action_f828af3ef8c34ff289142ee515b559aa].target.result"
+                        }
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              ],
+              "props": {}
+            },
+            "set": {
+              "id": "function_defcdf075e904153a9e8c72c0fa1bfc8",
+              "widget": "function",
+              "children": [
+                {
+                  "id": "action_f51a24ba58ba46f2a3c9a5912b203bbc",
+                  "widget": "action_api",
+                  "props": {
+                    "target": "&(ref)427356ec73694e70b61c0092df206c48.[f7aae6248cc949009b3a9d73989f8cc9]"
+                  }
+                }
+              ],
+              "props": {}
+            }
+          },
+          "children": [
+            {
+              "id": "formItem_725992e789f14c9498af257a0e8f9db4",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_725992e789f14c9498af257a0e8f9db4",
+                "label": "Id",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_a2e448d1c58343e8815c485507deac84].set.[action_f51a24ba58ba46f2a3c9a5912b203bbc].target.params.[30d54bbdd12e448283ab4a2bac11e171].[b6d52a1db4b641c982262b54cd0077d7]"
+                },
+                "hide": true
+              },
+              "children": [
+                {
+                  "id": "numberInput_062f85c42e68404cafcc14be1c00a9a2",
+                  "widget": "numberInput",
+                  "props": {
+                    "style": {
+                      "width": "100%"
+                    },
+                    "ref": "numberInput_062f85c42e68404cafcc14be1c00a9a2",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_a2e448d1c58343e8815c485507deac84].set.[action_f51a24ba58ba46f2a3c9a5912b203bbc].target.params.[30d54bbdd12e448283ab4a2bac11e171].[b6d52a1db4b641c982262b54cd0077d7]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "formItem_8c25470da30b4a4c8a28ad8d23efe576",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_8c25470da30b4a4c8a28ad8d23efe576",
+                "label": "部门名称",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_a2e448d1c58343e8815c485507deac84].set.[action_f51a24ba58ba46f2a3c9a5912b203bbc].target.params.[30d54bbdd12e448283ab4a2bac11e171].[bef77034b04a46959c03a9b1e5b9805d]"
+                }
+              },
+              "children": [
+                {
+                  "id": "input_d0cafdfc2e314b429602abe895a492d8",
+                  "widget": "input",
+                  "props": {
+                    "size": "middle",
+                    "ref": "input_d0cafdfc2e314b429602abe895a492d8",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_a2e448d1c58343e8815c485507deac84].set.[action_f51a24ba58ba46f2a3c9a5912b203bbc].target.params.[30d54bbdd12e448283ab4a2bac11e171].[bef77034b04a46959c03a9b1e5b9805d]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "formItem_7c293464ac3c4968a4c64ff1f73854af",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_7c293464ac3c4968a4c64ff1f73854af",
+                "label": "所属公司",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_a2e448d1c58343e8815c485507deac84].set.[action_f51a24ba58ba46f2a3c9a5912b203bbc].target.params.[30d54bbdd12e448283ab4a2bac11e171].[cd690bbd547745f79d547f9742529452]"
+                }
+              },
+              "children": [
+                {
+                  "id": "select_6425ea91f4e37be",
+                  "widget": "select",
+                  "props": {
+                    "style": {
+                      "width": "100%"
+                    },
+                    "ref": "select_6f8494f93717fb2",
+                    "defaultItemLabel": "全部",
+                    "dataSource": {
+                      "id": "function_2f7483a32916f43",
+                      "widget": "function",
+                      "children": [
+                        {
+                          "id": "action_798df3a4479c3e2",
+                          "widget": "action_api",
+                          "props": {
+                            "target": "&(ref)9dc8effc07a74430a0f3fe4739fc0833.[835ac329e3394c2db281b8f6b4a8b853]",
+                            "params": []
+                          }
+                        },
+                        {
+                          "id": "action_70a649b8bb2e4a6",
+                          "widget": "action_adapter",
+                          "children": [
+                            {
+                              "id": "assign_param_d0579672d40a7d4",
+                              "widget": "assign_param",
+                              "props": {
+                                "name": {
+                                  "kind": "Members",
+                                  "value": "&(self)[select_6425ea91f4e37be].data"
+                                },
+                                "value": {
+                                  "kind": "Field",
+                                  "value": "&(self)[select_6425ea91f4e37be].dataSource.[action_798df3a4479c3e2].target.result"
+                                }
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      ],
+                      "props": {}
+                    },
+                    "fieldName": {
+                      "kind": "Field",
+                      "value": "&(self)[select_6425ea91f4e37be].dataSource.[action_70a649b8bb2e4a6].[assign_param_d0579672d40a7d4].[9019a41bd855421685dacfb9018ef5ba]"
+                    },
+                    "fieldValue": {
+                      "kind": "Field",
+                      "value": "&(self)[select_6425ea91f4e37be].dataSource.[action_70a649b8bb2e4a6].[assign_param_d0579672d40a7d4].[71419c05e9b4445f965aa84aa4554dbe]"
+                    },
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_a2e448d1c58343e8815c485507deac84].set.[action_f51a24ba58ba46f2a3c9a5912b203bbc].target.params.[30d54bbdd12e448283ab4a2bac11e171].[cd690bbd547745f79d547f9742529452]"
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "flex_0df209acba3d40b1a4884ce319a03d44",
+              "widget": "flex",
+              "props": {
+                "ref": "flex_0df209acba3d40b1a4884ce319a03d44",
+                "justify": "end"
+              },
+              "children": [
+                {
+                  "id": "button_4e8d1aebc707407a815b86cafadd62bf",
+                  "widget": "button",
+                  "props": {
+                    "style": {
+                      "flexGrow": 0,
+                      "flexShrink": 0,
+                      "flexBasis": "auto"
+                    },
+                    "ref": "button_Submit",
+                    "htmlType": "submit",
+                    "label": "提交",
+                    "type": "primary"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "427356ec73694e70b61c0092df206c48": "..\\..\\APIS\\Department.sdlg",
+    "9dc8effc07a74430a0f3fe4739fc0833": "..\\..\\APIS\\Company.sdlg"
+  },
+  "version": "1.0.0"
+}

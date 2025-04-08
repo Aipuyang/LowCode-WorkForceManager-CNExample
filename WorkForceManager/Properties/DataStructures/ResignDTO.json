@@ -1,0 +1,44 @@
+﻿{
+  "id": "134641e574ec446383ebf2570004c5df",
+  "widget": "model",
+  "props": {
+    "name": "ResignDTO",
+    "displayName": "ResignDTO"
+  },
+  "children": [
+    {
+      "id": "2d3005e21ee44c6e86441a5d5e01907e",
+      "widget": "field",
+      "props": {
+        "displayName": "Id",
+        "name": "Id",
+        "dataType": "Int32",
+        "nullable": false,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "9029754a19da48cb8062a2b536cb558d",
+      "widget": "field",
+      "props": {
+        "displayName": "RnReason",
+        "name": "RnReason",
+        "dataType": "String",
+        "nullable": false,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "09f5966d4df3424dbc798c838819d0cf",
+      "widget": "field",
+      "props": {
+        "displayName": "RnDate",
+        "name": "RnDate",
+        "dataType": "DateOnly",
+        "nullable": false,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

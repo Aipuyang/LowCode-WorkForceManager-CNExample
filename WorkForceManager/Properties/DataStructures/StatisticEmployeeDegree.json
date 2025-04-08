@@ -1,0 +1,36 @@
+﻿{
+  "id": "29a25f6d521d4e2d9a5d7e967559e82e",
+  "widget": "model",
+  "props": {
+    "name": "StatisticEmployeeDegree",
+    "displayName": "StatisticEmployeeDegree"
+  },
+  "children": [
+    {
+      "id": "4210e62483cf453c9ae3a4277f4b60bd",
+      "widget": "field",
+      "props": {
+        "displayName": "Degree",
+        "name": "Degree",
+        "dataType": "$(ref)5ffe85a5af0d44929e9e5554bc2a4374",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "ae5463643225419499123bd272bba1f7",
+      "widget": "field",
+      "props": {
+        "displayName": "Count",
+        "name": "Count",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "references": {
+    "5ffe85a5af0d44929e9e5554bc2a4374": "DegreeType.json"
+  },
+  "version": "1.0.0"
+}

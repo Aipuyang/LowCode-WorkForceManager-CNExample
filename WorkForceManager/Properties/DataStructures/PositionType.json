@@ -1,0 +1,64 @@
+﻿{
+  "id": "a3defe6b65294f20883efee4d95ea20e",
+  "widget": "enum",
+  "props": {
+    "name": "PositionType",
+    "displayName": "职位",
+    "converters": [
+      {
+        "id": "02159e094582f25",
+        "widget": "converter",
+        "props": {
+          "name": "ContactPosition",
+          "ref": "ContactPosition",
+          "input": "enum",
+          "output": "Color",
+          "items": [
+            {
+              "source": "&(self)[a3defe6b65294f20883efee4d95ea20e].[b0cfa2a864a744148b4bcfd413452b48]",
+              "target": "#FF8C00FF"
+            },
+            {
+              "source": "&(self)[a3defe6b65294f20883efee4d95ea20e].[e6281a4bb24c4d8d85f6623a1558a121]",
+              "target": "#1F93FFB8"
+            },
+            {
+              "source": "&(self)[a3defe6b65294f20883efee4d95ea20e].[355d5bc56f6d40be936983c139228006]",
+              "target": "#C71585FF"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "b0cfa2a864a744148b4bcfd413452b48",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "人事",
+        "name": "HR",
+        "value": 0
+      }
+    },
+    {
+      "id": "e6281a4bb24c4d8d85f6623a1558a121",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "管理",
+        "name": "MR",
+        "value": 1
+      }
+    },
+    {
+      "id": "355d5bc56f6d40be936983c139228006",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "董事",
+        "name": "Header",
+        "value": 2
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

@@ -1,0 +1,33 @@
+﻿{
+  "id": "d154523513b744bb8307752e3c13cd05",
+  "widget": "model",
+  "props": {
+    "name": "StatisticEmployeeWorkYearDTO",
+    "displayName": "StatisticEmployeeWorkYearDTO"
+  },
+  "children": [
+    {
+      "id": "dcb7c18797504493bca4ad611cff5315",
+      "widget": "field",
+      "props": {
+        "displayName": "WorkYear",
+        "name": "WorkYear",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "ade77c2c21594c53b7b53b3f31509243",
+      "widget": "field",
+      "props": {
+        "displayName": "Count",
+        "name": "Count",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

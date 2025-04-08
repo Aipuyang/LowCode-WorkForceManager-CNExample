@@ -1,0 +1,22 @@
+﻿{
+  "id": "4b0e9453b3e84641bdd510a6d81a28ee",
+  "widget": "model",
+  "props": {
+    "name": "CityDTO",
+    "displayName": "CityDTO"
+  },
+  "children": [
+    {
+      "id": "267025d2c7954d9ab6ee53b00c351e9c",
+      "widget": "field",
+      "props": {
+        "displayName": "城市",
+        "name": "CityName",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

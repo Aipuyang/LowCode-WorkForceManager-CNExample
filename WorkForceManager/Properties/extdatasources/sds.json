@@ -1,0 +1,31 @@
+﻿{
+  "id": "0cf30fab073144c596ce6d561511e386",
+  "widget": "staticdatasource",
+  "props": {
+    "name": "Static"
+  },
+  "children": [
+    {
+      "id": "2fedf3ea0f374c70b21728148e6e5cf2",
+      "widget": "model_static",
+      "props": {
+        "name": "StaticSource",
+        "value": "[{\"Value\":\"CEO\"},{\"Value\":\"董事长\"},{\"Value\":\"部门经理\"},{\"Value\":\"项目经理\"},{\"Value\":\"产品经理\"},{\"Value\":\"工程师\"},{\"Value\":\"设计师\"},{\"Value\":\"财务\"},{\"Value\":\"前台\"},{\"Value\":\"人事\"},{\"Value\":\"其他\"}]",
+        "group": "Default",
+        "isJsonModel": true,
+        "isCollection": true
+      },
+      "children": [
+        {
+          "id": "b200ba8103fb4bca8a108177517b259a",
+          "widget": "field",
+          "props": {
+            "name": "Value",
+            "dataType": "String",
+            "defaultValue": "CEO"
+          }
+        }
+      ]
+    }
+  ]
+}

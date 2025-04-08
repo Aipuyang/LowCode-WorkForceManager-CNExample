@@ -1,24 +1,57 @@
-# LowCode-WorkForceManager-CNExample 简介
+# WorkForceManager 示例应用简介
 
-该示例应用程序在 SnapDevelop 2025 中开发。它向您展示了如何使用 SnapDevelop 2025 提供的可视化设计器，以高效的低代码开发方式开发一个全栈 C# 应用程序。
+WorkForceManager 示例使用 SnapDevelop 2026 开发，展示如何通过其可视化设计器，快速实现企业员工基本管理功能。
 
-示例应用程序中包含如下使用 SnapDevelop 可视化设计器创建的内容（实体、查询、视图等）：
+## 应用构建步骤
 
-- 实体: BaseEntity; Company; CompanyContact; Department; Education; Employee; EmployJob
-- 枚举: CompanySize; DegreeType; EmployeeStatus; Gender; PositionType
-- 查询: CompanyCities; CompanyDegreeStatic; CompanyEmployees; CompanyGenderStatic; CompanyGenderStatic; CompanySizeStatic; CompanyStatic; EmployeeDegreeStatic; EmployeeResignStatic; EmployeeStatic; EmployeeWorkExperienceStatics
-- 视图:
-  - 公司: CompanyAdd; CompanyContactAdd; CompanyDetail; CompanyList; CompanyUpdate
-  - 部门: Department_Employee_TreeList; DepartmentAdd; DepartmentUpdate
-  - 教育: EducationAdd
-  - 员工: EmployeeAdd; EmployeeDetail; EmployResign; EmployeeUpdate
-  - 员工职位: JobAdd
+以下将介绍使用 SnapDevelop 2026  构建本示例应用的关键步骤，让您直观感受其快速开发优势。
 
-请从当前仓库获取示例应用程序，并在 SnapDevelop 2025 中打开（可从 https://www.aipuyang.com 下载）。随后，您能够在SnapDevelop 2025 中获得如下便捷的开发体验：
+1. 启动 SnapDevelop 2026，创建类型为"浏览器端 Web 和 API“的项目，命名为 WorkForceManager.sln。
 
-- 查看使用可视化设计器完成的各项内容（实体、查询、视图等），并根据需要进行更改。
-- 打开生成配置 > Profile 查看用于生成项目的设置。
-- 点击 生成项目，一键生成全栈应用程序。
-- 在 IDE 中选择运行生成完毕的Web API 项目和Vue项目，可查看为应用程序创建的 Web API 和前端页面。
+4. 选择从零开始的方式创建一系列实体。您可以打开示例中的 Database.sde 文件，了解所创建的实体，实体间的关系，和每个实体的属性。
 
-欲了解更多信息，请查看教程：[创建企业员工统计系统](https://docs.aipuyang.com/sd2025/Create_a_Designer_Developed_Project/Code-First-Tutorials.html#%E5%88%9B%E5%BB%BA%E4%BC%81%E4%B8%9A%E5%91%98%E5%B7%A5%E7%BB%9F%E8%AE%A1%E7%B3%BB%E7%BB%9F)
+   ![image-20250403094150736](\Image\image-20250403094150736.png)
+
+5. 在 Database.sde 设计面板中选择快速创建逻辑，基于已有的实体快速生成逻辑。除此此外，为了进行员工数据统计，新建逻辑 StatisticsService.sdlg。
+
+   ![image-20250403095112437](\Image\image-20250403095112437.png)
+
+4. 打开每个逻辑文件，借助逻辑设计器，可以快速根据实际业务规则设计过滤器、调整、优化逻辑。例如 StatisticsService.sdlg 中的逻辑设计：
+
+   ![image-20250403095802871](\Image\image-20250403095802871.png)
+
+5. 借助设计的逻辑快速生成前端页面，并根据需求进行调整。
+
+   ![image-20250403095934935](\Image\image-20250403095934935.png)
+
+   如公司联系人表页面的设计：
+
+   ![image-20250403100101381](\Image\image-20250403100101381.png)
+
+6. 点击 WorkForceManager 项目右键，选择生成项目。在生成设置中，指定将新建项目Sqlite 数据库 database.db。
+
+   ![image-20250403100235646](\Image\image-20250403100235646.png)
+
+   SnapDevelop 将自动基于 WorkForceManager  的实体、逻辑和视图设计，生成 SourceCode 项目，其中包含标准的 Server 项目（后端项目）和 Web 项目 （前端项目）。
+
+   ![image-20250403100536850](\Image\image-20250403100536850.png)
+
+    
+
+## 应用运行效果
+
+- 首页 - 数据统计
+
+  ![image-20250403135209602](\Image\image-20250403135209602.png)
+
+- 公司管理
+
+  ![image-20250403140241098](\Image\image-20250403140241098.png)
+
+- 员工管理
+
+  ![image-20250403140316466](\Image\image-20250403140316466.png)
+
+## 更多信息
+
+如需了解更多关于 SnapDevelop 的使用信息，欢迎访问：https://docs.aipuyang.com.

@@ -1,369 +1,301 @@
-{
-  "id": "page_8dc9aa1e9cf5380",
-  "type": "page",
+﻿{
+  "id": "page_880069222513415",
   "widget": "page",
   "props": {
-    "ref": "page_home",
-    "title": {
-      "type": "string",
-      "value": ""
-    },
+    "ref": "page_880069222513415",
+    "name": "Home",
+    "title": "首页",
     "params": []
   },
-  "rules": [],
   "children": [
     {
-      "id": "row_d5a633805b6b100",
+      "id": "row_176ce3e541539ec",
       "widget": "row",
       "props": {
-        "ref": "row_d5a633805b6b100"
+        "style": {},
+        "ref": "row_5482a973a48f0e6",
+        "gutter": {
+          "enabled": false
+        }
       },
       "children": [
         {
-          "id": "col_d873cbc89cc9680",
+          "id": "col_e775306b8716579",
           "widget": "col",
           "props": {
-            "ref": "col_d873cbc89cc9680",
-            "offset": 0,
-            "width": "${span}8"
+            "style": {},
+            "ref": "col_0da7844942bcc3b",
+            "width": {
+              "kind": "span",
+              "value": 8
+            }
           },
           "children": [
             {
-              "id": "title_7add60b46637ec0",
-              "widget": "title",
+              "id": "formItem_f88e9e440037005",
+              "widget": "formItem",
               "props": {
-                "ref": "title_983fd59f5ca7000",
-                "level": 5,
-                "value": "城市："
+                "style": {},
+                "ref": "formItem_5a1165f81154e22",
+                "rules": [],
+                "label": "城市"
               },
-              "styles": {},
-              "children": []
-            },
-            {
-              "id": "select_97f346e22390380",
-              "widget": "select",
-              "props": {
-                "ref": "select_97f346e22390380",
-                "request": {
-                  "name": "$(Api)CompanyCities.GetListByNoFilter",
-                  "params": {}
-                },
-                "value": "$(Parameter)",
-                "fieldName": "$(Field)CompanyCities.City",
-                "fieldValue": "$(Field)CompanyCities.City",
-                "mode": "multiple"
-              },
-              "styles": {
-                "width": "40%"
-              }
+              "children": [
+                {
+                  "id": "select_b7bece98cddc00c",
+                  "widget": "select",
+                  "props": {
+                    "style": {
+                      "width": "100%"
+                    },
+                    "ref": "select_13f9078ec63208d",
+                    "defaultItemLabel": "全部",
+                    "model": {
+                      "data": "&(ref)4b0e9453b3e84641bdd510a6d81a28ee.[4b0e9453b3e84641bdd510a6d81a28ee]"
+                    },
+                    "fieldName": {
+                      "kind": "Field",
+                      "value": "&(self)[select_b7bece98cddc00c].dataSource.[action_b8544675f143d7b].[assign_param_d61869e064dc156].[267025d2c7954d9ab6ee53b00c351e9c]"
+                    },
+                    "fieldValue": {
+                      "kind": "Field",
+                      "value": "&(self)[select_b7bece98cddc00c].dataSource.[action_b8544675f143d7b].[assign_param_d61869e064dc156].[267025d2c7954d9ab6ee53b00c351e9c]"
+                    },
+                    "dataSource": {
+                      "id": "function_c70575bf46b978f",
+                      "widget": "function",
+                      "children": [
+                        {
+                          "id": "action_a7404a93c4e2cd6",
+                          "widget": "action_api",
+                          "props": {
+                            "target": "&(ref)0b803e242a8342c390961d861bfc7d7e.[9cec2175c67b4d94902161426cb754fe]",
+                            "params": []
+                          }
+                        },
+                        {
+                          "id": "action_b8544675f143d7b",
+                          "widget": "action_adapter",
+                          "children": [
+                            {
+                              "id": "assign_param_d61869e064dc156",
+                              "widget": "assign_param",
+                              "props": {
+                                "name": {
+                                  "kind": "Members",
+                                  "value": "&(self)[select_b7bece98cddc00c].data"
+                                },
+                                "value": {
+                                  "kind": "Field",
+                                  "value": "&(self)[select_b7bece98cddc00c].dataSource.[action_a7404a93c4e2cd6].target.result"
+                                }
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      ],
+                      "props": {}
+                    },
+                    "default": "",
+                    "placeholder": "请选择城市",
+                    "showSearch": true,
+                    "allowClear": true
+                  },
+                  "children": []
+                }
+              ]
             }
-          ],
-          "styles": {}
+          ]
         },
         {
-          "id": "col_e48ceeee338c500",
+          "id": "col_2fc3cf60033702e",
           "widget": "col",
           "props": {
-            "ref": "col_e48ceeee338c500",
-            "width": "${span}16"
+            "style": {},
+            "ref": "col_a2ad44560a2a81a",
+            "width": {
+              "kind": "span",
+              "value": 16
+            }
           },
           "children": []
         }
-      ],
-      "styles": {
-        "marginLeft": "15px"
-      }
+      ]
     },
     {
-      "id": "grid_6edcbeddc465f00",
+      "id": "grid_5d28882b627361e",
       "widget": "grid",
       "props": {
-        "ref": "grid_ab4038b5206d40",
+        "style": {},
+        "ref": "grid_cace79db2d6345a",
         "rowNum": 1,
-        "colNum": 3,
-        "hide": false
-      },
-      "styles": {
-        "marginTop": "10px"
+        "colNum": 3
       },
       "children": [
         {
-          "id": "row_5ebbe5075904d40",
+          "id": "row_a52f329095f37ab",
           "widget": "row",
           "props": {
-            "ref": "row_5ebbe5075904d40",
-            "grid": true,
+            "style": {},
+            "ref": "row_bc20868f6191f33",
             "gutter": {
               "enabled": true,
               "value": [
-                0,
+                10,
                 0
               ]
             },
-            "align": "bottom",
-            "justify": "start"
+            "grid": true
           },
           "children": [
             {
-              "id": "col_deb423ae5447580",
+              "id": "col_65c50fcba11d58f",
               "widget": "col",
               "props": {
-                "ref": "col_deb423ae5447580",
-                "width": "${span}8"
+                "style": {},
+                "ref": "col_b06cdb0d5f4149b",
+                "width": {
+                  "kind": "flex",
+                  "value": 1
+                }
               },
               "children": [
                 {
-                  "id": "card_9c80b50e3912d80",
+                  "id": "card_db83fe8b84e7d18",
                   "widget": "card",
                   "props": {
-                    "ref": "card_6243be3baa7a280",
-                    "title": {
-                      "type": "slot",
-                      "slot": {
-                        "hide": false,
-                        "render": [
-                          {
-                            "id": "title_2283223424cc460",
-                            "widget": "title",
-                            "props": {
-                              "ref": "title_a936b27536a1480",
-                              "level": 5,
-                              "value": "公司规模统计"
-                            },
-                            "styles": {},
-                            "children": []
-                          }
-                        ]
-                      }
-                    },
-                    "extra": []
-                  },
-                  "styles": {
-                    "marginLeft": "10px",
-                    "marginRight": "10px"
+                    "style": {},
+                    "ref": "card_5d487393a04031c",
+                    "extra": [],
+                    "title": "公司规模"
                   },
                   "children": [
                     {
-                      "id": "pie_7b0c12935941f40",
+                      "id": "pie_812e0873703da97",
                       "widget": "pie",
                       "props": {
-                        "ref": "pie_d6008cbbfc6d180",
+                        "style": {},
+                        "ref": "pie_7abab19e6110d06",
+                        "names": {
+                          "kind": "Field",
+                          "value": "&(self)[pie_812e0873703da97].dataSource.[action_f76edf593eea7cc].[assign_param_9159017bf163866].[c53ed62c374a4aa6b94a2e315480d267]"
+                        },
+                        "values": {
+                          "kind": "Field",
+                          "value": "&(self)[pie_812e0873703da97].dataSource.[action_f76edf593eea7cc].[assign_param_9159017bf163866].[5cd09d1c35014d0ab10f6894a0a81b35]"
+                        },
                         "title": {
-                          "text": "公司规模统计",
-                          "subtext": ""
+                          "text": "",
+                          "subtext": "",
+                          "textFontSize": 18,
+                          "subtextFontSize": 12
                         },
-                        "request": {
-                          "name": "$(Api)CompanyStatic.GetListByCityFilter",
-                          "params": {
-                            "City": "$(Members)[watch]select_97f346e22390380.value"
-                          }
+                        "titlePosition": {
+                          "type": "options",
+                          "options": "top/center",
+                          "top": "",
+                          "left": "",
+                          "textAlign": "left"
                         },
-                        "names": "$(Field)CompanyStatic.CompanyCompanySize",
-                        "values": "$(Field)CompanyStatic.CompanyCount",
+                        "startAngle": 90,
+                        "padAngle": 0,
+                        "borderRadius": 0,
                         "legend": {
                           "show": true,
-                          "position": "top/right/vertical"
+                          "position": "top/right/vertical",
+                          "itemWidth": 20,
+                          "itemHeight": 12,
+                          "textFontSize": 12,
+                          "icon": "roundRect"
                         },
                         "seriesLabel": {
                           "show": true,
                           "position": "outside",
-                          "fontSize": 12,
-                          "formatter": "{b}: {c}({d}%)"
-                        },
-                        "startAngle": 90,
-                        "endAngle": 450,
-                        "padAngle": 0,
-                        "borderRadius": 0,
-                        "color": "#5470c6, #91cc75, #fac858, #ee6666, #73c0de, #3ba272, #fc8452, #9a60b4, #ea7ccc",
-                        "titlePosition": "top/left",
-                        "radiusExternal": 60,
-                        "donutChar": true,
-                        "width": "${percent}100",
-                        "radiusInternal": 40,
-                        "height": "${width}300"
-                      },
-                      "styles": {},
-                      "children": []
-                    }
-                  ]
-                }
-              ],
-              "styles": {}
-            },
-            {
-              "id": "col_f7f362ba041da80",
-              "widget": "col",
-              "props": {
-                "ref": "col_44a5eca1df97c00",
-                "width": "${span}8"
-              },
-              "styles": {
-                "marginRight": "0px"
-              },
-              "children": [
-                {
-                  "id": "card_ad74f71b7894680",
-                  "widget": "card",
-                  "props": {
-                    "ref": "card_354bd2c65340e60",
-                    "title": {
-                      "type": "slot",
-                      "slot": {
-                        "hide": false,
-                        "render": [
-                          {
-                            "id": "title_c5b764ff39c0200",
-                            "widget": "title",
-                            "props": {
-                              "ref": "title_a2623dcd441eb00",
-                              "level": 5,
-                              "value": "员工学历统计"
-                            },
-                            "styles": {},
-                            "children": []
-                          }
-                        ]
-                      }
-                    },
-                    "extra": [
-                      {
-                        "id": "title_ee30236be7ccf80",
-                        "widget": "title",
-                        "props": {
-                          "ref": "title_d67deedf2ab3f80",
-                          "level": 5,
-                          "value": "离职人员："
-                        },
-                        "styles": {},
-                        "children": []
-                      },
-                      {
-                        "id": "switch_3ac4e892e9b7f4",
-                        "widget": "switch",
-                        "props": {
-                          "ref": "switch_3ac4e892e9b7f4",
-                          "checkedChildren": "包含",
-                          "unCheckedChildren": "不包含",
-                          "default": false
-                        }
-                      }
-                    ]
-                  },
-                  "styles": {
-                    "marginLeft": "10px",
-                    "marginRight": "10px"
-                  },
-                  "children": [
-                    {
-                      "id": "line_18f4ddc2e0f6250",
-                      "widget": "line",
-                      "props": {
-                        "ref": "line_6b032d657b4af00",
-                        "title": {
-                          "text": "",
-                          "subtext": ""
-                        },
-                        "request": {
-                          "name": "$(Api)CompanyDegreeStatic.GetListByCitiesFilter",
-                          "params": {
-                            "Cities": "$(Members)[watch]select_97f346e22390380.value",
-                            "IncludeResign": "$(Members)[watch]switch_3ac4e892e9b7f4.value"
-                          }
-                        },
-                        "xAxis": {
-                          "data": "$(Field)CompanyDegreeStatic.EmployeeDegree",
-                          "name": "",
-                          "axisLine": true,
-                          "axisTick": true,
-                          "splitLine": true,
-                          "boundaryGap": false
-                        },
-                        "yAxis": [
-                          {
-                            "data": "$(Field)CompanyDegreeStatic.EmployeeCount",
-                            "name": "数量",
-                            "color": "#1677ff"
-                          }
-                        ],
-                        "legend": {
-                          "show": true,
-                          "position": "top/right/vertical"
-                        },
-                        "seriesLabel": {
-                          "show": true,
-                          "position": "top",
                           "fontSize": 12
+                        },
+                        "tooltip": {
+                          "show": true,
+                          "textFontSize": 12
                         },
                         "color": [
-                          "#1677ff",
-                          "#91cc75",
-                          "#fac858",
-                          "#ee6666",
-                          "#73c0de",
-                          "#5470c6",
-                          "#3ba272",
-                          "#fc8452",
-                          "#9a60b4",
-                          "#ea7ccc"
+                          "#1677FF",
+                          "#91CC75",
+                          "#FAC858",
+                          "#EE6666",
+                          "#73C0DE",
+                          "#5470C6",
+                          "#3BA272",
+                          "#FC8452",
+                          "#9A60B4",
+                          "#EA7CCC"
                         ],
-                        "height": "${width}300",
-                        "ySplitLine": true,
-                        "yAxisTick": false,
-                        "yAxisLine": true
+                        "dataSource": {
+                          "id": "function_46c8dca672ac585",
+                          "widget": "function",
+                          "children": [
+                            {
+                              "id": "action_dea06935134d4d9",
+                              "widget": "action_api",
+                              "props": {
+                                "target": "&(ref)52857be25eaa46839bd0e4edfea35c8d.[ca4a1a12696a47d5880e43b8e5aabc68]",
+                                "params": [
+                                  {
+                                    "id": "assign_param_f988d6932471085",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[pie_812e0873703da97].dataSource.[action_dea06935134d4d9].target.params.[7aa8d8bc86af49359815e90c95bd3d44]"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "assign_param_6a677d4bd6c23fe",
+                                        "widget": "assign_param",
+                                        "props": {
+                                          "name": {
+                                            "kind": "Parameter",
+                                            "value": "&(self)[pie_812e0873703da97].dataSource.[action_dea06935134d4d9].target.params.[7aa8d8bc86af49359815e90c95bd3d44].[392611c18c1841a78f6f9408f6bccda2]"
+                                          },
+                                          "value": {
+                                            "kind": "Members",
+                                            "value": "&(self)[select_b7bece98cddc00c].value"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id": "action_f76edf593eea7cc",
+                              "widget": "action_adapter",
+                              "children": [
+                                {
+                                  "id": "assign_param_9159017bf163866",
+                                  "widget": "assign_param",
+                                  "props": {
+                                    "name": {
+                                      "kind": "Members",
+                                      "value": "&(self)[pie_812e0873703da97].data"
+                                    },
+                                    "value": {
+                                      "kind": "Field",
+                                      "value": "&(self)[pie_812e0873703da97].dataSource.[action_dea06935134d4d9].target.result"
+                                    }
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          ],
+                          "props": {}
+                        },
+                        "roseType": false,
+                        "donutChar": true
                       },
-                      "styles": {},
-                      "children": []
-                    },
-                    {
-                      "id": "bar_8135a5cf3399200",
-                      "widget": "bar",
-                      "props": {
-                        "ref": "bar_27ca36ed7378000",
-                        "title": {
-                          "text": "员工学历统计",
-                          "subtext": ""
-                        },
-                        "request": {
-                          "name": "$(Api)CompanyDegreeStatic.GetListByCitiesFilter",
-                          "params": {
-                            "Cities": "$(Members)[watch]select_97f346e22390380.value",
-                            "IncludeResign": "$(Members)[watch]switch_3ac4e892e9b7f4.value"
-                          }
-                        },
-                        "xAxis": {
-                          "data": "$(Field)CompanyDegreeStatic.EmployeeDegree",
-                          "name": "学历",
-                          "axisLine": true,
-                          "axisTick": true,
-                          "splitLine": false,
-                          "boundaryGap": true
-                        },
-                        "yAxis": [
-                          {
-                            "data": "$(Field)CompanyDegreeStatic.EmployeeCount",
-                            "name": "数量",
-                            "color": "#1677ff"
-                          }
-                        ],
-                        "legend": {
-                          "show": true,
-                          "position": "top/right/vertical"
-                        },
-                        "seriesLabel": {
-                          "show": true,
-                          "position": "top",
-                          "fontSize": 12
-                        },
-                        "yName": "数量",
-                        "titlePosition": "top/left",
-                        "yMax": "",
-                        "height": "${width}300",
-                        "yAxisTick": true,
-                        "yAxisLine": true,
-                        "barWidth": "${percent}40",
-                        "hide": true
-                      },
-                      "styles": {},
                       "children": []
                     }
                   ]
@@ -371,85 +303,359 @@
               ]
             },
             {
-              "id": "col_84291c2c3be3e80",
+              "id": "col_3957252437068e8",
               "widget": "col",
               "props": {
-                "ref": "col_84291c2c3be3e80",
-                "width": "${span}8"
+                "style": {},
+                "ref": "col_dda412ef89845f2",
+                "width": {
+                  "kind": "flex",
+                  "value": 1
+                }
               },
               "children": [
                 {
-                  "id": "card_aefa97b72915f00",
+                  "id": "card_46857f41dc037b3",
                   "widget": "card",
                   "props": {
-                    "ref": "card_f1aa14db035d200",
-                    "title": {
-                      "type": "slot",
-                      "slot": {
-                        "hide": false,
-                        "render": [
+                    "style": {},
+                    "ref": "card_f37f710a49f031d",
+                    "extra": [
+                      {
+                        "id": "formItem_f71ef6a9d11aecc",
+                        "widget": "formItem",
+                        "props": {
+                          "style": {},
+                          "ref": "formItem_e81cc071dc97c25",
+                          "rules": [],
+                          "label": "离职员工",
+                          "hide": false
+                        },
+                        "children": [
                           {
-                            "id": "title_b5174f79fe5d880",
-                            "widget": "title",
+                            "id": "switch_30d2f17359764cc",
+                            "widget": "switch",
                             "props": {
-                              "ref": "title_4b74d6c2d971300",
-                              "level": 5,
-                              "value": "员工性别统计"
+                              "style": {},
+                              "ref": "switch_f5e8c99d73ca1d7",
+                              "default": true,
+                              "checkedChildren": "包含",
+                              "unCheckedChildren": "不包含"
                             },
-                            "styles": {},
                             "children": []
                           }
                         ]
                       }
-                    },
-                    "extra": []
-                  },
-                  "styles": {
-                    "marginLeft": "10px",
-                    "marginRight": "10px"
+                    ],
+                    "title": "员工学历统计",
+                    "hideActions": false
                   },
                   "children": [
                     {
-                      "id": "pie_92461d40be3bf8",
-                      "widget": "pie",
+                      "id": "line_bdc564146210ac7",
+                      "widget": "line",
                       "props": {
-                        "ref": "pie_38538833e9a0460",
+                        "style": {},
+                        "ref": "line_a7657b81d545da6",
+                        "xAxis": {
+                          "data": {
+                            "kind": "Field",
+                            "value": "&(self)[line_bdc564146210ac7].dataSource.[action_7ef28be36a6687c].[assign_param_12ce5b74bc8b7ac].[4210e62483cf453c9ae3a4277f4b60bd]"
+                          },
+                          "name": "",
+                          "nameLocation": "end",
+                          "axisLine": true,
+                          "axisTick": true,
+                          "splitLine": false,
+                          "boundaryGap": false,
+                          "labelFontSize": 12
+                        },
+                        "yAxis": [
+                          {
+                            "data": {
+                              "kind": "Field",
+                              "value": "&(self)[line_bdc564146210ac7].dataSource.[action_7ef28be36a6687c].[assign_param_12ce5b74bc8b7ac].[ae5463643225419499123bd272bba1f7]"
+                            },
+                            "name": "人数"
+                          }
+                        ],
                         "title": {
                           "text": "",
-                          "subtext": ""
+                          "subtext": "",
+                          "textFontSize": 18,
+                          "subtextFontSize": 12
                         },
-                        "request": {
-                          "name": "$(Api)CompanyGenderStatic.GetListByCityFilter",
-                          "params": {
-                            "Cities": "$(Members)[watch]select_97f346e22390380.value"
-                          }
+                        "titlePosition": {
+                          "type": "options",
+                          "options": "top/center",
+                          "top": "",
+                          "left": "",
+                          "textAlign": "left"
                         },
-                        "names": "$(Field)CompanyGenderStatic.EmployeeGender",
-                        "values": "$(Field)CompanyGenderStatic.EmployeeCount",
                         "legend": {
                           "show": true,
-                          "position": "top/right/vertical"
+                          "position": "top/right/vertical",
+                          "itemWidth": 20,
+                          "itemHeight": 12,
+                          "textFontSize": 12,
+                          "icon": "roundRect"
+                        },
+                        "seriesLabel": {
+                          "show": true,
+                          "position": "inside",
+                          "fontSize": 12
+                        },
+                        "tooltip": {
+                          "show": true,
+                          "textFontSize": 12
+                        },
+                        "color": [
+                          "#1677FF",
+                          "#91CC75",
+                          "#FAC858",
+                          "#EE6666",
+                          "#73C0DE",
+                          "#5470C6",
+                          "#3BA272",
+                          "#FC8452",
+                          "#9A60B4",
+                          "#EA7CCC"
+                        ],
+                        "dataSource": {
+                          "id": "function_b33abad97d27c1c",
+                          "widget": "function",
+                          "children": [
+                            {
+                              "id": "action_97bc72465dd175b",
+                              "widget": "action_api",
+                              "props": {
+                                "target": "&(ref)52857be25eaa46839bd0e4edfea35c8d.[ceb949beb3724189b219b1da05c78748]",
+                                "params": [
+                                  {
+                                    "id": "assign_param_0bd8077b0ab4653",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[line_bdc564146210ac7].dataSource.[action_97bc72465dd175b].target.params.[5c64e5c0430a42818d1ed687c395cdc2]"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "assign_param_428a015ac4ac736",
+                                        "widget": "assign_param",
+                                        "props": {
+                                          "name": {
+                                            "kind": "Parameter",
+                                            "value": "&(self)[line_bdc564146210ac7].dataSource.[action_97bc72465dd175b].target.params.[5c64e5c0430a42818d1ed687c395cdc2].[6c6ec1c4548a433abb3887ef56bb52b1]"
+                                          },
+                                          "value": {
+                                            "kind": "Members",
+                                            "value": "&(self)[select_b7bece98cddc00c].value"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "id": "assign_param_0c6310000bd68e2",
+                                        "widget": "assign_param",
+                                        "props": {
+                                          "name": {
+                                            "kind": "Parameter",
+                                            "value": "&(self)[line_bdc564146210ac7].dataSource.[action_97bc72465dd175b].target.params.[5c64e5c0430a42818d1ed687c395cdc2].[3cd0d84f1ff9443f8489df4e6dc94e08]"
+                                          },
+                                          "value": {
+                                            "kind": "Members",
+                                            "value": "&(self)[card_46857f41dc037b3].extra.[switch_30d2f17359764cc].value"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id": "action_7ef28be36a6687c",
+                              "widget": "action_adapter",
+                              "children": [
+                                {
+                                  "id": "assign_param_12ce5b74bc8b7ac",
+                                  "widget": "assign_param",
+                                  "props": {
+                                    "name": {
+                                      "kind": "Members",
+                                      "value": "&(self)[line_bdc564146210ac7].data"
+                                    },
+                                    "value": {
+                                      "kind": "Field",
+                                      "value": "&(self)[line_bdc564146210ac7].dataSource.[action_97bc72465dd175b].target.result"
+                                    }
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          ],
+                          "props": {}
+                        },
+                        "model": {
+                          "data": "$(ref)StatisticEmployeeDegree29a25f6d521d4e2d9a5d7e967559e82e.[29a25f6d521d4e2d9a5d7e967559e82e]"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "col_e0343c24879e362",
+              "widget": "col",
+              "props": {
+                "style": {},
+                "ref": "col_1120146c4b625e3",
+                "width": {
+                  "kind": "flex",
+                  "value": 1
+                }
+              },
+              "children": [
+                {
+                  "id": "card_6045fdbccfa1a6a",
+                  "widget": "card",
+                  "props": {
+                    "style": {},
+                    "ref": "card_e7c74a3808986fc",
+                    "extra": [],
+                    "title": "性别统计"
+                  },
+                  "children": [
+                    {
+                      "id": "pie_767c37259e962cd",
+                      "widget": "pie",
+                      "props": {
+                        "style": {},
+                        "ref": "pie_2b228fbb0a03445",
+                        "names": {
+                          "kind": "Field",
+                          "value": "&(self)[pie_767c37259e962cd].dataSource.[action_ab50e6124055fb8].[assign_param_7281a7214993f53].[8265139edd4440ee9078d7a234f9fa78]"
+                        },
+                        "values": {
+                          "kind": "Field",
+                          "value": "&(self)[pie_767c37259e962cd].dataSource.[action_ab50e6124055fb8].[assign_param_7281a7214993f53].[e512eb9c07ce42a19060923fd0f240f8]"
+                        },
+                        "title": {
+                          "text": "",
+                          "subtext": "",
+                          "textFontSize": 18,
+                          "subtextFontSize": 12
+                        },
+                        "titlePosition": {
+                          "type": "options",
+                          "options": "top/center",
+                          "top": "",
+                          "left": "",
+                          "textAlign": "left"
+                        },
+                        "startAngle": 90,
+                        "padAngle": 0,
+                        "borderRadius": 0,
+                        "legend": {
+                          "show": true,
+                          "position": "top/right/vertical",
+                          "itemWidth": 20,
+                          "itemHeight": 12,
+                          "textFontSize": 12,
+                          "icon": "roundRect"
                         },
                         "seriesLabel": {
                           "show": true,
                           "position": "outside",
-                          "fontSize": 12,
-                          "formatter": "{b}: {d}%"
+                          "fontSize": 12
                         },
-                        "startAngle": 90,
-                        "endAngle": 450,
-                        "padAngle": 0,
-                        "borderRadius": 0,
+                        "tooltip": {
+                          "show": true,
+                          "textFontSize": 12
+                        },
                         "color": [
-                          "#5C99E7FF",
-                          "#E74672FF"
+                          "#1677FF",
+                          "#91CC75",
+                          "#FAC858",
+                          "#EE6666",
+                          "#73C0DE",
+                          "#5470C6",
+                          "#3BA272",
+                          "#FC8452",
+                          "#9A60B4",
+                          "#EA7CCC"
                         ],
-                        "donutChar": false,
-                        "roseType": false,
-                        "titlePosition": "top/left",
-                        "height": "${width}300"
+                        "dataSource": {
+                          "id": "function_20a688b6313b983",
+                          "widget": "function",
+                          "children": [
+                            {
+                              "id": "action_322cbb8535b0a02",
+                              "widget": "action_api",
+                              "props": {
+                                "target": "&(ref)52857be25eaa46839bd0e4edfea35c8d.[04677b288f054127aff4301725520e04]",
+                                "params": [
+                                  {
+                                    "id": "assign_param_c2dc4b97ad2a296",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[pie_767c37259e962cd].dataSource.[action_322cbb8535b0a02].target.params.[73d67320b6a64196accdc001dd2d001f]"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "assign_param_2d51bea4bb62b89",
+                                        "widget": "assign_param",
+                                        "props": {
+                                          "name": {
+                                            "kind": "Parameter",
+                                            "value": "&(self)[pie_767c37259e962cd].dataSource.[action_322cbb8535b0a02].target.params.[73d67320b6a64196accdc001dd2d001f].[123afa760af64266bd2c116c76a01313]"
+                                          },
+                                          "value": {
+                                            "kind": "Members",
+                                            "value": "&(self)[select_b7bece98cddc00c].value"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id": "action_ab50e6124055fb8",
+                              "widget": "action_adapter",
+                              "children": [
+                                {
+                                  "id": "assign_param_7281a7214993f53",
+                                  "widget": "assign_param",
+                                  "props": {
+                                    "name": {
+                                      "kind": "Members",
+                                      "value": "&(self)[pie_767c37259e962cd].data"
+                                    },
+                                    "value": {
+                                      "kind": "Field",
+                                      "value": "&(self)[pie_767c37259e962cd].dataSource.[action_322cbb8535b0a02].target.result"
+                                    }
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          ],
+                          "props": {}
+                        },
+                        "model": {
+                          "data": "$(ref)StatisticGenderDTOfa9489441bcb42caaaa3a715fafd8f24.[fa9489441bcb42caaaa3a715fafd8f24]"
+                        }
                       },
-                      "styles": {},
                       "children": []
                     }
                   ]
@@ -461,205 +667,346 @@
       ]
     },
     {
-      "id": "divider_781268e49152ac0",
+      "id": "divider_05acf44b3a57b49",
       "widget": "divider",
       "props": {
-        "ref": "divider_9a20b3e848bd480",
-        "title": {
-          "type": "string",
-          "value": ""
-        }
+        "style": {},
+        "ref": "divider_463a57fd787519c",
+        "orientation": "center",
+        "title": ""
       },
-      "styles": {},
       "children": []
     },
     {
-      "id": "row_b68cfe988e46600",
+      "id": "row_18ffacb1c1e46d8",
       "widget": "row",
       "props": {
-        "ref": "row_b68cfe988e46600"
+        "style": {},
+        "ref": "row_68df2a469e942c9",
+        "gutter": {
+          "enabled": false
+        }
       },
       "children": [
         {
-          "id": "col_59494b187f69f40",
+          "id": "col_aabca05a684e8d1",
           "widget": "col",
           "props": {
-            "ref": "col_59494b187f69f40",
-            "width": "${span}8"
+            "style": {},
+            "ref": "col_d221cef5dfa11f5",
+            "width": {
+              "kind": "span",
+              "value": 8
+            }
           },
           "children": [
             {
-              "id": "title_ddbdf4a9802bd00",
-              "widget": "title",
+              "id": "formItem_17b64b3e457ad3f",
+              "widget": "formItem",
               "props": {
-                "ref": "title_732a3654b79ea80",
-                "level": 5,
-                "value": "公司："
+                "style": {},
+                "ref": "formItem_626a786ae4b8296",
+                "rules": [],
+                "label": "公司"
               },
-              "styles": {},
-              "children": []
-            },
-            {
-              "id": "select_44f808509c47580",
-              "widget": "select",
-              "props": {
-                "ref": "select_59fe5eca8fbfe80",
-                "request": {
-                  "name": "$(Api)Company.GetPageByAddressSizeName",
-                  "params": {
-                    "Cities": "$(Members)[watch]select_97f346e22390380.value",
-                    "CompanySize": ""
-                  }
-                },
-                "fieldName": "$(Field)Company.CompanyName",
-                "fieldValue": "$(Field)Company.Id"
-              },
-              "styles": {
-                "width": "40%"
-              }
+              "children": [
+                {
+                  "id": "select_2fb0281088f172d",
+                  "widget": "select",
+                  "props": {
+                    "style": {
+                      "width": "100%"
+                    },
+                    "ref": "select_ed31c027b10d995",
+                    "defaultItemLabel": "全部",
+                    "model": {
+                      "data": "&(ref)Department732e9468e48d4dad884eaf11408ef5f3.[07b0fe61729f4d47b4e2e4902fc42222]"
+                    },
+                    "fieldName": {
+                      "kind": "Field",
+                      "value": "&(self)[select_2fb0281088f172d].dataSource.[action_cbd2ca8a30aa56b].[assign_param_8e78eca3a424cd7].[9019a41bd855421685dacfb9018ef5ba]"
+                    },
+                    "fieldValue": {
+                      "kind": "Field",
+                      "value": "&(self)[select_2fb0281088f172d].dataSource.[action_cbd2ca8a30aa56b].[assign_param_8e78eca3a424cd7].[71419c05e9b4445f965aa84aa4554dbe]"
+                    },
+                    "dataSource": {
+                      "id": "function_c5bb8bc457457d1",
+                      "widget": "function",
+                      "children": [
+                        {
+                          "id": "action_f6b0841fd04b223",
+                          "widget": "action_api",
+                          "props": {
+                            "target": "&(ref)0b803e242a8342c390961d861bfc7d7e.[835ac329e3394c2db281b8f6b4a8b853]",
+                            "params": []
+                          }
+                        },
+                        {
+                          "id": "action_cbd2ca8a30aa56b",
+                          "widget": "action_adapter",
+                          "children": [
+                            {
+                              "id": "assign_param_8e78eca3a424cd7",
+                              "widget": "assign_param",
+                              "props": {
+                                "name": {
+                                  "kind": "Members",
+                                  "value": "&(self)[select_2fb0281088f172d].data"
+                                },
+                                "value": {
+                                  "kind": "Field",
+                                  "value": "&(self)[select_2fb0281088f172d].dataSource.[action_f6b0841fd04b223].target.result"
+                                }
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      ],
+                      "props": {}
+                    },
+                    "placeholder": "请选择公司",
+                    "showSearch": true,
+                    "allowClear": true
+                  },
+                  "children": []
+                }
+              ]
             }
           ]
         },
         {
-          "id": "col_1c8c387febfeea0",
+          "id": "col_2085d3805d6d8e7",
           "widget": "col",
           "props": {
-            "ref": "col_1c8c387febfeea0",
-            "width": "${span}16"
+            "style": {},
+            "ref": "col_ac6e4c4cebff1de",
+            "width": {
+              "kind": "span",
+              "value": 16
+            }
           },
           "children": []
         }
-      ],
-      "styles": {
-        "marginLeft": "15px"
-      }
+      ]
     },
     {
-      "id": "grid_c31fc40ab2c7680",
+      "id": "grid_d8b61359962962b",
       "widget": "grid",
       "props": {
-        "ref": "grid_71a31eb4ae58280",
-        "colNum": 3,
+        "style": {},
+        "ref": "grid_81c452d26d18659",
         "rowNum": 1,
-        "hide": false
-      },
-      "styles": {
-        "marginTop": "10px"
+        "colNum": 3
       },
       "children": [
         {
-          "id": "row_573d67206116080",
+          "id": "row_b6c5904f95617d3",
           "widget": "row",
           "props": {
-            "ref": "row_573d67206116080",
-            "grid": true,
+            "style": {},
+            "ref": "row_2f670b886f74820",
             "gutter": {
               "enabled": true,
               "value": [
-                0,
+                10,
                 0
               ]
-            }
+            },
+            "grid": true
           },
           "children": [
             {
-              "id": "col_ea07398f67b2680",
+              "id": "col_d1aa756800dfa48",
               "widget": "col",
               "props": {
-                "ref": "col_ea07398f67b2680",
-                "width": "${span}8"
+                "style": {},
+                "ref": "col_e8b45e84d9d8f09",
+                "width": {
+                  "kind": "flex",
+                  "value": 1
+                }
               },
               "children": [
                 {
-                  "id": "card_4d735af5bd84bc0",
+                  "id": "card_49f8d4fc547ac01",
                   "widget": "card",
                   "props": {
-                    "ref": "card_2d2c941b65231e0",
-                    "title": {
-                      "type": "slot",
-                      "slot": {
-                        "hide": false,
-                        "render": [
-                          {
-                            "id": "title_4eaa51f63de4600",
-                            "widget": "title",
-                            "props": {
-                              "ref": "title_816652f39f78a00",
-                              "level": 5,
-                              "value": "员工学历统计"
-                            },
-                            "styles": {},
-                            "children": []
-                          }
-                        ]
+                    "style": {},
+                    "ref": "card_801b1ace53bc86c",
+                    "extra": [
+                      {
+                        "id": "datePicker_e56f7246d6d18b7",
+                        "widget": "datePicker",
+                        "props": {
+                          "style": {
+                            "width": "100%"
+                          },
+                          "ref": "datePicker_c2f4cb655d0fc94",
+                          "format": "YYYY",
+                          "valueFormat": "YYYY",
+                          "picker": "year",
+                          "default": "2024"
+                        },
+                        "children": []
                       }
-                    },
-                    "extra": []
-                  },
-                  "styles": {
-                    "marginLeft": "10px",
-                    "marginRight": "10px"
+                    ],
+                    "title": "员工离职统计",
+                    "hideActions": false
                   },
                   "children": [
                     {
-                      "id": "bar_9b3b4446b593200",
-                      "widget": "bar",
+                      "id": "line_b73899845c3c25f",
+                      "widget": "line",
                       "props": {
-                        "ref": "bar_1d4d66a20bbbcd0",
-                        "title": {
-                          "text": "",
-                          "subtext": ""
-                        },
-                        "request": {
-                          "name": "$(Api)EmployeeDegreeStatic.GetListByCompanyFilter",
-                          "params": {
-                            "Company": "$(Members)[watch]select_44f808509c47580.value"
-                          }
-                        },
+                        "style": {},
+                        "ref": "line_bc7d3f478d824c0",
                         "xAxis": {
-                          "data": "$(Field)EmployeeDegreeStatic.EmployeeDegree",
-                          "name": "学历",
+                          "data": {
+                            "kind": "Field",
+                            "value": "&(self)[line_b73899845c3c25f].dataSource.[action_1a4b8f22cf90b1f].[assign_param_6ecc471da3da80f].[3f9d5bb312ae4274b5f59e1d50a5f952]"
+                          },
+                          "name": "",
+                          "nameLocation": "end",
                           "axisLine": true,
                           "axisTick": true,
                           "splitLine": false,
-                          "boundaryGap": true
+                          "boundaryGap": false,
+                          "labelFontSize": 12
                         },
                         "yAxis": [
                           {
-                            "data": "$(Field)EmployeeDegreeStatic.EmployCount",
-                            "name": "数量",
-                            "color": "#1677ff"
+                            "data": {
+                              "kind": "Field",
+                              "value": "&(self)[line_b73899845c3c25f].dataSource.[action_1a4b8f22cf90b1f].[assign_param_6ecc471da3da80f].[a449c3888d4a4a99b4b8e154ec727c96]"
+                            },
+                            "name": "离职人数"
                           }
                         ],
+                        "title": {
+                          "text": "",
+                          "subtext": "",
+                          "textFontSize": 18,
+                          "subtextFontSize": 12
+                        },
+                        "titlePosition": {
+                          "type": "options",
+                          "options": "top/center",
+                          "top": "",
+                          "left": "",
+                          "textAlign": "left"
+                        },
                         "legend": {
                           "show": true,
-                          "position": "top/right/vertical"
+                          "position": "top/right/vertical",
+                          "itemWidth": 20,
+                          "itemHeight": 12,
+                          "textFontSize": 12,
+                          "icon": "roundRect"
                         },
                         "seriesLabel": {
                           "show": true,
                           "position": "inside",
                           "fontSize": 12
                         },
-                        "yName": "数量",
-                        "titlePosition": "top/left",
-                        "yMax": "",
-                        "height": "${width}300",
-                        "barWidth": "${percent}40",
-                        "yAxisLine": true,
+                        "tooltip": {
+                          "show": true,
+                          "textFontSize": 12
+                        },
                         "color": [
-                          "#73c0de",
-                          "#ea7ccc",
-                          "#ee6666",
-                          "#91cc75",
-                          "#1677ff",
-                          "#fac858",
-                          "#5470c6",
-                          "#3ba272",
-                          "#fc8452",
-                          "#9a60b4"
-                        ]
+                          "#1677FF",
+                          "#91CC75",
+                          "#FAC858",
+                          "#EE6666",
+                          "#73C0DE",
+                          "#5470C6",
+                          "#3BA272",
+                          "#FC8452",
+                          "#9A60B4",
+                          "#EA7CCC"
+                        ],
+                        "model": {
+                          "data": "&(ref)4a13585bd46b480fb62779a669674472.[4a13585bd46b480fb62779a669674472]"
+                        },
+                        "dataSource": {
+                          "id": "function_08023d1c25cf2b4",
+                          "widget": "function",
+                          "children": [
+                            {
+                              "id": "action_4be87034b6d6a2b",
+                              "widget": "action_api",
+                              "props": {
+                                "target": "&(ref)52857be25eaa46839bd0e4edfea35c8d.[2df2ecbf34a14d7da1b4ccc5699a7717]",
+                                "params": [
+                                  {
+                                    "id": "assign_param_b9ba3ed7b1b6db3",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[line_b73899845c3c25f].dataSource.[action_4be87034b6d6a2b].target.params.[0a9411f97cdf470e95c38ff5094b8a5a]"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "assign_param_780f3ebf9ac696a",
+                                        "widget": "assign_param",
+                                        "props": {
+                                          "name": {
+                                            "kind": "Parameter",
+                                            "value": "&(self)[line_b73899845c3c25f].dataSource.[action_4be87034b6d6a2b].target.params.[0a9411f97cdf470e95c38ff5094b8a5a].[4634ec5f868f4890a6ca8c09a92f88e5]"
+                                          },
+                                          "value": {
+                                            "kind": "Members",
+                                            "value": "&(self)[select_2fb0281088f172d].value"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "id": "assign_param_0e0cf39aee9299c",
+                                        "widget": "assign_param",
+                                        "props": {
+                                          "name": {
+                                            "kind": "Parameter",
+                                            "value": "&(self)[line_b73899845c3c25f].dataSource.[action_4be87034b6d6a2b].target.params.[0a9411f97cdf470e95c38ff5094b8a5a].[a7c5c0cea6194a2386781c7c8e1404e2]"
+                                          },
+                                          "value": {
+                                            "kind": "Members",
+                                            "value": "&(self)[card_49f8d4fc547ac01].extra.[datePicker_e56f7246d6d18b7].value"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id": "action_1a4b8f22cf90b1f",
+                              "widget": "action_adapter",
+                              "children": [
+                                {
+                                  "id": "assign_param_6ecc471da3da80f",
+                                  "widget": "assign_param",
+                                  "props": {
+                                    "name": {
+                                      "kind": "Members",
+                                      "value": "&(self)[line_b73899845c3c25f].data"
+                                    },
+                                    "value": {
+                                      "kind": "Field",
+                                      "value": "&(self)[line_b73899845c3c25f].dataSource.[action_4be87034b6d6a2b].target.result"
+                                    }
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          ],
+                          "props": {}
+                        }
                       },
-                      "styles": {},
                       "children": []
                     }
                   ]
@@ -667,98 +1014,267 @@
               ]
             },
             {
-              "id": "col_b004eb9b5ee7900",
+              "id": "col_b0b58cf60e58e25",
               "widget": "col",
               "props": {
-                "ref": "col_405157a2154c880",
-                "width": "${span}8"
+                "style": {},
+                "ref": "col_42241d10cf07c93",
+                "width": {
+                  "kind": "flex",
+                  "value": 1
+                }
               },
-              "styles": {},
               "children": [
                 {
-                  "id": "card_66e7b872871dc00",
+                  "id": "card_f1dfa0d1f47d209",
                   "widget": "card",
                   "props": {
-                    "ref": "card_64954637fda1600",
-                    "title": {
-                      "type": "string",
-                      "value": "员工状态统计"
-                    },
+                    "style": {},
+                    "ref": "card_a961f8df9d9b29e",
                     "extra": [
                       {
-                        "id": "title_84d41dcc9ec3500",
-                        "widget": "title",
+                        "id": "formItem_a16ce50ac69b179",
+                        "widget": "formItem",
                         "props": {
-                          "ref": "title_95496ddc86dcf00",
-                          "value": "部门：",
-                          "level": 5
-                        }
-                      },
-                      {
-                        "id": "select_2c9bd3ed5bea100",
-                        "widget": "select",
-                        "props": {
-                          "ref": "select_217a3a74cf89940",
-                          "placeholder": "请选择部门",
-                          "request": {
-                            "name": "$(Api)Department.GetListByCompanyFilter",
-                            "params": {
-                              "Company": "$(Members)[watch]select_44f808509c47580.value"
-                            }
-                          },
-                          "fieldName": "$(Field)Department.DepartmentName",
-                          "fieldValue": "$(Field)Department.Id"
+                          "style": {},
+                          "ref": "formItem_b52b754243bed98",
+                          "rules": [],
+                          "label": "部门"
                         },
-                        "styles": {
-                          "width": "200px"
-                        }
+                        "children": [
+                          {
+                            "id": "select_7d6386d29ac5217",
+                            "widget": "select",
+                            "props": {
+                              "style": {
+                                "width": "100%"
+                              },
+                              "ref": "select_33cb657faef3323",
+                              "defaultItemLabel": "全部",
+                              "placeholder": "请选择部门",
+                              "dataSource": {
+                                "id": "function_a021286317eac5d",
+                                "widget": "function",
+                                "children": [
+                                  {
+                                    "id": "action_63290b4ca84aa3c",
+                                    "widget": "action_api",
+                                    "props": {
+                                      "target": "&(ref)5f6db97315754cfd8ed7746ad22f483a.[268a6754796347eaba39997c61ec1f39]",
+                                      "params": [
+                                        {
+                                          "id": "assign_param_caf764b09788c55",
+                                          "widget": "assign_param",
+                                          "props": {
+                                            "name": {
+                                              "kind": "Parameter",
+                                              "value": "&(self)[card_f1dfa0d1f47d209].extra.[select_7d6386d29ac5217].dataSource.[action_63290b4ca84aa3c].target.params.[24ef12d0de9f4ba784bcea15d2fb2544]"
+                                            }
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "assign_param_312f25d9c347ac0",
+                                              "widget": "assign_param",
+                                              "props": {
+                                                "name": {
+                                                  "kind": "Parameter",
+                                                  "value": "&(self)[card_f1dfa0d1f47d209].extra.[select_7d6386d29ac5217].dataSource.[action_63290b4ca84aa3c].target.params.[24ef12d0de9f4ba784bcea15d2fb2544].[54a59d0f6a4d4866a5cc2d96ef9bf016]"
+                                                },
+                                                "value": {
+                                                  "kind": "Members",
+                                                  "value": "&(self)[select_2fb0281088f172d].value"
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "id": "action_f23f97b5ddc0cba",
+                                    "widget": "action_adapter",
+                                    "children": [
+                                      {
+                                        "id": "assign_param_43929564713e20b",
+                                        "widget": "assign_param",
+                                        "props": {
+                                          "name": {
+                                            "kind": "Members",
+                                            "value": "&(self)[card_f1dfa0d1f47d209].extra.[select_7d6386d29ac5217].data"
+                                          },
+                                          "value": {
+                                            "kind": "Field",
+                                            "value": "&(self)[card_f1dfa0d1f47d209].extra.[select_7d6386d29ac5217].dataSource.[action_63290b4ca84aa3c].target.result"
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "props": {}
+                                  }
+                                ],
+                                "props": {}
+                              },
+                              "fieldName": {
+                                "kind": "Field",
+                                "value": "&(self)[card_f1dfa0d1f47d209].extra.[select_7d6386d29ac5217].dataSource.[action_f23f97b5ddc0cba].[assign_param_43929564713e20b].[bef77034b04a46959c03a9b1e5b9805d]"
+                              },
+                              "fieldValue": {
+                                "kind": "Field",
+                                "value": "&(self)[card_f1dfa0d1f47d209].extra.[select_7d6386d29ac5217].dataSource.[action_f23f97b5ddc0cba].[assign_param_43929564713e20b].[b6d52a1db4b641c982262b54cd0077d7]"
+                              },
+                              "model": {
+                                "data": "&(ref)Department732e9468e48d4dad884eaf11408ef5f3.[732e9468e48d4dad884eaf11408ef5f3]"
+                              }
+                            },
+                            "children": []
+                          }
+                        ]
                       }
-                    ]
-                  },
-                  "styles": {
-                    "marginLeft": "10px",
-                    "marginRight": "10px"
+                    ],
+                    "title": "员工状态统计",
+                    "hideActions": false
                   },
                   "children": [
                     {
-                      "id": "pie_f84cb47f63b0900",
+                      "id": "pie_eec8b9513714bb9",
                       "widget": "pie",
                       "props": {
-                        "ref": "pie_a12d437cbeec580",
+                        "style": {},
+                        "ref": "pie_df3fe6018529e02",
+                        "names": {
+                          "kind": "Field",
+                          "value": "&(self)[pie_eec8b9513714bb9].dataSource.[action_29e090c5f6c9dd8].[assign_param_12020c61223e2f9].[35b9ff44ce904e9b8d50728960917a9d]"
+                        },
+                        "values": {
+                          "kind": "Field",
+                          "value": "&(self)[pie_eec8b9513714bb9].dataSource.[action_29e090c5f6c9dd8].[assign_param_12020c61223e2f9].[731996ea0aad484eacde322712c7c201]"
+                        },
                         "title": {
                           "text": "",
-                          "subtext": ""
+                          "subtext": "",
+                          "textFontSize": 18,
+                          "subtextFontSize": 12
                         },
-                        "request": {
-                          "name": "$(Api)EmployeeStatic.GetListByCompanyFilter",
-                          "params": {
-                            "Company": "$(Members)[watch]select_44f808509c47580.value",
-                            "Department": "$(Members)[watch]select_2c9bd3ed5bea100.value"
-                          }
+                        "titlePosition": {
+                          "type": "options",
+                          "options": "top/center",
+                          "top": "",
+                          "left": "",
+                          "textAlign": "left"
                         },
-                        "names": "$(Field)EmployeeStatic.Status",
-                        "values": "$(Field)EmployeeStatic.EmployeeCount",
+                        "startAngle": 90,
+                        "padAngle": 0,
+                        "borderRadius": 0,
                         "legend": {
                           "show": true,
-                          "position": "top/right/vertical"
+                          "position": "top/right/vertical",
+                          "itemWidth": 20,
+                          "itemHeight": 12,
+                          "textFontSize": 12,
+                          "icon": "roundRect"
                         },
                         "seriesLabel": {
                           "show": true,
                           "position": "outside",
-                          "fontSize": 12,
-                          "formatter": "{b}: {d}%"
+                          "fontSize": 12
                         },
-                        "startAngle": 90,
-                        "endAngle": 450,
-                        "padAngle": 0,
-                        "borderRadius": 0,
-                        "color": "#5470c6, #91cc75, #fac858, #ee6666, #73c0de, #3ba272, #fc8452, #9a60b4, #ea7ccc",
-                        "donutChar": true,
+                        "tooltip": {
+                          "show": true,
+                          "textFontSize": 12
+                        },
+                        "color": [
+                          "#1677FF",
+                          "#91CC75",
+                          "#FAC858",
+                          "#EE6666",
+                          "#73C0DE",
+                          "#5470C6",
+                          "#3BA272",
+                          "#FC8452",
+                          "#9A60B4",
+                          "#EA7CCC"
+                        ],
                         "roseType": true,
-                        "titlePosition": "top/left",
-                        "height": "${width}300"
+                        "donutChar": true,
+                        "dataSource": {
+                          "id": "function_6161c7dea63e5ed",
+                          "widget": "function",
+                          "children": [
+                            {
+                              "id": "action_c5d5ddec0469a8d",
+                              "widget": "action_api",
+                              "props": {
+                                "target": "&(ref)52857be25eaa46839bd0e4edfea35c8d.[46d4d160a0044638ba418ae8cc06301e]",
+                                "params": [
+                                  {
+                                    "id": "assign_param_0441593584884d4",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[pie_eec8b9513714bb9].dataSource.[action_c5d5ddec0469a8d].target.params.[b704e0e9d1004e8e86e784e805b97150]"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "assign_param_238587694f07bb0",
+                                        "widget": "assign_param",
+                                        "props": {
+                                          "name": {
+                                            "kind": "Parameter",
+                                            "value": "&(self)[pie_eec8b9513714bb9].dataSource.[action_c5d5ddec0469a8d].target.params.[b704e0e9d1004e8e86e784e805b97150].[25943dfc07a248489b572b1b0a422f5e]"
+                                          },
+                                          "value": {
+                                            "kind": "Members",
+                                            "value": "&(self)[select_2fb0281088f172d].value"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "id": "assign_param_7630827fa1de825",
+                                        "widget": "assign_param",
+                                        "props": {
+                                          "name": {
+                                            "kind": "Parameter",
+                                            "value": "&(self)[pie_eec8b9513714bb9].dataSource.[action_c5d5ddec0469a8d].target.params.[b704e0e9d1004e8e86e784e805b97150].[cb7ac7757f9941a28ee01c906547b75a]"
+                                          },
+                                          "value": {
+                                            "kind": "Members",
+                                            "value": "&(self)[card_f1dfa0d1f47d209].extra.[select_7d6386d29ac5217].value"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id": "action_29e090c5f6c9dd8",
+                              "widget": "action_adapter",
+                              "children": [
+                                {
+                                  "id": "assign_param_12020c61223e2f9",
+                                  "widget": "assign_param",
+                                  "props": {
+                                    "name": {
+                                      "kind": "Members",
+                                      "value": "&(self)[pie_eec8b9513714bb9].data"
+                                    },
+                                    "value": {
+                                      "kind": "Field",
+                                      "value": "&(self)[pie_eec8b9513714bb9].dataSource.[action_c5d5ddec0469a8d].target.result"
+                                    }
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          ],
+                          "props": {}
+                        }
                       },
-                      "styles": {},
                       "children": []
                     }
                   ]
@@ -766,67 +1282,150 @@
               ]
             },
             {
-              "id": "col_5c21ecf7c92a6c",
+              "id": "col_d391cdf859486de",
               "widget": "col",
               "props": {
-                "ref": "col_5c21ecf7c92a6c",
-                "width": "${span}8"
+                "style": {},
+                "ref": "col_17b5ae2e55e6e2e",
+                "width": {
+                  "kind": "flex",
+                  "value": 1
+                }
               },
               "children": [
                 {
-                  "id": "card_4d469ef12fdd280",
+                  "id": "card_a0b1fc99467ad86",
                   "widget": "card",
                   "props": {
-                    "ref": "card_b6c0e254c851d00",
-                    "title": {
-                      "type": "string",
-                      "value": "工作年限统计"
-                    },
+                    "style": {},
+                    "ref": "card_ab6ec30752f1edd",
                     "extra": [],
-                    "size": "default",
-                    "loading": false,
-                    "hideActions": false
-                  },
-                  "styles": {
-                    "marginLeft": "10px",
-                    "marginRight": "10px"
+                    "title": "工作年限统计"
                   },
                   "children": [
                     {
-                      "id": "pie_a8ba41d6508b680",
+                      "id": "pie_d545bc19871d81c",
                       "widget": "pie",
                       "props": {
-                        "ref": "pie_5bd62e528e2b840",
+                        "style": {},
+                        "ref": "pie_12c0098f31354fc",
+                        "names": {
+                          "kind": "Field",
+                          "value": "&(self)[pie_d545bc19871d81c].dataSource.[action_aa384a25aee0714].[assign_param_f9d940002dcad30].[dcb7c18797504493bca4ad611cff5315]"
+                        },
+                        "values": {
+                          "kind": "Field",
+                          "value": "&(self)[pie_d545bc19871d81c].dataSource.[action_aa384a25aee0714].[assign_param_f9d940002dcad30].[ade77c2c21594c53b7b53b3f31509243]"
+                        },
                         "title": {
                           "text": "",
-                          "subtext": ""
+                          "subtext": "",
+                          "textFontSize": 18,
+                          "subtextFontSize": 12
                         },
-                        "request": {
-                          "name": "$(Api)EmployeeWorkExperienceStatics.GetListByCompanyFilter",
-                          "params": {
-                            "Company": "$(Members)[watch]select_44f808509c47580.value"
-                          }
+                        "titlePosition": {
+                          "type": "options",
+                          "options": "top/center",
+                          "top": "",
+                          "left": "",
+                          "textAlign": "left"
                         },
-                        "names": "$(Field)EmployeeWorkExperienceStatics.Workexp",
-                        "values": "$(Field)EmployeeWorkExperienceStatics.EmployeeCount",
+                        "startAngle": 90,
+                        "padAngle": 0,
+                        "borderRadius": 0,
                         "legend": {
                           "show": true,
-                          "position": "top/right/vertical"
+                          "position": "top/right/vertical",
+                          "itemWidth": 20,
+                          "itemHeight": 12,
+                          "textFontSize": 12,
+                          "icon": "roundRect"
                         },
                         "seriesLabel": {
                           "show": true,
                           "position": "outside",
-                          "fontSize": 12,
-                          "formatter": "{b}: {d}%"
+                          "fontSize": 12
                         },
-                        "startAngle": 90,
-                        "endAngle": 450,
-                        "padAngle": 0,
-                        "borderRadius": 0,
-                        "color": [],
-                        "height": "${width}300"
+                        "tooltip": {
+                          "show": true,
+                          "textFontSize": 12
+                        },
+                        "color": [
+                          "#1677FF",
+                          "#91CC75",
+                          "#FAC858",
+                          "#EE6666",
+                          "#73C0DE",
+                          "#5470C6",
+                          "#3BA272",
+                          "#FC8452",
+                          "#9A60B4",
+                          "#EA7CCC"
+                        ],
+                        "dataSource": {
+                          "id": "function_b7ac230fd5792f7",
+                          "widget": "function",
+                          "children": [
+                            {
+                              "id": "action_baccc92264b5e89",
+                              "widget": "action_api",
+                              "props": {
+                                "target": "&(ref)52857be25eaa46839bd0e4edfea35c8d.[dac6a17959e64778bcc08b62cc5a7733]",
+                                "params": [
+                                  {
+                                    "id": "assign_param_2613d2816e0e138",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[pie_d545bc19871d81c].dataSource.[action_baccc92264b5e89].target.params.[9e8ce301330a4c54a2b58fb72ee70cdc]"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "assign_param_33132184f0a5a50",
+                                        "widget": "assign_param",
+                                        "props": {
+                                          "name": {
+                                            "kind": "Parameter",
+                                            "value": "&(self)[pie_d545bc19871d81c].dataSource.[action_baccc92264b5e89].target.params.[9e8ce301330a4c54a2b58fb72ee70cdc].[18533cd3c2154d8eb211fbe9e20f4749]"
+                                          },
+                                          "value": {
+                                            "kind": "Members",
+                                            "value": "&(self)[select_2fb0281088f172d].value"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id": "action_aa384a25aee0714",
+                              "widget": "action_adapter",
+                              "children": [
+                                {
+                                  "id": "assign_param_f9d940002dcad30",
+                                  "widget": "assign_param",
+                                  "props": {
+                                    "name": {
+                                      "kind": "Members",
+                                      "value": "&(self)[pie_d545bc19871d81c].data"
+                                    },
+                                    "value": {
+                                      "kind": "Field",
+                                      "value": "&(self)[pie_d545bc19871d81c].dataSource.[action_baccc92264b5e89].target.result"
+                                    }
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          ],
+                          "props": {}
+                        }
                       },
-                      "styles": {},
                       "children": []
                     }
                   ]
@@ -839,18 +1438,14 @@
     }
   ],
   "references": {
-    "CompanyCities": "Query\\CompanyCities.sdq",
-    "EmployeeDegreeStatic": "Query\\EmployeeDegreeStatic.sdq",
-    "Company": "Entities\\Company.sde",
-    "EmployeeStatic": "Query\\EmployeeStatic.sdq",
-    "Department": "Entities\\Department.sde",
-    "CompanyDegreeStatic": "Query\\CompanyDegreeStatic.sdq",
-    "CompanyGenderStatic": "Query\\CompanyGenderStatic.sdq",
-    "EmployeeWorkExperienceStatics": "Query\\EmployeeWorkExperienceStatics.sdq",
-    "Home": "Home.sdv",
-    "CompanyStatic": "Query\\CompanyStatic.sdq"
+    "0b803e242a8342c390961d861bfc7d7e": "APIS\\Company.sdlg",
+    "52857be25eaa46839bd0e4edfea35c8d": "APIS\\StatisticsService.sdlg",
+    "5f6db97315754cfd8ed7746ad22f483a": "APIS\\Department.sdlg",
+    "StatisticEmployeeDegree29a25f6d521d4e2d9a5d7e967559e82e": "Properties\\DataStructures\\StatisticEmployeeDegree.json",
+    "StatisticGenderDTOfa9489441bcb42caaaa3a715fafd8f24": "Properties\\DataStructures\\StatisticGenderDTO.json",
+    "Department732e9468e48d4dad884eaf11408ef5f3": "DataSource\\Database.sde",
+    "4b0e9453b3e84641bdd510a6d81a28ee": "Properties\\DataStructures\\CityDTO.json",
+    "4a13585bd46b480fb62779a669674472": "Properties\\DataStructures\\StatisticReignDTO.json"
   },
-  "events": {
-    "onLoad": []
-  }
+  "version": "1.0.0"
 }

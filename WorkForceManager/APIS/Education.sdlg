@@ -1,0 +1,264 @@
+﻿{
+  "id": "5fe620b6e7b041b0bd73b55e55909bcf_api",
+  "widget": "api",
+  "version": "1.0.0",
+  "props": {
+    "name": "Education",
+    "description": "Education",
+    "route": "api/[controller]"
+  },
+  "children": [
+    {
+      "id": "9eab10c79b704c6fb5b9267efd7cf87a",
+      "widget": "filter",
+      "props": {
+        "displayName": "EmployeeIdFilter",
+        "name": "EmployeeIdFilter",
+        "sources": [
+          {
+            "id": "d68d03c5c0d348e2910d6f3ac75306f6",
+            "type": "table",
+            "name": "Education",
+            "target": "$(ref)2047b4d54b79438b9de36fe7d5dca4ee.[561ce6553a1a46da96d9b5c9c0799b43]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "2d437ed294a348708becddcb16e52164",
+          "widget": "field",
+          "props": {
+            "displayName": "EmployeeId",
+            "name": "EmployeeId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "ba188f83552845938b55941829f5e71f",
+          "widget": "condition",
+          "props": {
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[2d437ed294a348708becddcb16e52164]",
+            "field": "&(self)[9eab10c79b704c6fb5b9267efd7cf87a].sources.[d68d03c5c0d348e2910d6f3ac75306f6].[ac09415e2b7e4cdaac419f339e3beee7]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "561ce6553a1a46da96d9b5c9c0799b43_add_func",
+      "widget": "function",
+      "props": {
+        "name": "AddEducation",
+        "openApi": true,
+        "requestMethod": "POST",
+        "route": "AddEducation"
+      },
+      "children": [
+        {
+          "id": "7dcc339f78c04f55bdd5e651f610b227",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[c9e13b133b274d809dc6ad24fc6570bb]"
+          },
+          "children": [
+            {
+              "id": "561ce6553a1a46da96d9b5c9c0799b43_add_params",
+              "widget": "field",
+              "props": {
+                "name": "education",
+                "dataType": "$(ref)2047b4d54b79438b9de36fe7d5dca4ee.[561ce6553a1a46da96d9b5c9c0799b43]",
+                "parameterFrom": "Body"
+              }
+            }
+          ]
+        },
+        {
+          "id": "c9e13b133b274d809dc6ad24fc6570bb",
+          "widget": "insert",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "新增",
+            "next": "$(self)[561ce6553a1a46da96d9b5c9c0799b43_add_end]",
+            "source": "$(ref)2047b4d54b79438b9de36fe7d5dca4ee.[561ce6553a1a46da96d9b5c9c0799b43]",
+            "sourceValue": "$(self)[7dcc339f78c04f55bdd5e651f610b227].[561ce6553a1a46da96d9b5c9c0799b43_add_params]"
+          }
+        },
+        {
+          "id": "561ce6553a1a46da96d9b5c9c0799b43_add_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[c9e13b133b274d809dc6ad24fc6570bb].result.[c9e13b133b274d809dc6ad24fc6570bb_success]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "8c18e0506e4248b386f95712b5b6b754",
+      "widget": "function",
+      "props": {
+        "name": "DeleteEducation",
+        "openApi": true,
+        "requestMethod": "DELETE",
+        "route": "DeleteEducation",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "79acb1d248f4432e9ae405f567ff673a",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[12f45f0f77394c18907dc968d0719b23]"
+          },
+          "children": [
+            {
+              "id": "7ef6554dc42e42ecb65c8e648f120ca4",
+              "widget": "field",
+              "props": {
+                "displayName": "id",
+                "name": "id",
+                "dataType": "Int32",
+                "defaultValueType": "Value",
+                "parameterFrom": "Route"
+              }
+            }
+          ]
+        },
+        {
+          "id": "12f45f0f77394c18907dc968d0719b23",
+          "widget": "delete",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "删除",
+            "next": "$(self)[d08363f4d3f546d68de46404dbddbbf5]",
+            "source": "$(ref)2047b4d54b79438b9de36fe7d5dca4ee.[561ce6553a1a46da96d9b5c9c0799b43]",
+            "filter": "$(ref)2047b4d54b79438b9de36fe7d5dca4ee.[561ce6553a1a46da96d9b5c9c0799b43].PrimaryKeys"
+          },
+          "children": [
+            {
+              "id": "c148737fbaa64b5aa965992011b510bd",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[12f45f0f77394c18907dc968d0719b23].filter.[370e18f5e6a1453894a17df560582fa5]",
+                "value": "&(self)[79acb1d248f4432e9ae405f567ff673a].[7ef6554dc42e42ecb65c8e648f120ca4]",
+                "type": "Field"
+              }
+            }
+          ]
+        },
+        {
+          "id": "d08363f4d3f546d68de46404dbddbbf5",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "result": "&(self)[12f45f0f77394c18907dc968d0719b23].result.[12f45f0f77394c18907dc968d0719b23_success]",
+            "type": "Field"
+          }
+        }
+      ]
+    },
+    {
+      "id": "d7f186f077484b24948b88c2ce574306",
+      "widget": "function",
+      "props": {
+        "name": "GetListByEmployeeId",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetListByEmployeeId",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "65ebf7319e234e8097c60eb4cc2ea71b",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[62b54f4b233b4eeba7a946667c4d4a2a]"
+          },
+          "children": [
+            {
+              "id": "1673fd2486d6458d9f9eac32ae1f4a6a",
+              "widget": "field",
+              "props": {
+                "displayName": "employeeIdFilter",
+                "name": "employeeIdFilter",
+                "dataType": "$(self)[9eab10c79b704c6fb5b9267efd7cf87a]",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "62b54f4b233b4eeba7a946667c4d4a2a",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "查询",
+            "next": "$(self)[df5cb6b24b4241058f48ad946faf125d]",
+            "filter": "$(self)[9eab10c79b704c6fb5b9267efd7cf87a]",
+            "strategy": "list"
+          },
+          "children": [
+            {
+              "id": "75b5bae3c373464692290b4c09ce875d",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "44589c4620fe434abd5ddc7426afa1c7",
+                    "type": "table",
+                    "name": "Education",
+                    "target": "$(ref)2047b4d54b79438b9de36fe7d5dca4ee.[561ce6553a1a46da96d9b5c9c0799b43]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "90a51f19e7c64c15b15620268fe16f11",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[62b54f4b233b4eeba7a946667c4d4a2a].filter.[2d437ed294a348708becddcb16e52164]",
+                "value": "&(self)[65ebf7319e234e8097c60eb4cc2ea71b].[1673fd2486d6458d9f9eac32ae1f4a6a].[2d437ed294a348708becddcb16e52164]",
+                "type": "Field"
+              }
+            }
+          ]
+        },
+        {
+          "id": "df5cb6b24b4241058f48ad946faf125d",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "result": "&(self)[62b54f4b233b4eeba7a946667c4d4a2a].result.[561ce6553a1a46da96d9b5c9c0799b43]",
+            "type": "Field"
+          }
+        }
+      ]
+    }
+  ],
+  "references": {
+    "2047b4d54b79438b9de36fe7d5dca4ee": "..\\DataSource\\Database.sde"
+  }
+}

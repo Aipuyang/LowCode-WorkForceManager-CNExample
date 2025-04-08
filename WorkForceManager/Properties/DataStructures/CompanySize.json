@@ -1,0 +1,81 @@
+﻿{
+  "id": "d893c8e7e88841a1b37a29a838b1697e",
+  "widget": "enum",
+  "props": {
+    "name": "CompanySize",
+    "displayName": "CompanySize",
+    "converters": [
+      {
+        "id": "0d3cc2afa4202c8",
+        "widget": "converter",
+        "props": {
+          "name": "CompanySizeColor",
+          "ref": "CompanySizeColor",
+          "input": "enum",
+          "output": "Color",
+          "items": [
+            {
+              "source": "&(self)[d893c8e7e88841a1b37a29a838b1697e].[8d346ee1a1e447fca8a0078ac514bb8a]",
+              "target": "#90F09080"
+            },
+            {
+              "source": "&(self)[d893c8e7e88841a1b37a29a838b1697e].[3bcf5b6ece494ed1b0106758e5d11662]",
+              "target": "#FAD400FF"
+            },
+            {
+              "source": "&(self)[d893c8e7e88841a1b37a29a838b1697e].[359e0d148f804105804e85c964aa73cd]",
+              "target": "#FF7800FF"
+            },
+            {
+              "source": "&(self)[d893c8e7e88841a1b37a29a838b1697e].[57cbf8c8b3ab47f798aa275f9a87c798]",
+              "target": "#1E90FFFF"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "8d346ee1a1e447fca8a0078ac514bb8a",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "微型",
+        "name": "Tiny",
+        "value": 0,
+        "description": "0-10"
+      }
+    },
+    {
+      "id": "3bcf5b6ece494ed1b0106758e5d11662",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "小型",
+        "name": "Small",
+        "value": 1,
+        "description": "10-100"
+      }
+    },
+    {
+      "id": "359e0d148f804105804e85c964aa73cd",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "中型",
+        "name": "Big",
+        "value": 2,
+        "description": "100-1000"
+      }
+    },
+    {
+      "id": "57cbf8c8b3ab47f798aa275f9a87c798",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "大型",
+        "name": "Large",
+        "value": 3,
+        "description": ">1000"
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

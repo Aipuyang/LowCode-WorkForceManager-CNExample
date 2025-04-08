@@ -1,0 +1,66 @@
+﻿{
+  "id": "a3bc945b672c422b9ea8728da525a54c",
+  "widget": "model",
+  "props": {
+    "name": "CompanySizeStaticDTO",
+    "displayName": "公司统计模型"
+  },
+  "children": [
+    {
+      "id": "f6dbcce1a60c41f48b2c2782015e17f0",
+      "widget": "field",
+      "props": {
+        "displayName": "TinyCount",
+        "name": "TinyCount",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "bcc555b7aa464be38dab38ea94f56f6e",
+      "widget": "field",
+      "props": {
+        "displayName": "SmallCount",
+        "name": "SmallCount",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "52f66694750348c1927d5e78a7375fcd",
+      "widget": "field",
+      "props": {
+        "displayName": "BigCount",
+        "name": "BigCount",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "5ddbb075e39449d18009785157940d8c",
+      "widget": "field",
+      "props": {
+        "displayName": "LargerCount",
+        "name": "LargerCount",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "56763bc892cc40e8b86fa9e61883479b",
+      "widget": "field",
+      "props": {
+        "displayName": "Total",
+        "name": "Total",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

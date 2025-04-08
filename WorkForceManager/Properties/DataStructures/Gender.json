@@ -1,0 +1,51 @@
+﻿{
+  "id": "3f93e06f5f904e57b838cd019abf1db2",
+  "widget": "enum",
+  "props": {
+    "name": "Gender",
+    "displayName": "性别",
+    "converters": [
+      {
+        "id": "f6a89a8fc80ab57",
+        "widget": "converter",
+        "props": {
+          "name": "Gender",
+          "ref": "Gender",
+          "input": "enum",
+          "output": "Color",
+          "items": [
+            {
+              "source": "&(self)[3f93e06f5f904e57b838cd019abf1db2].[f8ed5e46db5e491f8118eaefb9cfd7ea]",
+              "target": "#1F93FFB8"
+            },
+            {
+              "source": "&(self)[3f93e06f5f904e57b838cd019abf1db2].[2601accf67a640a48131da88b8132b3d]",
+              "target": "#C7158573"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "f8ed5e46db5e491f8118eaefb9cfd7ea",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "男",
+        "name": "Male",
+        "value": 0
+      }
+    },
+    {
+      "id": "2601accf67a640a48131da88b8132b3d",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "女",
+        "name": "FeMale",
+        "value": 1
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

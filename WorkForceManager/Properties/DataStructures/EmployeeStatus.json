@@ -1,0 +1,77 @@
+﻿{
+  "id": "c1375195ba3049dd9dcea7705bb35cd5",
+  "widget": "enum",
+  "props": {
+    "name": "EmployeeStatus",
+    "displayName": "员工状态",
+    "converters": [
+      {
+        "id": "9ba0b7b11925c23",
+        "widget": "converter",
+        "props": {
+          "name": "EmployeeStatus",
+          "ref": "EmployeeStatus",
+          "input": "enum",
+          "output": "Color",
+          "items": [
+            {
+              "source": "&(self)[c1375195ba3049dd9dcea7705bb35cd5].[f8a07fd55caa411baebdbffbe087d7e0]",
+              "target": "#1F93FFB8"
+            },
+            {
+              "source": "&(self)[c1375195ba3049dd9dcea7705bb35cd5].[91180369c1a34a15b6e90d935f3e9c9b]",
+              "target": "#FAD400FF"
+            },
+            {
+              "source": "&(self)[c1375195ba3049dd9dcea7705bb35cd5].[349e342da3e94bd0bcc5c392308e7bb6]",
+              "target": "#00B10080"
+            },
+            {
+              "source": "&(self)[c1375195ba3049dd9dcea7705bb35cd5].[692079d338f248f48daa3e909cca8d9e]",
+              "target": "#FF4500FF"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "f8a07fd55caa411baebdbffbe087d7e0",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "实习",
+        "name": "IS",
+        "value": 0
+      }
+    },
+    {
+      "id": "91180369c1a34a15b6e90d935f3e9c9b",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "试用期",
+        "name": "PB",
+        "value": 1
+      }
+    },
+    {
+      "id": "349e342da3e94bd0bcc5c392308e7bb6",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "全职",
+        "name": "FT",
+        "value": 2
+      }
+    },
+    {
+      "id": "692079d338f248f48daa3e909cca8d9e",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "离职",
+        "name": "RN",
+        "value": 3
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

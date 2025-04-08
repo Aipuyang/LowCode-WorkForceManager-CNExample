@@ -1,33 +1,32 @@
-{
-  "id": "page_layout_8dc8564dbad7e9a",
-  "type": "page",
+﻿{
+  "id": "pageLayout_729203879464399",
   "widget": "page_layout",
-  "designVersion": "1.0.0",
-  "version": 1,
   "props": {
-    "ref": "page_layout",
-    "title": "企业员工统计系统",
+    "ref": "pageLayout_729203879464399",
+    "title": "WorkForceManager",
+    "logo": "/static/images/logo.svg",
+    "name": "Layout",
     "footer": [
       {
-        "id": "row_8dc8564dbad7eb2",
+        "id": "row_939488376122384",
         "widget": "row",
         "props": {
-          "ref": "row_8dc8564dbad7eb2"
+          "ref": "row_939488376122384"
         },
         "children": [
           {
-            "id": "col_8dc8564dbad7eb4",
+            "id": "col_617386396409969",
             "widget": "col",
             "props": {
-              "ref": "col_8dc8564dbad7eb4"
+              "ref": "col_617386396409969"
             },
             "children": [
               {
-                "id": "text_8dc8564dbad7eb5",
+                "id": "text_376560086637185",
                 "widget": "text",
                 "props": {
-                  "ref": "text_8dc8564dbad7eb5",
-                  "value": "Copyright © 2024 艾普阳（深圳）有限公司"
+                  "ref": "text_376560086637185",
+                  "value": "© 2025 艾普阳深圳有限公司.保留所有权利"
                 }
               }
             ]
@@ -36,35 +35,57 @@
       }
     ],
     "menu": {
-      "type": "sub",
+      "type": "group",
       "items": [
         {
-          "key": "df2f3d2dd631080",
-          "label": "统计",
-          "page": "$(Document)Home",
-          "icon": "PieChartFilled",
-          "hide": false
+          "id": "layoutMenuItem_689553691892235",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layoutMenuItem_689553691892235",
+            "label": "首页",
+            "icon": "antdv://HomeFilled",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)home_338268383642198"
+            },
+            "hide": false
+          }
         },
         {
-          "key": "331e40578aa9940",
-          "label": "公司",
-          "page": "$(Document)CompanyList",
-          "icon": "BankFilled",
-          "hide": false
+          "id": "layout_menuItem_47b4b50b860695b",
+          "widget": "layout_menuItem",
+          "props": {
+            "style": {},
+            "ref": "layout_menuItem_68efddb71b39c02",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)38d9d4bf897e4ff799eec222a5fcebc5"
+            },
+            "label": "公司管理",
+            "icon": "antdv://BankFilled"
+          }
         },
         {
-          "key": "355ac1df3a03d60",
-          "label": "员工",
-          "page": "$(Document)Department_Employee_TreeList",
-          "icon": "ContactsFilled",
-          "hide": false
+          "id": "layout_menuItem_ad7c4673257c97d",
+          "widget": "layout_menuItem",
+          "props": {
+            "style": {},
+            "ref": "layout_menuItem_1fa55c3589cd23e",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)f4e719b57cb14096a4dc52b566bbdd54"
+            },
+            "label": "员工管理",
+            "icon": "antdv://ContactsFilled"
+          }
         }
       ]
     }
   },
   "references": {
-    "CompanyList": "Views\\Company\\CompanyList.sdv",
-    "Department_Employee_TreeList": "Views\\Department\\Department_Employee_TreeList.sdv",
-    "Home": "Home.sdv"
-  }
+    "home_338268383642198": "Home.sdv",
+    "38d9d4bf897e4ff799eec222a5fcebc5": "Views\\Company\\CompanyList.sdv",
+    "f4e719b57cb14096a4dc52b566bbdd54": "Views\\Employee\\Employee_Department_TreeList.sdv"
+  },
+  "version": "1.0.0"
 }
