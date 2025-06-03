@@ -53,7 +53,7 @@ WorkForceManager 示例使用 SnapDevelop 2026 开发，展示如何通过其可
   ![image-20250403140316466](Image/image-20250403140316466.png)
 
 ## 更多信息
-关于这个示例应用的更多开发细节，请查看：https://docs.aipuyang.com/sd2026/Create_a_Designer_Developed_Project/Code-First-Tutorials.html#进阶指南创建企业员工统计系统。
+关于这个示例应用的更多开发细节，请参见[项目设计文档](/项目设计文档.md)。
 
 如需下载最新版本的 SnapDevelop，欢迎访问：[https://www.aipuyang.com](https://www.aipuyang.com)。
 
