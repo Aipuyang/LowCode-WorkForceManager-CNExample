@@ -374,11 +374,11 @@
     }
   ],
   "references": {
-    "105e4a7cc54b404f8829e81d8ad9ffb2": "..\\..\\APIS\\CompanyContact.sdlg",
+    "105e4a7cc54b404f8829e81d8ad9ffb2": "..\\..\\Logics\\APIS\\CompanyContact.sdlg",
     "c035343604754d01b171470e82ce35c9": "..\\..\\Properties\\DataStructures\\PositionType.json",
-    "0fa32701ed694daca365fe6089843b9a": "..\\..\\APIS\\Employee.sdlg",
-    "64f4f81a55c34b5aa3081cce3f2922b8": "..\\..\\APIS\\Company.sdlg",
-    "9112573518644a56ab96c31d94e612e6": "..\\..\\DataSource\\Database.sde"
+    "0fa32701ed694daca365fe6089843b9a": "..\\..\\Logics\\APIS\\Employee.sdlg",
+    "64f4f81a55c34b5aa3081cce3f2922b8": "..\\..\\Logics\\APIS\\Company.sdlg",
+    "9112573518644a56ab96c31d94e612e6": "..\\..\\Entities\\DataSource\\Database.sde"
   },
   "version": "1.0.0"
 }

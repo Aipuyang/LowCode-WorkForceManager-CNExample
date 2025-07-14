@@ -40,6 +40,42 @@
             }
           ]
         }
+      },
+      {
+        "id": "converter_13ffdab0159ea32",
+        "widget": "converter",
+        "props": {
+          "name": "converter_13ffdab0159ea32",
+          "ref": "converter_13ffdab0159ea32",
+          "input": "enum",
+          "output": "Text",
+          "items": [
+            {
+              "source": "&(self)[0a50063933594d59a1aea3169d00ce5e].[fd9f36edf75249b3beca55d79632686f]",
+              "target": "准学士"
+            },
+            {
+              "source": "&(self)[0a50063933594d59a1aea3169d00ce5e].[e11198248b0f48ed8c6461c50365e430]",
+              "target": "学士"
+            },
+            {
+              "source": "&(self)[0a50063933594d59a1aea3169d00ce5e].[cf4cc5eb1fa645928cc786b21c0f23cb]",
+              "target": "硕士"
+            },
+            {
+              "source": "&(self)[0a50063933594d59a1aea3169d00ce5e].[bb26d169704f4170ab46c60a0e59a9d3]",
+              "target": "博士"
+            },
+            {
+              "source": "&(self)[0a50063933594d59a1aea3169d00ce5e].[e38e58a987874fa2a5af13eb4b26058e]",
+              "target": "教授"
+            },
+            {
+              "source": "&(self)[0a50063933594d59a1aea3169d00ce5e].[8136c362a5dd4de4bb848d833019ccf5]",
+              "target": "其他"
+            }
+          ]
+        }
       }
     ]
   },

@@ -275,6 +275,6 @@
     }
   ],
   "references": {
-    "e6d451ec4ec8411f988661cbb3881a72": "..\\DataSource\\Database.sde"
+    "e6d451ec4ec8411f988661cbb3881a72": "..\\..\\Entities\\DataSource\\Database.sde"
   }
 }

@@ -7,16 +7,16 @@
     "description": "Database",
     "dbType": "Sqlite",
     "connectionString": "Data Source=\"Database.db\"",
-    "x": 52.5,
-    "y": 100.5
+    "x": 55.5,
+    "y": 238.5
   },
   "children": [
     {
       "id": "07b0fe61729f4d47b4e2e4902fc42222",
       "widget": "table",
       "props": {
-        "x": 569.5,
-        "y": 453,
+        "x": 830,
+        "y": 562.5,
         "displayName": "公司表",
         "name": "Company",
         "indexes": [
@@ -147,8 +147,8 @@
       "id": "e9496a0de6e744f0bda5526e977cbdd4",
       "widget": "table",
       "props": {
-        "x": 247.5,
-        "y": 171,
+        "x": 508,
+        "y": 280.5,
         "displayName": "公司联系人表",
         "name": "CompanyContact",
         "indexes": [
@@ -266,8 +266,8 @@
       "id": "732e9468e48d4dad884eaf11408ef5f3",
       "widget": "table",
       "props": {
-        "x": 231,
-        "y": 882,
+        "x": 508,
+        "y": 1006.5,
         "displayName": "部门表",
         "name": "Department",
         "indexes": [
@@ -364,8 +364,8 @@
       "id": "561ce6553a1a46da96d9b5c9c0799b43",
       "widget": "table",
       "props": {
-        "x": 247.5,
-        "y": 640,
+        "x": 508,
+        "y": 748.5,
         "displayName": "教育经历",
         "name": "Education",
         "indexes": [
@@ -494,8 +494,8 @@
       "id": "820fc7ca30c4456cbb4e05086ec9f39c",
       "widget": "table",
       "props": {
-        "x": 569.5,
-        "y": 171,
+        "x": 830,
+        "y": 280.5,
         "displayName": "员工",
         "name": "Employee",
         "indexes": [
@@ -883,8 +883,8 @@
       "id": "edf5b54a97eb4d0d803efb81554fd77b",
       "widget": "table",
       "props": {
-        "x": 247.5,
-        "y": 357,
+        "x": 508,
+        "y": 466.5,
         "displayName": "工作经历",
         "name": "EmployeeJob",
         "indexes": [
@@ -1033,10 +1033,10 @@
     }
   ],
   "references": {
-    "f3b5b3597a4a473aac597e1c17fba72e": "..\\Properties\\DataStructures\\CompanySize.json",
-    "06cde15b34964d06bc7749fe05c2bba5": "..\\Properties\\DataStructures\\PositionType.json",
-    "f18bf8913614438180c6387570d05652": "..\\Properties\\DataStructures\\DegreeType.json",
-    "712b65e3a5c34046a10ad17015e715f3": "..\\Properties\\DataStructures\\Gender.json",
-    "870e2f0e4ecc4b65ace74852a78d5f7d": "..\\Properties\\DataStructures\\EmployeeStatus.json"
+    "f3b5b3597a4a473aac597e1c17fba72e": "..\\..\\Properties\\DataStructures\\CompanySize.json",
+    "06cde15b34964d06bc7749fe05c2bba5": "..\\..\\Properties\\DataStructures\\PositionType.json",
+    "f18bf8913614438180c6387570d05652": "..\\..\\Properties\\DataStructures\\DegreeType.json",
+    "712b65e3a5c34046a10ad17015e715f3": "..\\..\\Properties\\DataStructures\\Gender.json",
+    "870e2f0e4ecc4b65ace74852a78d5f7d": "..\\..\\Properties\\DataStructures\\EmployeeStatus.json"
   }
 }

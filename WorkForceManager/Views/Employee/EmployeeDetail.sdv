@@ -89,7 +89,9 @@
           "id": "row_94665f41e11aeb8",
           "widget": "row",
           "props": {
-            "style": {},
+            "style": {
+              "width": "100%"
+            },
             "ref": "row_e1f86861e6ed295",
             "gutter": {
               "enabled": false
@@ -112,7 +114,9 @@
                   "id": "grid_86c66ed34b8287a",
                   "widget": "grid",
                   "props": {
-                    "style": {},
+                    "style": {
+                      "width": "100%"
+                    },
                     "ref": "grid_eaae92792a62e9e",
                     "rowNum": 3,
                     "colNum": 1
@@ -122,7 +126,9 @@
                       "id": "row_41a7b8d79751255",
                       "widget": "row",
                       "props": {
-                        "style": {},
+                        "style": {
+                          "width": "100%"
+                        },
                         "ref": "row_cb526b19c043401",
                         "gutter": {
                           "enabled": true,
@@ -202,7 +208,9 @@
                                       "id": "grid_1b30d3a82a48127",
                                       "widget": "grid",
                                       "props": {
-                                        "style": {},
+                                        "style": {
+                                          "width": "100%"
+                                        },
                                         "ref": "grid_863c2308ceda6fb",
                                         "rowNum": 3,
                                         "colNum": 1
@@ -212,7 +220,9 @@
                                           "id": "row_008d742ff16ff75",
                                           "widget": "row",
                                           "props": {
-                                            "style": {},
+                                            "style": {
+                                              "width": "100%"
+                                            },
                                             "ref": "row_a78deba59dc951c",
                                             "gutter": {
                                               "enabled": true,
@@ -244,7 +254,8 @@
                                                     "ref": "tag_f8c542a68f81604",
                                                     "value": {
                                                       "kind": "Field",
-                                                      "value": "&(self)[card_283566e755b1295].dataSource.[action_24c2a984f519462].[assign_param_94f8c7d9df554d3].[a315eeba89cd41e18eb16ada89245a6d]"
+                                                      "value": "&(self)[card_283566e755b1295].dataSource.[action_24c2a984f519462].[assign_param_94f8c7d9df554d3].[a315eeba89cd41e18eb16ada89245a6d]",
+                                                      "converter": "&(ref)be09cb7a5f4a447d8767a9260b2c1ef2.[c1375195ba3049dd9dcea7705bb35cd5].converters.[converter_16773912f40f25e]"
                                                     },
                                                     "color": {
                                                       "kind": "Field",
@@ -782,7 +793,8 @@
                                           "ref": "tag_986aa269cc14102",
                                           "value": {
                                             "kind": "MemberField",
-                                            "value": "&(self)[card_283566e755b1295].data.[e0c5c5b6f28945d583ffa411ab743895]"
+                                            "value": "&(self)[card_283566e755b1295].data.[e0c5c5b6f28945d583ffa411ab743895]",
+                                            "converter": "&(ref)f2145bb7b98e4432a090555b0aa2f26b.[3f93e06f5f904e57b838cd019abf1db2].converters.[converter_6e454a672d05a49]"
                                           },
                                           "color": {
                                             "kind": "MemberField",
@@ -874,7 +886,8 @@
                                           },
                                           "value": {
                                             "kind": "MemberField",
-                                            "value": "&(self)[card_283566e755b1295].data.[541d9cadc4c5402cb8e97bf625317ed0]"
+                                            "value": "&(self)[card_283566e755b1295].data.[541d9cadc4c5402cb8e97bf625317ed0]",
+                                            "converter": "&(ref)5a48a495019f4f8b9f5e9c2e975fb70e.[0a50063933594d59a1aea3169d00ce5e].converters.[converter_13ffdab0159ea32]"
                                           }
                                         },
                                         "children": []
@@ -953,7 +966,9 @@
                       "id": "row_70bd0c2a07824dc",
                       "widget": "row",
                       "props": {
-                        "style": {},
+                        "style": {
+                          "width": "100%"
+                        },
                         "ref": "row_f3e3e91e9bd49a1",
                         "gutter": {
                           "enabled": true,
@@ -1168,7 +1183,8 @@
                                           },
                                           "value": {
                                             "kind": "Field",
-                                            "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[d77fff4b25274384a4dc9e9bef5faae5]"
+                                            "value": "&(self)[tableContainer_2b352a813512c94].dataSource.[action_d05ca7802d269d1].[assign_param_0ad1acb741232d8].[d77fff4b25274384a4dc9e9bef5faae5]",
+                                            "converter": "&(ref)5a48a495019f4f8b9f5e9c2e975fb70e.[0a50063933594d59a1aea3169d00ce5e].converters.[converter_13ffdab0159ea32]"
                                           }
                                         },
                                         "children": []
@@ -2411,14 +2427,14 @@
     }
   ],
   "references": {
-    "cf345cb6b637414bb6619b02a12770bb": "..\\..\\APIS\\Employee.sdlg",
+    "cf345cb6b637414bb6619b02a12770bb": "..\\..\\Logics\\APIS\\Employee.sdlg",
     "b0f9efb944c048459489c0c5bdb40bcb": "EmployeeJobAdd.sdv",
     "ae26d21704db418bb76ae9382de6a8b4": "EducationAdd.sdv",
-    "0c48ed5ed0fe472ab906600e0b52bd4b": "..\\..\\APIS\\Education.sdlg",
-    "abd24aa208cf48f1a5a957bb6b059750": "..\\..\\APIS\\EmployeeJob.sdlg",
+    "0c48ed5ed0fe472ab906600e0b52bd4b": "..\\..\\Logics\\APIS\\Education.sdlg",
+    "abd24aa208cf48f1a5a957bb6b059750": "..\\..\\Logics\\APIS\\EmployeeJob.sdlg",
     "394405d93a774776960b5b2ae1d7fff6": "EmployeeUpdate.sdv",
     "f488c65108b74ffab2c1de49abb5083e": "EmployeeResgin.sdv",
-    "EmployeeJobedf5b54a97eb4d0d803efb81554fd77b": "..\\..\\DataSource\\Database.sde",
+    "EmployeeJobedf5b54a97eb4d0d803efb81554fd77b": "..\\..\\Entities\\DataSource\\Database.sde",
     "be09cb7a5f4a447d8767a9260b2c1ef2": "..\\..\\Properties\\DataStructures\\EmployeeStatus.json",
     "5a48a495019f4f8b9f5e9c2e975fb70e": "..\\..\\Properties\\DataStructures\\DegreeType.json",
     "f2145bb7b98e4432a090555b0aa2f26b": "..\\..\\Properties\\DataStructures\\Gender.json"

@@ -32,6 +32,34 @@
             }
           ]
         }
+      },
+      {
+        "id": "converter_16773912f40f25e",
+        "widget": "converter",
+        "props": {
+          "name": "converter_16773912f40f25e",
+          "ref": "converter_16773912f40f25e",
+          "input": "enum",
+          "output": "Text",
+          "items": [
+            {
+              "source": "&(self)[c1375195ba3049dd9dcea7705bb35cd5].[f8a07fd55caa411baebdbffbe087d7e0]",
+              "target": "实习"
+            },
+            {
+              "source": "&(self)[c1375195ba3049dd9dcea7705bb35cd5].[91180369c1a34a15b6e90d935f3e9c9b]",
+              "target": "试用期"
+            },
+            {
+              "source": "&(self)[c1375195ba3049dd9dcea7705bb35cd5].[349e342da3e94bd0bcc5c392308e7bb6]",
+              "target": "全职"
+            },
+            {
+              "source": "&(self)[c1375195ba3049dd9dcea7705bb35cd5].[692079d338f248f48daa3e909cca8d9e]",
+              "target": "离职"
+            }
+          ]
+        }
       }
     ]
   },

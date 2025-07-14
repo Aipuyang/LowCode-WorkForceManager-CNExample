@@ -1213,14 +1213,14 @@
     }
   ],
   "references": {
-    "a64053161f674fe8b1a15536517d4ec0": "..\\..\\APIS\\Employee.sdlg",
+    "a64053161f674fe8b1a15536517d4ec0": "..\\..\\Logics\\APIS\\Employee.sdlg",
     "6cb6ef01835d4b23a1ce68ecedbf51ca": "..\\..\\Properties\\DataStructures\\Gender.json",
     "c7ca084813fc4bf69fe86ded76491d33": "..\\..\\Properties\\DataStructures\\DegreeType.json",
     "3d8aa73fc5214a9088db500ccac5873c": "..\\..\\Properties\\DataStructures\\EmployeeStatus.json",
-    "43508789b7c247928c9035d9fb94c453": "..\\..\\APIS\\Company.sdlg",
-    "0a8144bb5137444690efd52de14db8fb": "..\\..\\APIS\\Department.sdlg",
-    "Department732e9468e48d4dad884eaf11408ef5f3": "..\\..\\DataSource\\Database.sde",
-    "d162bb29eead41a2a47ae9bef39febde": "..\\..\\Properties\\extdatasources\\sds.json"
+    "43508789b7c247928c9035d9fb94c453": "..\\..\\Logics\\APIS\\Company.sdlg",
+    "0a8144bb5137444690efd52de14db8fb": "..\\..\\Logics\\APIS\\Department.sdlg",
+    "Department732e9468e48d4dad884eaf11408ef5f3": "..\\..\\Entities\\DataSource\\Database.sde",
+    "d162bb29eead41a2a47ae9bef39febde": "..\\..\\Properties\\Extdatasources\\Static\\Default.json"
   },
   "version": "1.0.0"
 }

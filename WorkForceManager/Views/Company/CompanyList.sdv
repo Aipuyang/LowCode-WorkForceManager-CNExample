@@ -342,7 +342,8 @@
                   },
                   "value": {
                     "kind": "Field",
-                    "value": "&(self)[tableContainer_cb11fd60e21de39].dataSource.[action_32d46feaf5c6c9c].[assign_param_e987c584da364e7].[9f45f4a80da24bf38e4012b7a9e0fbc7]"
+                    "value": "&(self)[tableContainer_cb11fd60e21de39].dataSource.[action_32d46feaf5c6c9c].[assign_param_e987c584da364e7].[9f45f4a80da24bf38e4012b7a9e0fbc7]",
+                    "converter": "&(ref)bf61afe1d3cd4934ae4f17281d204a99.[d893c8e7e88841a1b37a29a838b1697e].converters.[converter_661a8485883710a]"
                   }
                 },
                 "children": []
@@ -713,7 +714,7 @@
                 "value": ""
               },
               "default": {
-                "kind": "Field",
+                "kind": "EnumField",
                 "value": [
                   "&(ref)bf61afe1d3cd4934ae4f17281d204a99.[8d346ee1a1e447fca8a0078ac514bb8a]",
                   "&(ref)bf61afe1d3cd4934ae4f17281d204a99.[3bcf5b6ece494ed1b0106758e5d11662]",
@@ -1236,12 +1237,12 @@
     }
   ],
   "references": {
-    "34e1ab6381b84f909233d8c39bb4323b": "..\\..\\APIS\\Company.sdlg",
+    "34e1ab6381b84f909233d8c39bb4323b": "..\\..\\Logics\\APIS\\Company.sdlg",
     "bf61afe1d3cd4934ae4f17281d204a99": "..\\..\\Properties\\DataStructures\\CompanySize.json",
     "055dc602a2b046a5a1f594b0f53ce99f": "CompanyAdd.sdv",
     "23cd27b4fa494288bd234f575bc062ea": "CompanyUpdate.sdv",
     "f22fb29d0bbf430c8f01f8867b2807e9": "CompanyDetail.sdv",
-    "9112573518644a56ab96c31d94e612e6": "..\\..\\DataSource\\Database.sde",
+    "9112573518644a56ab96c31d94e612e6": "..\\..\\Entities\\DataSource\\Database.sde",
     "4b0e9453b3e84641bdd510a6d81a28ee": "..\\..\\Properties\\DataStructures\\CityDTO.json"
   },
   "version": "1.0.0"

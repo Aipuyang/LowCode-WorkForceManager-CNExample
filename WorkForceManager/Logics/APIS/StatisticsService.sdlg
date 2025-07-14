@@ -488,7 +488,7 @@
           },
           "children": [
             {
-              "id": "15836315670d40e8b197e1eef217390d",
+              "id": "f337d31c9b63467d84107d0360cbc42c",
               "widget": "assign_field",
               "props": {
                 "field": "&(self)[2efd20ee6db446f98375994d46f3d268].result.[c53ed62c374a4aa6b94a2e315480d267]",
@@ -497,7 +497,7 @@
               }
             },
             {
-              "id": "71910e5978ad458b8cc3c90e399c0d6e",
+              "id": "938e48fd3cfd4c7caff994f2532b87c1",
               "widget": "assign_field",
               "props": {
                 "field": "&(self)[2efd20ee6db446f98375994d46f3d268].result.[5cd09d1c35014d0ab10f6894a0a81b35]",
@@ -1459,13 +1459,13 @@
     }
   ],
   "references": {
-    "d67c2ac1eef748b890af39e3fec945a7": "..\\DataSource\\Database.sde",
-    "cb085c3dab6649caa376eb536cb336ae": "..\\Properties\\DataStructures\\StatisticCompanySizeDTO.json",
-    "874985a9882b424d93c1c853333a746e": "..\\Properties\\DataStructures\\StatisticGenderDTO.json",
-    "7eb339885e7c44a2a0ed7675a7c28446": "..\\Properties\\DataStructures\\StatisticEmployeeDegree.json",
-    "ecbc3f2da3e34642a9fe61c3563f23ed": "..\\Properties\\DataStructures\\StatisticEmployeeStatusDTO.json",
-    "8e4ec7b5df634cc3afe04a469679ef32": "..\\Properties\\DataStructures\\EmployeeStatus.json",
-    "2675b72c9563427683f2f3aed2330174": "..\\Properties\\DataStructures\\StatisticEmployeeWorkYearDTO.json",
-    "838e71ad00054ebba0615c0698954aa0": "..\\Properties\\DataStructures\\StatisticReignDTO.json"
+    "d67c2ac1eef748b890af39e3fec945a7": "..\\..\\Entities\\DataSource\\Database.sde",
+    "cb085c3dab6649caa376eb536cb336ae": "..\\..\\Properties\\DataStructures\\StatisticCompanySizeDTO.json",
+    "874985a9882b424d93c1c853333a746e": "..\\..\\Properties\\DataStructures\\StatisticGenderDTO.json",
+    "7eb339885e7c44a2a0ed7675a7c28446": "..\\..\\Properties\\DataStructures\\StatisticEmployeeDegree.json",
+    "ecbc3f2da3e34642a9fe61c3563f23ed": "..\\..\\Properties\\DataStructures\\StatisticEmployeeStatusDTO.json",
+    "8e4ec7b5df634cc3afe04a469679ef32": "..\\..\\Properties\\DataStructures\\EmployeeStatus.json",
+    "2675b72c9563427683f2f3aed2330174": "..\\..\\Properties\\DataStructures\\StatisticEmployeeWorkYearDTO.json",
+    "838e71ad00054ebba0615c0698954aa0": "..\\..\\Properties\\DataStructures\\StatisticReignDTO.json"
   }
 }

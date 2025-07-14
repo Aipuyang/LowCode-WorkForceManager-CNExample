@@ -360,7 +360,7 @@
     }
   ],
   "references": {
-    "b3b8483d8e134a0483d0f3d9ada54d82": "..\\..\\APIS\\Company.sdlg",
+    "b3b8483d8e134a0483d0f3d9ada54d82": "..\\..\\Logics\\APIS\\Company.sdlg",
     "9e49b0f618824a1b804018c5be95948e": "..\\..\\Properties\\DataStructures\\CompanySize.json"
   },
   "version": "1.0.0"

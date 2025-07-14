@@ -230,7 +230,7 @@
     }
   ],
   "references": {
-    "06338a479bab4e7d9001cfb31e0a09b9": "..\\..\\APIS\\Employee.sdlg"
+    "06338a479bab4e7d9001cfb31e0a09b9": "..\\..\\Logics\\APIS\\Employee.sdlg"
   },
   "version": "1.0.0"
 }

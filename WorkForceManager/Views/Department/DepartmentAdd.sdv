@@ -233,8 +233,8 @@
     }
   ],
   "references": {
-    "bce410c7e0c3412fbd95c770cdb4c15e": "..\\..\\APIS\\Department.sdlg",
-    "a564615811614f019ab84c8e128242d3": "..\\..\\APIS\\Company.sdlg"
+    "bce410c7e0c3412fbd95c770cdb4c15e": "..\\..\\Logics\\APIS\\Department.sdlg",
+    "a564615811614f019ab84c8e128242d3": "..\\..\\Logics\\APIS\\Company.sdlg"
   },
   "version": "1.0.0"
 }

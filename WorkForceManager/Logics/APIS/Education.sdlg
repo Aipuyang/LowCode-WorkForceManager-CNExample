@@ -259,6 +259,6 @@
     }
   ],
   "references": {
-    "2047b4d54b79438b9de36fe7d5dca4ee": "..\\DataSource\\Database.sde"
+    "2047b4d54b79438b9de36fe7d5dca4ee": "..\\..\\Entities\\DataSource\\Database.sde"
   }
 }

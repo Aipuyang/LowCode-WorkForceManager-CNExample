@@ -24,6 +24,26 @@
             }
           ]
         }
+      },
+      {
+        "id": "converter_6e454a672d05a49",
+        "widget": "converter",
+        "props": {
+          "name": "converter_6e454a672d05a49",
+          "ref": "converter_6e454a672d05a49",
+          "input": "enum",
+          "output": "Text",
+          "items": [
+            {
+              "source": "&(self)[3f93e06f5f904e57b838cd019abf1db2].[f8ed5e46db5e491f8118eaefb9cfd7ea]",
+              "target": "男"
+            },
+            {
+              "source": "&(self)[3f93e06f5f904e57b838cd019abf1db2].[2601accf67a640a48131da88b8132b3d]",
+              "target": "女"
+            }
+          ]
+        }
       }
     ]
   },

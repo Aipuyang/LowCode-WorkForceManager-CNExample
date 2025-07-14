@@ -3,7 +3,7 @@
   "widget": "page_layout",
   "props": {
     "ref": "pageLayout_729203879464399",
-    "title": "WorkForceManager",
+    "title": "公司员工管理",
     "logo": "/static/images/logo.svg",
     "name": "Layout",
     "footer": [
@@ -11,7 +11,10 @@
         "id": "row_939488376122384",
         "widget": "row",
         "props": {
-          "ref": "row_939488376122384"
+          "ref": "row_939488376122384",
+          "style": {
+            "width": "100%"
+          }
         },
         "children": [
           {
@@ -84,8 +87,8 @@
   },
   "references": {
     "home_338268383642198": "Home.sdv",
-    "38d9d4bf897e4ff799eec222a5fcebc5": "Views\\Company\\CompanyList.sdv",
-    "f4e719b57cb14096a4dc52b566bbdd54": "Views\\Employee\\Employee_Department_TreeList.sdv"
+    "38d9d4bf897e4ff799eec222a5fcebc5": "Company\\CompanyList.sdv",
+    "f4e719b57cb14096a4dc52b566bbdd54": "Employee\\Employee_Department_TreeList.sdv"
   },
   "version": "1.0.0"
 }

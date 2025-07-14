@@ -339,7 +339,7 @@
     }
   ],
   "references": {
-    "7a80aa33193a47188a879885aac67ca5": "..\\..\\APIS\\Education.sdlg",
+    "7a80aa33193a47188a879885aac67ca5": "..\\..\\Logics\\APIS\\Education.sdlg",
     "e85bf6b69f5a4370b2937f7f60264949": "..\\..\\Properties\\DataStructures\\DegreeType.json"
   },
   "version": "1.0.0"

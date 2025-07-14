@@ -12,7 +12,9 @@
       "id": "row_176ce3e541539ec",
       "widget": "row",
       "props": {
-        "style": {},
+        "style": {
+          "width": "100%"
+        },
         "ref": "row_5482a973a48f0e6",
         "gutter": {
           "enabled": false
@@ -127,7 +129,9 @@
       "id": "grid_5d28882b627361e",
       "widget": "grid",
       "props": {
-        "style": {},
+        "style": {
+          "width": "100%"
+        },
         "ref": "grid_cace79db2d6345a",
         "rowNum": 1,
         "colNum": 3
@@ -137,7 +141,9 @@
           "id": "row_a52f329095f37ab",
           "widget": "row",
           "props": {
-            "style": {},
+            "style": {
+              "width": "100%"
+            },
             "ref": "row_bc20868f6191f33",
             "gutter": {
               "enabled": true,
@@ -179,7 +185,8 @@
                         "ref": "pie_7abab19e6110d06",
                         "names": {
                           "kind": "Field",
-                          "value": "&(self)[pie_812e0873703da97].dataSource.[action_f76edf593eea7cc].[assign_param_9159017bf163866].[c53ed62c374a4aa6b94a2e315480d267]"
+                          "value": "&(self)[pie_812e0873703da97].dataSource.[action_f76edf593eea7cc].[assign_param_9159017bf163866].[c53ed62c374a4aa6b94a2e315480d267]",
+                          "converter": "&(ref)8eabcc3b0a264e55b76c7c758f33efa1.[d893c8e7e88841a1b37a29a838b1697e].converters.[converter_661a8485883710a]"
                         },
                         "values": {
                           "kind": "Field",
@@ -538,7 +545,8 @@
                         "ref": "pie_2b228fbb0a03445",
                         "names": {
                           "kind": "Field",
-                          "value": "&(self)[pie_767c37259e962cd].dataSource.[action_ab50e6124055fb8].[assign_param_7281a7214993f53].[8265139edd4440ee9078d7a234f9fa78]"
+                          "value": "&(self)[pie_767c37259e962cd].dataSource.[action_ab50e6124055fb8].[assign_param_7281a7214993f53].[8265139edd4440ee9078d7a234f9fa78]",
+                          "converter": "&(ref)d6c2a3ad26db410f8d6d33d1d5246571.[3f93e06f5f904e57b838cd019abf1db2].converters.[converter_6e454a672d05a49]"
                         },
                         "values": {
                           "kind": "Field",
@@ -681,7 +689,9 @@
       "id": "row_18ffacb1c1e46d8",
       "widget": "row",
       "props": {
-        "style": {},
+        "style": {
+          "width": "100%"
+        },
         "ref": "row_68df2a469e942c9",
         "gutter": {
           "enabled": false
@@ -795,7 +805,9 @@
       "id": "grid_d8b61359962962b",
       "widget": "grid",
       "props": {
-        "style": {},
+        "style": {
+          "width": "100%"
+        },
         "ref": "grid_81c452d26d18659",
         "rowNum": 1,
         "colNum": 3
@@ -805,7 +817,9 @@
           "id": "row_b6c5904f95617d3",
           "widget": "row",
           "props": {
-            "style": {},
+            "style": {
+              "width": "100%"
+            },
             "ref": "row_2f670b886f74820",
             "gutter": {
               "enabled": true,
@@ -1144,7 +1158,8 @@
                         "ref": "pie_df3fe6018529e02",
                         "names": {
                           "kind": "Field",
-                          "value": "&(self)[pie_eec8b9513714bb9].dataSource.[action_29e090c5f6c9dd8].[assign_param_12020c61223e2f9].[35b9ff44ce904e9b8d50728960917a9d]"
+                          "value": "&(self)[pie_eec8b9513714bb9].dataSource.[action_29e090c5f6c9dd8].[assign_param_12020c61223e2f9].[35b9ff44ce904e9b8d50728960917a9d]",
+                          "converter": "&(ref)f7cf07e2900b4e2dbe3454b5bb81af48.[c1375195ba3049dd9dcea7705bb35cd5].converters.[converter_16773912f40f25e]"
                         },
                         "values": {
                           "kind": "Field",
@@ -1438,14 +1453,17 @@
     }
   ],
   "references": {
-    "0b803e242a8342c390961d861bfc7d7e": "APIS\\Company.sdlg",
-    "52857be25eaa46839bd0e4edfea35c8d": "APIS\\StatisticsService.sdlg",
-    "5f6db97315754cfd8ed7746ad22f483a": "APIS\\Department.sdlg",
-    "StatisticEmployeeDegree29a25f6d521d4e2d9a5d7e967559e82e": "Properties\\DataStructures\\StatisticEmployeeDegree.json",
-    "StatisticGenderDTOfa9489441bcb42caaaa3a715fafd8f24": "Properties\\DataStructures\\StatisticGenderDTO.json",
-    "Department732e9468e48d4dad884eaf11408ef5f3": "DataSource\\Database.sde",
-    "4b0e9453b3e84641bdd510a6d81a28ee": "Properties\\DataStructures\\CityDTO.json",
-    "4a13585bd46b480fb62779a669674472": "Properties\\DataStructures\\StatisticReignDTO.json"
+    "0b803e242a8342c390961d861bfc7d7e": "..\\Logics\\APIS\\Company.sdlg",
+    "52857be25eaa46839bd0e4edfea35c8d": "..\\Logics\\APIS\\StatisticsService.sdlg",
+    "5f6db97315754cfd8ed7746ad22f483a": "..\\Logics\\APIS\\Department.sdlg",
+    "StatisticEmployeeDegree29a25f6d521d4e2d9a5d7e967559e82e": "..\\Properties\\DataStructures\\StatisticEmployeeDegree.json",
+    "StatisticGenderDTOfa9489441bcb42caaaa3a715fafd8f24": "..\\Properties\\DataStructures\\StatisticGenderDTO.json",
+    "Department732e9468e48d4dad884eaf11408ef5f3": "..\\Entities\\DataSource\\Database.sde",
+    "4b0e9453b3e84641bdd510a6d81a28ee": "..\\Properties\\DataStructures\\CityDTO.json",
+    "4a13585bd46b480fb62779a669674472": "..\\Properties\\DataStructures\\StatisticReignDTO.json",
+    "8eabcc3b0a264e55b76c7c758f33efa1": "..\\Properties\\DataStructures\\CompanySize.json",
+    "d6c2a3ad26db410f8d6d33d1d5246571": "..\\Properties\\DataStructures\\Gender.json",
+    "f7cf07e2900b4e2dbe3454b5bb81af48": "..\\Properties\\DataStructures\\EmployeeStatus.json"
   },
   "version": "1.0.0"
 }

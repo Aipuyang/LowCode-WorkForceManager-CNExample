@@ -12,7 +12,9 @@
       "id": "grid_d2fc5b88ea8975b",
       "widget": "grid",
       "props": {
-        "style": {},
+        "style": {
+          "width": "100%"
+        },
         "ref": "grid_2fe3c6421139cce",
         "colNum": 2,
         "rowNum": 1
@@ -22,7 +24,9 @@
           "id": "row_1b869c005a94a3f",
           "widget": "row",
           "props": {
-            "style": {},
+            "style": {
+              "width": "100%"
+            },
             "ref": "row_0e21f87662a80d6",
             "gutter": {
               "enabled": true,
@@ -556,7 +560,8 @@
                                   },
                                   "value": {
                                     "kind": "Field",
-                                    "value": "&(self)[tableContainer_00f8840e1b5f453].dataSource.[action_f3e7bf1364f3d24].[assign_param_74c8a55366d781b].[e0c5c5b6f28945d583ffa411ab743895]"
+                                    "value": "&(self)[tableContainer_00f8840e1b5f453].dataSource.[action_f3e7bf1364f3d24].[assign_param_74c8a55366d781b].[e0c5c5b6f28945d583ffa411ab743895]",
+                                    "converter": "&(ref)c69797960f35470dad34a778a4e1fda9.[3f93e06f5f904e57b838cd019abf1db2].converters.[converter_6e454a672d05a49]"
                                   }
                                 },
                                 "children": []
@@ -622,7 +627,8 @@
                                   },
                                   "value": {
                                     "kind": "Field",
-                                    "value": "&(self)[tableContainer_00f8840e1b5f453].dataSource.[action_f3e7bf1364f3d24].[assign_param_74c8a55366d781b].[541d9cadc4c5402cb8e97bf625317ed0]"
+                                    "value": "&(self)[tableContainer_00f8840e1b5f453].dataSource.[action_f3e7bf1364f3d24].[assign_param_74c8a55366d781b].[541d9cadc4c5402cb8e97bf625317ed0]",
+                                    "converter": "&(ref)c8a838d7dcee4c1aa4aa8f64874809e1.[0a50063933594d59a1aea3169d00ce5e].converters.[converter_13ffdab0159ea32]"
                                   }
                                 },
                                 "children": []
@@ -657,7 +663,8 @@
                                   },
                                   "value": {
                                     "kind": "Field",
-                                    "value": "&(self)[tableContainer_00f8840e1b5f453].dataSource.[action_f3e7bf1364f3d24].[assign_param_74c8a55366d781b].[a315eeba89cd41e18eb16ada89245a6d]"
+                                    "value": "&(self)[tableContainer_00f8840e1b5f453].dataSource.[action_f3e7bf1364f3d24].[assign_param_74c8a55366d781b].[a315eeba89cd41e18eb16ada89245a6d]",
+                                    "converter": "&(ref)7a30714d2366446299df7f5eebe282fe.[c1375195ba3049dd9dcea7705bb35cd5].converters.[converter_16773912f40f25e]"
                                   }
                                 },
                                 "children": []
@@ -1362,17 +1369,17 @@
     }
   ],
   "references": {
-    "cf83907c93f14b0d88ad81703bbcd25a": "..\\..\\APIS\\Employee.sdlg",
+    "cf83907c93f14b0d88ad81703bbcd25a": "..\\..\\Logics\\APIS\\Employee.sdlg",
     "cfdf2a01030d4bf789586fbf4cdee657": "..\\DepartMent\\DepartmentAdd.sdv",
     "27546f5f46c74803abeaf9508d4508fd": "..\\DepartMent\\DepartmentEidt.sdv",
     "54b4ac962f5f40e497381d2bf98eb925": "EmployeeAdd.sdv",
     "fb40a31fe3df4fcf9b0e4f09377d11d2": "EmployeeDetail.sdv",
-    "Department732e9468e48d4dad884eaf11408ef5f3": "..\\..\\DataSource\\Database.sde",
+    "Department732e9468e48d4dad884eaf11408ef5f3": "..\\..\\Entities\\DataSource\\Database.sde",
     "c69797960f35470dad34a778a4e1fda9": "..\\..\\Properties\\DataStructures\\Gender.json",
     "c8a838d7dcee4c1aa4aa8f64874809e1": "..\\..\\Properties\\DataStructures\\DegreeType.json",
     "7a30714d2366446299df7f5eebe282fe": "..\\..\\Properties\\DataStructures\\EmployeeStatus.json",
-    "9156d0bc4d6944869f9735edfdbe81c8": "..\\..\\APIS\\Company.sdlg",
-    "95656cf0a7664f8498d7d968977ec974": "..\\..\\APIS\\Department.sdlg"
+    "9156d0bc4d6944869f9735edfdbe81c8": "..\\..\\Logics\\APIS\\Company.sdlg",
+    "95656cf0a7664f8498d7d968977ec974": "..\\..\\Logics\\APIS\\Department.sdlg"
   },
   "version": "1.0.0"
 }

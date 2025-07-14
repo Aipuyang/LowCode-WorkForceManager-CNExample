@@ -358,7 +358,7 @@
     }
   ],
   "references": {
-    "d35e6e9a32c34ab1be81a429392cd4c5": "..\\..\\APIS\\EmployeeJob.sdlg"
+    "d35e6e9a32c34ab1be81a429392cd4c5": "..\\..\\Logics\\APIS\\EmployeeJob.sdlg"
   },
   "version": "1.0.0"
 }

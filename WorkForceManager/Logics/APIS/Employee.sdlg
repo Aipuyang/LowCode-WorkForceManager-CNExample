@@ -1018,10 +1018,10 @@
     }
   ],
   "references": {
-    "d245059fa87042ba9f95bd917f90cbec": "..\\DataSource\\Database.sde",
+    "d245059fa87042ba9f95bd917f90cbec": "..\\..\\Entities\\DataSource\\Database.sde",
     "b3a115b7349f4dec8401d99b22c20906": "$(global)PageParameter.json",
     "897d7f8da2b24c2fbf7cf050572c18f0": "$(global)PageResult.json",
-    "1389ebf193524f1cb182bdd653c6820c": "..\\Properties\\DataStructures\\ResignDTO.json",
-    "415b30c1625c49f1ba7aa9ff413064e7": "..\\Properties\\DataStructures\\EmployeeStatus.json"
+    "1389ebf193524f1cb182bdd653c6820c": "..\\..\\Properties\\DataStructures\\ResignDTO.json",
+    "415b30c1625c49f1ba7aa9ff413064e7": "..\\..\\Properties\\DataStructures\\EmployeeStatus.json"
   }
 }

@@ -883,11 +883,11 @@
     }
   ],
   "references": {
-    "6ede7d29c6d74a8ea0c07eeabf7a2eec": "..\\DataSource\\Database.sde",
-    "d6e77e5b663f4b04ad1f3de01c1584f4": "..\\Properties\\DataStructures\\CompanySize.json",
+    "6ede7d29c6d74a8ea0c07eeabf7a2eec": "..\\..\\Entities\\DataSource\\Database.sde",
+    "d6e77e5b663f4b04ad1f3de01c1584f4": "..\\..\\Properties\\DataStructures\\CompanySize.json",
     "102e382d62854f899d36dec1285b2a87": "$(global)PageParameter.json",
     "570e2a10127e440e80593813d1824518": "$(global)PageResult.json",
-    "776bf8aafa104cd8859691170084ceaf": "..\\Properties\\DataStructures\\CityDTO.json",
-    "6cb0f450d07b4ba2b1e2e718479b3da4": "..\\Properties\\DataStructures\\CompanySizeStaticDTO.json"
+    "776bf8aafa104cd8859691170084ceaf": "..\\..\\Properties\\DataStructures\\CityDTO.json",
+    "6cb0f450d07b4ba2b1e2e718479b3da4": "..\\..\\Properties\\DataStructures\\CompanySizeStaticDTO.json"
   }
 }

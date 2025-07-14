@@ -194,7 +194,8 @@
                   "ref": "tag_64dd51fc3b4648da9115d95b4e8b5759",
                   "value": {
                     "kind": "Field",
-                    "value": "&(self)[descriptions_976c2ea04a764871b2d35c810a9ed3a6].dataSource.[actionAdapter_df2ac5656e7146abafdbe7da713cf42e].[adapterParam_9c7cd81cd56047459c1677062fb56280].[9f45f4a80da24bf38e4012b7a9e0fbc7]"
+                    "value": "&(self)[descriptions_976c2ea04a764871b2d35c810a9ed3a6].dataSource.[actionAdapter_df2ac5656e7146abafdbe7da713cf42e].[adapterParam_9c7cd81cd56047459c1677062fb56280].[9f45f4a80da24bf38e4012b7a9e0fbc7]",
+                    "converter": "&(ref)98abb46189a749a5acfa8ec9a619efae.[d893c8e7e88841a1b37a29a838b1697e].converters.[converter_661a8485883710a]"
                   },
                   "color": {
                     "kind": "Field",
@@ -353,7 +354,8 @@
                           "color": "#1F93FFB8",
                           "value": {
                             "kind": "Field",
-                            "value": "&(self)[tableContainer_189934103049869].dataSource.[action_350291d1ebb6bbb].[assign_param_5fb740dedc0b69f].[a113f760a6dd4e46a1d403f2c17c412f]"
+                            "value": "&(self)[tableContainer_189934103049869].dataSource.[action_350291d1ebb6bbb].[assign_param_5fb740dedc0b69f].[a113f760a6dd4e46a1d403f2c17c412f]",
+                            "converter": "&(ref)54e66efc7c5f4603bd2a9d1e26715593.[a3defe6b65294f20883efee4d95ea20e].converters.[converter_9b0f760e13f79e8]"
                           }
                         },
                         "children": []
@@ -737,10 +739,11 @@
     }
   ],
   "references": {
-    "9ec055555c9548a2804c1d7daf123e9f": "..\\..\\APIS\\Company.sdlg",
-    "c5a1764e5fe54dc89728234d583bbc41": "..\\..\\APIS\\CompanyContact.sdlg",
+    "9ec055555c9548a2804c1d7daf123e9f": "..\\..\\Logics\\APIS\\Company.sdlg",
+    "c5a1764e5fe54dc89728234d583bbc41": "..\\..\\Logics\\APIS\\CompanyContact.sdlg",
     "e4057534ca87466f9d03c2a25c5d44b6": "..\\CompanyContact\\ContactAdd.sdv",
     "98abb46189a749a5acfa8ec9a619efae": "..\\..\\Properties\\DataStructures\\CompanySize.json",
-    "9112573518644a56ab96c31d94e612e6": "..\\..\\DataSource\\Database.sde"
+    "9112573518644a56ab96c31d94e612e6": "..\\..\\Entities\\DataSource\\Database.sde",
+    "54e66efc7c5f4603bd2a9d1e26715593": "..\\..\\Properties\\DataStructures\\PositionType.json"
   }
 }

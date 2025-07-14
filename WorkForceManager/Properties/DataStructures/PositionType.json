@@ -28,6 +28,30 @@
             }
           ]
         }
+      },
+      {
+        "id": "converter_9b0f760e13f79e8",
+        "widget": "converter",
+        "props": {
+          "name": "converter_9b0f760e13f79e8",
+          "ref": "converter_9b0f760e13f79e8",
+          "input": "enum",
+          "output": "Text",
+          "items": [
+            {
+              "source": "&(self)[a3defe6b65294f20883efee4d95ea20e].[b0cfa2a864a744148b4bcfd413452b48]",
+              "target": "人事"
+            },
+            {
+              "source": "&(self)[a3defe6b65294f20883efee4d95ea20e].[e6281a4bb24c4d8d85f6623a1558a121]",
+              "target": "管理"
+            },
+            {
+              "source": "&(self)[a3defe6b65294f20883efee4d95ea20e].[355d5bc56f6d40be936983c139228006]",
+              "target": "董事"
+            }
+          ]
+        }
       }
     ]
   },

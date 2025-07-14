@@ -1,8 +1,9 @@
 ﻿{
-  "id": "0cf30fab073144c596ce6d561511e386",
+  "id": "c4b16fce4be3476bb05126f2b1f75c7f",
   "widget": "staticdatasource",
+  "version": "1.0.0",
   "props": {
-    "name": "Static"
+    "name": "Default"
   },
   "children": [
     {
@@ -11,7 +12,6 @@
       "props": {
         "name": "StaticSource",
         "value": "[{\"Value\":\"CEO\"},{\"Value\":\"董事长\"},{\"Value\":\"部门经理\"},{\"Value\":\"项目经理\"},{\"Value\":\"产品经理\"},{\"Value\":\"工程师\"},{\"Value\":\"设计师\"},{\"Value\":\"财务\"},{\"Value\":\"前台\"},{\"Value\":\"人事\"},{\"Value\":\"其他\"}]",
-        "group": "Default",
         "isJsonModel": true,
         "isCollection": true
       },
@@ -27,5 +27,6 @@
         }
       ]
     }
-  ]
+  ],
+  "references": []
 }

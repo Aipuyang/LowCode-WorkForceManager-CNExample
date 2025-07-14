@@ -32,6 +32,34 @@
             }
           ]
         }
+      },
+      {
+        "id": "converter_661a8485883710a",
+        "widget": "converter",
+        "props": {
+          "name": "converter_661a8485883710a",
+          "ref": "converter_661a8485883710a",
+          "input": "enum",
+          "output": "Text",
+          "items": [
+            {
+              "source": "&(self)[d893c8e7e88841a1b37a29a838b1697e].[8d346ee1a1e447fca8a0078ac514bb8a]",
+              "target": "微型"
+            },
+            {
+              "source": "&(self)[d893c8e7e88841a1b37a29a838b1697e].[3bcf5b6ece494ed1b0106758e5d11662]",
+              "target": "小型"
+            },
+            {
+              "source": "&(self)[d893c8e7e88841a1b37a29a838b1697e].[359e0d148f804105804e85c964aa73cd]",
+              "target": "中型"
+            },
+            {
+              "source": "&(self)[d893c8e7e88841a1b37a29a838b1697e].[57cbf8c8b3ab47f798aa275f9a87c798]",
+              "target": "大型"
+            }
+          ]
+        }
       }
     ]
   },

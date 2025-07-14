@@ -299,7 +299,7 @@
     }
   ],
   "references": {
-    "ea5f00dcdde045658d7acd47975e31cc": "..\\..\\APIS\\Company.sdlg",
+    "ea5f00dcdde045658d7acd47975e31cc": "..\\..\\Logics\\APIS\\Company.sdlg",
     "930a27a0ea1f453f906bea912794a8e6": "..\\..\\Properties\\DataStructures\\CompanySize.json"
   },
   "version": "1.0.0"
